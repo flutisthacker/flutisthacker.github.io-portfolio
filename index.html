@@ -75,7 +75,7 @@
 
       <!-- VIDEO -->
       <div class="video-container">
-        <video autoplay="" loop="true">
+        <video autoplay="" loop="true" id="bgVideo">
           <source type="video/mp4" src="https://videos.pexels.com/video-files/5948574/5948574-sd_640_360_30fps.mp4">
         </video>
       </div>
@@ -487,4 +487,8 @@
   <script src="./js/jquery.animateNumber.min.js"></script>
 
   <script src="./js/custom.js"></script>
-
+  <script>
+    document.getElementById("bgVideo").muted = true;
+</script>
+</body>
+</html>
