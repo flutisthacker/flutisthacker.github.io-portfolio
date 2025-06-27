@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body class="bg-secondary">
+<ul class="list-group m-5 ">
+</ul>
+</body>
+
+<script>
+  // replit
+  // produchunt
+  // devdocs
+  listWeb={
+    "learn code":[  "quickref.me", 
+    "codehype.in",
+    "overapi.com",
+    "roadmap.sh",
+    "codepen.io",
+    "web.dev",
+    "learnvern.com",
+    "digitaldefynd.com",
+    "theodinproject.com",
+    "mygreatlearning.com",
+    "mooc.org",""],
+  "code to image":["ray.so",""],
+  "CV":["resumeworded.com","read.cv"],
+  "online certificate":["alison.com","classcentral.com","openculture.com","mindluster.com"],
+  "books":[
+    "Gutenberg.org",
+    "viralityAI.net"],
+  "android app":["andromo.com","bubble.io"],
+  "ai website builder":["codedesign.ai"],
+  "unscubcribe newsletter":["leavemealone.app"],
+  "video summary":["getmerlin.in"],
+  "recipe":["supercook.com"],
+  "excel formula":["sheetplus.in","excelformulabot.com"],
+  "humanize":["twaingpt.com"],
+  "exercise":["darebee.com","exercism.com"],
+  "food nutrition":["examine.com","myfridge.food"],
+  "mail":["temp-mail.org"],
+  "pdf tool":["himata","thereisanai.com","tinywow.com","avepdf.com","pdf24.org","123apps.com","gettingintopc.world"],
+  "game":["poki.com","megagames","battle.net","acidplay","g2a","fitgirlrepack"],
+  "anime":["9anime","gogoanime","animesuge","kissanime","aniwatch"],
+  "slides":["slidesai.io"],
+  "movies":["uhdmovies","hdmovies2.today","gokutv","moviesmod","vegamoviesis","zinkmovies.cfd"],
+  "other":["nodegpt.com","studentpeeps.com","onlineocr.net","chat-animator.com","upscale.media","instrack.app","whitescreen.com","cobalt.tools","pdfgears.com","pentester.com","textbehindimage.com","liteapks.com","fileconv.online/remove-bg","namso-gen.com","file.pizza","alphatron.tv","photext.com","dodirepack.com","stirlingpdf.io","instructables.com","tailornova.com","bugmenot.com","kiddoworksheets.com","adescargar.online"],
+  "link":["beatsync.gg"],
+  "research":["scispace.com/extractdata","paperpal.com"],
+  "aitools":["diabrowser","tanka","shipableAIcntxt","huntr AI resume","glims","emotion sense pro"],  
+  }
+
+
+
+  Object.keys(listWeb).forEach(lists => {
+    document.querySelector(".list-group").innerHTML+=`<li class="list-group-item bg-info">${lists}</li>`
+    listWeb[lists].forEach(e=>{
+      document.querySelector(".list-group").innerHTML+=`<li class="list-group-item ${lists} ${e}"><a href='https://${e}' target="_blank">${e}</a></li>`
+    })
+    document.querySelector(".list-group").innerHTML+=`<li class="list-group-item bg-secondary"> </li>`
+  });
+// typingbird
+</script>
+</html>
