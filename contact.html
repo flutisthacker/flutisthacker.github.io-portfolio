@@ -238,7 +238,7 @@
     let email=document.querySelector("#email").value
     let subject=document.querySelector("#subject").value
     let mailbody=document.querySelector("#message").value.replaceAll(" ","%20")
-    let mailContent=`mailto:saman.maharjan96@gmail.com?subject=${subject}&amp;body=${mailbody}$amp;from:${email}`
+    let mailContent=`mailto:saman.maharjan96@gmail.com?subject=${subject}&amp;body=${mailbody}&amp;from:${email}`
     document.querySelector("#hiddenMailTo").href=mailContent
     document.querySelector("#hiddenMailTo").click()
   }
