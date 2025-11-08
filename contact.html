@@ -235,9 +235,9 @@
   function sendMail(){
     // document.querySelector("#fname")
     // document.querySelector("#lname")
-    let email=document.querySelector("#email")
-    let subject=document.querySelector("#subject")
-    let mailbody=document.querySelector("#message")
+    let email=document.querySelector("#email").textContent
+    let subject=document.querySelector("#subject").textContent
+    let mailbody=document.querySelector("#message").textContent
     let mailContent=`mailto:saman.maharjan96@gmail.com?subject=${subject}&amp;body=${mailbody}$amp;from:${email}`
     document.querySelector("#hiddenMailTo").href=mailContent
     document.querySelector("#hiddenMailTo").click()
