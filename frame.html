@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div class="row">
+        <div class="col-1  bg-dark">
+            <button class="btn btn-primary m-1" data-srcset="https://transposenotes.pages.dev" onclick="document.querySelector('#frameBody').src=this.dataset.srcset">transpose</button>
+            <button class="btn btn-primary m-1" data-srcset="https://transposenotes.pages.dev/views/noteMaker" onclick="document.querySelector('#frameBody').src=this.dataset.srcset">transpose</button>
+            <button class="btn btn-primary m-1" data-srcset="https://transposenotes.pages.dev/Dhime" onclick="document.querySelector('#frameBody').src=this.dataset.srcset">Dhime</button>
+            <button class="btn btn-primary m-1" data-srcset="https://shayartohnahi.pages.dev" onclick="document.querySelector('#frameBody').src=this.dataset.srcset">shayar</button>
+            <button class="btn btn-primary m-1" data-srcset="https://mcs2semnotes.pages.dev" onclick="document.querySelector('#frameBody').src=this.dataset.srcset">mcs notes</button>
+        </div>
+        <div class="col-11">
+        <iframe src="index.html" id="frameBody" allowfullscreen frameborder="0"></iframe>
+
+        </div>
+    </div>
+</body>
+</html>
