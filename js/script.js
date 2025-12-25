@@ -50,12 +50,12 @@ function AddExperience(){
           </div>
         </div>`
 }
-function AddTraining(){
+function AddTraining(data){
   document.querySelector(".my-training").innerHTML+=`<div class="col-6 col-md-6 col-lg-4 mb-4 mb-lg-5">
           <a href="/service-single.html" class="block__16443 text-secondary text-center d-block">
             <span class="custom-icon mx-auto"><span class="icon-line-tools d-block"></span></span>
-            <h3>Scrum master register workshop</h3>
-            <p>Registered Scrum Master under the Scrumlab platform. Short workshop on learning the scrum methods and its implementation.</p>
+            <h3>${data.title}</h3>
+            <p>${data.description}</p>
           </a>
 
         </div>`
