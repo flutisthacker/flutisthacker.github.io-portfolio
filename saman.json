@@ -1,8 +1,11 @@
 {
     "personal":{
+        "title":"Saman Maharjan",
         "contact":"9803042890",
         "email":"saman.maharjan96@gmail.com",
-        "location":"Teku, Kathmandu"
+        "location":"Teku, Kathmandu",
+        "position":"QA Engineer"
+
     },
     "awards":[
         {

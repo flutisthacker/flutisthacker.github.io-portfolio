@@ -5,9 +5,11 @@ let myData;
 let myData2={
         "saman":{
             "personal":{
+                "title":"Saman Maharjan",
                 "contact":"9803042890",
                 "email":"saman.maharjan96@gmail.com",
-                "location":"Teku, Kathmandu"
+                "location":"Teku, Kathmandu",
+                "position":"QA Engineer"
             },
             "awards":[
                 {
@@ -211,7 +213,9 @@ let myData2={
         "name":"Delisha Maharjan",
         "contact":"9826262128",
         "email":"delishamaharjan@gmail.com",
-        "location":"Kritipur, Kathmandu"
+        "location":"Kritipur, Kathmandu",
+        "position":"QA Engineer"
+
     }, 
     "awards":[
         {
