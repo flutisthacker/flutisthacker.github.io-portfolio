@@ -37,7 +37,7 @@ let myData2={
             "title":"QA Engineer",
             "date":"2020-2025",
             "location":"KUDO.inc",
-            "logo":"kudo.png",
+            "logo":"https://website-cdn.kudo.ai/wp-content/uploads/2024/05/kudo-logo-header.svg",
             "description":"Assisted in designing wireframes and interactive prototypes using Figma for a mobile-based e-health application.;Created user personas and journey maps to build user-focused designs.;Developed responsive web page layouts and mobile app interfaces based on UI/UX best practices.; Developed low-fidelity and high-fidelity prototypes to simulate user interactions.  ",
             "points":"Analyze and clarify requirements with team members.||Performed manual functional testing of application features and bugs.||Writing test cases and scenarios for the new features and bugs using test rails.||Performed various types of testing such as sanity, smoke, and regression testing in non-production and production environments.||Usedtestrails for production sanity testing and ensuring production stability.||WorkedwithTrello and Jira for project management.||Collaborated with DevOps and Developers for testing new application features and infrastructure changes.||WorkedwithKanban and sprint methodologies in a team.||WorkedinAPItesting on features with the help of Postman||WorkedwithAzure SDK and websockets for machine translation for human speech||Partly handled scrum on project and Release management||Testcase automation with test agent.||Datavalidation to test AI with LLM model implementation.||Extendedtest on integration and POC applications||PlannedandReviewed test plan and scenario||Verification of Application vulnerability threats||Co-Organized onsite event for the team.|| Performed manual functional testing of the application features.|| Identify problem areas and bugs of the application.|| Re-test fixed defects.|| Ensureproduction environment sanity testing and stabilization.|| Performed various types of testing such as sanity, smoke, and regression testing.|| Workedinateamanddiscussed bugs with developers with limited access.|| Exploratory testing on AI-based application|| Functional testing for the data-based applications.|| Usedgoogledocs for documenting bug lists.|| UsedTrello for bug tracking.|| LearnedAPI testing for AI based applications."
         },
@@ -45,7 +45,7 @@ let myData2={
             "title":"Bazaar Factory",
             "date":"2018-2019",
             "location":"KUDO.inc",
-            "logo":"kudo.png",
+            "logo":"./images/bf.png",
             "description":"Assisted in designing wireframes and interactive prototypes using Figma for a mobile-based e-health application.;Created user personas and journey maps to build user-focused designs.;Developed responsive web page layouts and mobile app interfaces based on UI/UX best practices.; Developed low-fidelity and high-fidelity prototypes to simulate user interactions.  ",
             "points":"Developed application features for e-commerce platforms.|| Fixed application bugs and developed features according to clients’ needs.|| Developed dashboard and e-commerce websites using API application and liquid templating.|| UsedTrello, Gitlab/Github/Bitbucket for project management.|| Workedwithversion control systems.|| LearnedRuby onRails and liquid templating.|| Fixedandtested application bugs.|| Learnedsoftware development methodologies."
         },
@@ -53,14 +53,14 @@ let myData2={
             "title":"Youth Member",
             "date":"2020-2025",
             "location":"Youth Corner Club",
-            "logo":"kudo.png",
+            "logo":"./images/ycc%20logo.png",
             "description":"Assisted in designing wireframes and interactive prototypes using Figma for a mobile-based e-health application.;Created user personas and journey maps to build user-focused designs.;Developed responsive web page layouts and mobile app interfaces based on UI/UX best practices.; Developed low-fidelity and high-fidelity prototypes to simulate user interactions.  "
         },
         {
             "title":"Member",
             "date":"2025-2027",
             "location":"Youth Corner Club",
-            "logo":"kudo.png",
+            "logo":"./images/ycc%2050.png",
             "description":"Assisted in designing wireframes and interactive prototypes using Figma for a mobile-based e-health application.;Created user personas and journey maps to build user-focused designs.;Developed responsive web page layouts and mobile app interfaces based on UI/UX best practices.; Developed low-fidelity and high-fidelity prototypes to simulate user interactions.  "
         }
     ],
@@ -245,7 +245,7 @@ let myData2={
             "title":"Administrative Office Assistant",
             "date":"November 2023 - May 2025 (1 year 7 months)",
             "location":"Pratham Trade Line Pvt ltd",
-            "logo":"kudo.png",
+            "logo":"https://www.prathamtradeline.com/assets/images/logo.png",
             "description":"Managed billing operations in the FMCG sector, handled letter of credit (LC) documentation, processed cheque deposits, and coordinated with sales associates to ensure smooth financial and sales operations.",
             "points":"Developed application features for e-commerce platforms.|| Fixed application bugs and developed features according to clients’ needs.|| Developed dashboard and e-commerce websites using API application and liquid templating.|| UsedTrello, Gitlab/Github/Bitbucket for project management.|| Workedwithversion control systems.|| LearnedRuby onRails and liquid templating.|| Fixedandtested application bugs.|| Learnedsoftware development methodologies."
         },
@@ -253,7 +253,7 @@ let myData2={
             "title":"Administrative Assistant",
             "date":"November 2022 - October 2023 (1 year)",
             "location":"Zoom dental clinic Pvt ltd",
-            "logo":"kudo.png",
+            "logo":"https://scontent.fktm7-1.fna.fbcdn.net/v/t39.30808-6/301960592_453766793470277_2868436646038975389_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=YFHzvvk-VfgQ7kNvwGLt9Ek&_nc_oc=AdnjlBfmAmUpljZcJqMKfkeHaq226DPhZCrCgJpmO9TkePkhWexAIYZnuVaCiUi2B-3cIUI1lhm3Tx_qZes3iUgQ&_nc_zt=23&_nc_ht=scontent.fktm7-1.fna&_nc_gid=X58pJSyyNFX54a1A8Q0xXg&oh=00_Afm1xTLUx-3kSBKX-wZ5-5Aa-fOBht6wB_wNq-r9Bh8ngg&oe=695341FE",
             "description":"Managed billing operations in the FMCG sector, handled letter of credit (LC) documentation, processed cheque deposits, and coordinated with sales associates to ensure smooth financial and sales operations.",
             "points":"Developed application features for e-commerce platforms.|| Fixed application bugs and developed features according to clients’ needs.|| Developed dashboard and e-commerce websites using API application and liquid templating.|| UsedTrello, Gitlab/Github/Bitbucket for project management.|| Workedwithversion control systems.|| LearnedRuby onRails and liquid templating.|| Fixedandtested application bugs.|| Learnedsoftware development methodologies."
         },
@@ -261,7 +261,7 @@ let myData2={
             "title":"Front Desk Attendant",
             "date":"June 2021 - July 2022 (1 year 2 months)",
             "location":"Zoom dental clinic Pvt ltd",
-            "logo":"kudo.png",
+            "logo":"https://scontent.fktm7-1.fna.fbcdn.net/v/t39.30808-6/301960592_453766793470277_2868436646038975389_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=YFHzvvk-VfgQ7kNvwGLt9Ek&_nc_oc=AdnjlBfmAmUpljZcJqMKfkeHaq226DPhZCrCgJpmO9TkePkhWexAIYZnuVaCiUi2B-3cIUI1lhm3Tx_qZes3iUgQ&_nc_zt=23&_nc_ht=scontent.fktm7-1.fna&_nc_gid=X58pJSyyNFX54a1A8Q0xXg&oh=00_Afm1xTLUx-3kSBKX-wZ5-5Aa-fOBht6wB_wNq-r9Bh8ngg&oe=695341FE",
             "description":"Managed billing operations in the FMCG sector, handled letter of credit (LC) documentation, processed cheque deposits, and coordinated with sales associates to ensure smooth financial and sales operations.",
             "points":"Developed application features for e-commerce platforms.|| Fixed application bugs and developed features according to clients’ needs.|| Developed dashboard and e-commerce websites using API application and liquid templating.|| UsedTrello, Gitlab/Github/Bitbucket for project management.|| Workedwithversion control systems.|| LearnedRuby onRails and liquid templating.|| Fixedandtested application bugs.|| Learnedsoftware development methodologies."
         }
