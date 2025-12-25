@@ -37,7 +37,7 @@ function AddExperience(data){
             </figure>
             <div class="h-100">
               <h3 class="mb-4"><a href="#">
-                KUDO
+               ${data.location}
               </a></h3>
               <div class="block__27192 d-flex pt-1 border-top">
                 <a href="#"><span class="icon-person"></span>                     
