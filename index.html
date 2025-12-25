@@ -280,7 +280,7 @@
       </div>
       <div class="container">
 
-        <div class="row">
+        <div class="row my-education">
             
           <div class="col-lg-6 mb-4">
             <div class="block__87154  bg-dark text-light">
@@ -571,6 +571,27 @@ function updateData(nJSON){
   document.querySelector(".personal-email")=nJSON.personal.email
   document.querySelector(".personal-location")=nJSON.personal.location
   document.querySelector(".personal-position")=nJSON.personal.position
+}
+function AddEducation(){
+  document.querySelector(".my-education").innerHTML+=`
+  <div class="col-lg-6 mb-4">
+            <div class="block__87154  bg-dark text-light">
+              <span class="quote"><img src="./images/quote.png" alt="Image"></span>
+              <blockquote>
+                <p>
+                  I am currently pursuing a Master’s degree in Computer Science, focusing on advanced topics such as algorithms, machine learning, and software engineering. This program is enhancing my expertise in developing innovative solutions and tackling complex computational problems. My studies are deepening my understanding of cutting-edge technologies and equipping me with the skills needed to drive impactful projects in the tech industry.
+                  <!-- I hold a Master’s degree in Computer Science, which has equipped me with a comprehensive understanding of advanced computational theories, software engineering principles, and cutting-edge technologies. My studies covered a range of topics including algorithms, data structures, machine learning, and system architecture, providing me with both theoretical knowledge and practical skills. This advanced education has prepared me to tackle complex technical challenges, drive innovative solutions, and contribute effectively to diverse projects in the tech industry. -->
+                </p>
+              </blockquote>
+              <div class="block__91147 d-flex align-items-center">
+                <figure class="mr-4"><img src="./images/lincoln.png" alt="Image" class="img-fluid"></figure>
+                <div>
+                  <h3 class="text-light">Masters in computer science</h3>
+                  <span class="position">Lincoln university</span>
+                </div>
+              </div>
+            </div>
+          </div>`
 }
 </script>  
 
