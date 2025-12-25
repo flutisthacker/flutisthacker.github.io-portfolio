@@ -30,34 +30,110 @@ let myData2={
                 "Documentation tools: Confluence, Testrails, Slack.",
                 "Monitoring tools: datadog, logrocket, Heap analytics."],
             "language":["English","Newari","Nepali","Hindi"],
-            "experience":[
+                "experience":[
+        {
+            "title":"QA Engineer",
+            "date":"2020-2025",
+            "location":"KUDO.inc",
+            "logo":"kudo.png",
+            "description":"Assisted in designing wireframes and interactive prototypes using Figma for a mobile-based e-health application.;Created user personas and journey maps to build user-focused designs.;Developed responsive web page layouts and mobile app interfaces based on UI/UX best practices.; Developed low-fidelity and high-fidelity prototypes to simulate user interactions.  ",
+            "points":"Analyze and clarify requirements with team members.||Performed manual functional testing of application features and bugs.||Writing test cases and scenarios for the new features and bugs using test rails.||Performed various types of testing such as sanity, smoke, and regression testing in non-production and production environments.||Usedtestrails for production sanity testing and ensuring production stability.||WorkedwithTrello and Jira for project management.||Collaborated with DevOps and Developers for testing new application features and infrastructure changes.||WorkedwithKanban and sprint methodologies in a team.||WorkedinAPItesting on features with the help of Postman||WorkedwithAzure SDK and websockets for machine translation for human speech||Partly handled scrum on project and Release management||Testcase automation with test agent.||Datavalidation to test AI with LLM model implementation.||Extendedtest on integration and POC applications||PlannedandReviewed test plan and scenario||Verification of Application vulnerability threats||Co-Organized onsite event for the team.|| Performed manual functional testing of the application features.|| Identify problem areas and bugs of the application.|| Re-test fixed defects.|| Ensureproduction environment sanity testing and stabilization.|| Performed various types of testing such as sanity, smoke, and regression testing.|| Workedinateamanddiscussed bugs with developers with limited access.|| Exploratory testing on AI-based application|| Functional testing for the data-based applications.|| Usedgoogledocs for documenting bug lists.|| UsedTrello for bug tracking.|| LearnedAPI testing for AI based applications."
+        },
+        {
+            "title":"Bazaar Factory",
+            "date":"2018-2019",
+            "location":"KUDO.inc",
+            "logo":"kudo.png",
+            "description":"Assisted in designing wireframes and interactive prototypes using Figma for a mobile-based e-health application.;Created user personas and journey maps to build user-focused designs.;Developed responsive web page layouts and mobile app interfaces based on UI/UX best practices.; Developed low-fidelity and high-fidelity prototypes to simulate user interactions.  ",
+            "points":"Developed application features for e-commerce platforms.|| Fixed application bugs and developed features according to clients’ needs.|| Developed dashboard and e-commerce websites using API application and liquid templating.|| UsedTrello, Gitlab/Github/Bitbucket for project management.|| Workedwithversion control systems.|| LearnedRuby onRails and liquid templating.|| Fixedandtested application bugs.|| Learnedsoftware development methodologies."
+        },
+        {
+            "title":"Youth Member",
+            "date":"2020-2025",
+            "location":"Youth Corner Club",
+            "logo":"kudo.png",
+            "description":"Assisted in designing wireframes and interactive prototypes using Figma for a mobile-based e-health application.;Created user personas and journey maps to build user-focused designs.;Developed responsive web page layouts and mobile app interfaces based on UI/UX best practices.; Developed low-fidelity and high-fidelity prototypes to simulate user interactions.  "
+        },
+        {
+            "title":"Member",
+            "date":"2025-2027",
+            "location":"Youth Corner Club",
+            "logo":"kudo.png",
+            "description":"Assisted in designing wireframes and interactive prototypes using Figma for a mobile-based e-health application.;Created user personas and journey maps to build user-focused designs.;Developed responsive web page layouts and mobile app interfaces based on UI/UX best practices.; Developed low-fidelity and high-fidelity prototypes to simulate user interactions.  "
+        }
+    ],
+            "training":[
                 {
-                    "title":"QA Engineer",
-                    "date":"2020-2025",
-                    "location":"KUDO.inc",
-                    "logo":"kudo.png",
-                    "description":"Assisted in designing wireframes and interactive prototypes using Figma for a mobile-based e-health application.;Created user personas and journey maps to build user-focused designs.;Developed responsive web page layouts and mobile app interfaces based on UI/UX best practices.; Developed low-fidelity and high-fidelity prototypes to simulate user interactions.  "
+                    "title":"Scrum Master workshop",
+                    "date":"2022",
+                    "location":"Prakash Aryal",
+                    "description":"Registered Scrum Master under the Scrumlab platform. Short workshop on learning the scrum methods and its implementation."
                 },
                 {
-                    "title":"Bazaar Factory",
-                    "date":"2018-2019",
-                    "location":"KUDO.inc",
-                    "logo":"kudo.png",
-                    "description":"Assisted in designing wireframes and interactive prototypes using Figma for a mobile-based e-health application.;Created user personas and journey maps to build user-focused designs.;Developed responsive web page layouts and mobile app interfaces based on UI/UX best practices.; Developed low-fidelity and high-fidelity prototypes to simulate user interactions.  "
+                    "title":"Preventing Discrimination & Harassment: Global Employee V3.3",
+                    "date":"2021-2025",
+                    "location":"KUDO",
+                    "description":"Learned about the harassment and discrimination that may arise in the company and learnt ways to prevent it."
                 },
                 {
-                    "title":"Youth Member",
-                    "date":"2020-2025",
-                    "location":"Youth Corner Club",
-                    "logo":"kudo.png",
-                    "description":"Assisted in designing wireframes and interactive prototypes using Figma for a mobile-based e-health application.;Created user personas and journey maps to build user-focused designs.;Developed responsive web page layouts and mobile app interfaces based on UI/UX best practices.; Developed low-fidelity and high-fidelity prototypes to simulate user interactions.  "
+                    "title":"Game development training",
+                    "date":"2019",
+                    "location":"Red Fox Studio",
+                    "description":"Learned creating a game using unity 3d game engine using C# as language and Visual code studio as a code editor"
                 },
                 {
-                    "title":"Member",
-                    "date":"2025-2027",
-                    "location":"Youth Corner Club",
-                    "logo":"kudo.png",
-                    "description":"Assisted in designing wireframes and interactive prototypes using Figma for a mobile-based e-health application.;Created user personas and journey maps to build user-focused designs.;Developed responsive web page layouts and mobile app interfaces based on UI/UX best practices.; Developed low-fidelity and high-fidelity prototypes to simulate user interactions.  "
+                    "title":"Blockchain Workshop",
+                    "date":"2017",
+                    "location":"IIMS College",
+                    "description":""
+                },
+                {
+                    "title":"ASP.net workshop",
+                    "date":"2017",
+                    "location":"IIMS College",
+                    "description":""
+                },
+                {
+                    "title":"Big data Workshop",
+                    "date":"2017",
+                    "location":"IIMS College",
+                    "description":"Attended the workshop as a participant and learned about the V3, Hadoop, data types."
+                },
+                {
+                    "title":"Mass Communication workshop",
+                    "date":"2017",
+                    "location":"KTM Metropolitician",
+                    "description":"Attended a week long workshop where we learnt the process of hosting."
+                },
+                {
+                    "title":"Workshop Cum training Program on SELF Management",
+                    "date":"2017",
+                    "location":"IIMS College",
+                    "description":"Attended workshop for self management and time management conducted by guruji shri yogacharya arun kumar"
+                },
+                {
+                    "title":"PHP Advance Workshop",
+                    "date":"2017",
+                    "location":"IIMS College",
+                    "description":"Organized a workshop as a vice president and learned about the GitHub and OOPandSQLconcept on PHP."
+                },
+                {
+                    "title":"Microsoft Student Partnership Training- Networking Workshop",
+                    "date":"2017",
+                    "location":"IIMS College",
+                    "description":"Learned about IPv4, IPv6, and networking."
+                },
+                {
+                    "title":"Microsoft Office Package",
+                    "date":"2013",
+                    "location":"Pentasoft Institute, Jamal",
+                    "description":"Learned about Microsoft Word, Excel, and Powerpoint."
+                },
+                {
+                    "title":"Graphic Designing and Web Designing",
+                    "date":"2017",
+                    "location":"Pentasoft Institute, Jamal",
+                    "description":"Learned graphics designing using Adobe Photoshop and web designing using HTML5 and CSS."
                 }
             ],
             "projects involved":[],
