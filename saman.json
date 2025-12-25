@@ -1,0 +1,42 @@
+{
+    "personal":{
+        "contact":"9803042890",
+        "email":"saman.maharjan96@gmail.com",
+        "location":"Teku, Kathmandu"
+    },
+    "awards":[
+        {
+            "title":"Dean Award",
+            "location":"Taylors University",
+            "date":"2022"
+        }
+    ],
+    "skills":[],
+    "language":["English","Newari","Dutch"],
+    "work experience":[],
+    "projects involved":[],
+    "education":[
+        {
+            "title":"Bachelor in computer Science (Hons)",
+            "name":"Taylors University, Malaysia",
+            "date":"2025",
+            "marks":"",
+            "location":"Putalisadak, Kathmandu"
+        },
+        {
+            "title":"High School",
+            "name":"Hetauda School of Management",
+            "date":"2020",
+            "marks":"3.26 GPA",
+            "location":"Hetauda"
+        },
+        {
+            "title":"Primary School (SEE)",
+            "name":"Tulsi Meher Memorial School",
+            "date":"2017-2018",
+            "marks":"3.45 GPA",
+            "location":"Hetauda"
+        }
+    ],
+    "summary":""
+}

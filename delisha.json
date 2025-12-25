@@ -1,0 +1,135 @@
+{
+    "personal":{
+        "name":"Delisha Maharjan",
+        "contact":"9826262128",
+        "email":"delishamaharjan@gmail.com",
+        "location":"Kritipur, Kathmandu"
+    },
+    "awards":[
+        {
+            "title":"Dean Award",
+            "location":"Taylors University",
+            "date":"2022"
+        }
+    ],
+    "skills":[
+["figma","75"],
+["Canva","75"],
+["Adobe Photoshop (Basic)","25"],
+["Web Development(HTML,CSS,","75"],
+["Time management and problem-solving","75"],
+["Communication","75"],
+["Wireframing and Prototyping with Figma","58"],
+["Database Systems: Oracle Database, MySQL","58"],
+["Python","58"],
+["MS Excel","58"]
+    ],
+    "language":["English","Newari","Dutch"],
+    "experience":[
+        {
+            "title":"UI/UX Designer",
+            "date":"Jan,2024 - Mar,2024",
+            "location":"Academic & Personal Projects",
+            "description":"Assisted in designing wireframes and interactive prototypes using Figma for a mobile-based e-health application.;Created user personas and journey maps to build user-focused designs.;Developed responsive web page layouts and mobile app interfaces based on UI/UX best practices.; Developed low-fidelity and high-fidelity prototypes to simulate user interactions.  "
+        },
+        {
+            "title":"UI/UX Designer",
+            "date":"Jan,2024 - Mar,2024",
+            "location":"Codavatar Internship",
+            "description":""
+        }
+    ],
+    "training":[
+        {
+            "title":"AWS Cloud Practitioner Essetials",
+            "date":"2022",
+            "location":"IIMS",
+            "description":""
+        },
+        {
+            "title":"Exploring Networking with cisco packet tracer",
+            "date":"2022",
+            "location":"IIMS",
+            "description":""
+        }
+    ],
+    "projects involved":[
+        {
+            "title":"Mobile app (Care Hospital)",
+            "date":"2022",
+            "location":"https://www.figma.com/design/56BaK7FZNZdY9Yjz16wjh7/DelishaDangol_0355759?node-id=0-1&p=f&t=O6Nv54Xa",
+            "description":"Designed a clean and user-friendly UI/UX for Care Hospital,focused on enhancing the digital healthcare experience.;The interface allows users to easily book appointments,log in securely and track their health progress in an intuitive, seamless flow.;Prioritized accessibility, simplicity, and visual clarity to make healthcare more approachable and efficient for all users.  "
+        },
+        {
+            "title":"UI/UX Designer | Business Startup - IIMS College",
+            "date":"2022",
+            "location":"https://www.figma.com/design/eENKHilrciXatNnJ8WkrSV/Untitled?node-id=0-1&p=f&t=HkniF6apyAm0EA1Z0",
+            "description":"   Created high-fidelity prototypes in Figma, focusing on user-centric design.; Mapped user journeys to showcase functionality and business value  "
+        },
+        {
+            "title":"Professionalism at workplace Effective Communication",
+            "date":"2022",
+            "location":"https://www.youtube.com/watch?v=u0Qc3czZl_g",
+            "description":"We have made a video on the basis of our project, Professionalism at Workplace. This video will help you develop the skills you need to excel in professional communication. Discover strategies for expressing yourself and boosting your confidence in any situation, from making presentations to sending emails."
+        },
+        {
+            "title":"Tranquility Guild",
+            "date":"2022",
+            "location":" ",
+            "description":"  I was actively involved in a project focused on sound healing and meditation to support mental well-being. As part of the initiative, we also developed a website platform where individuals facing mental health challenges could openly share their concerns and receive compassionate, supportive responses.  "
+        },
+        {
+            "title":"Mental Health Website Using HTML,CSS & JAVASCRIPT",
+            "date":"2022",
+            "location":" ",
+            "description":"https://github.com/delishadangol1/MayaCare/blob/main/index.html"
+        }
+    ],
+    "education":[
+        {
+            "title":"Bachelor in computer Science (Hons)",
+            "name":"Taylors University, Malaysia",
+            "date":"2025",
+            "marks":"",
+            "location":"Putalisadak, Kathmandu"
+        },
+        {
+            "title":"High School",
+            "name":"Hetauda School of Management",
+            "date":"2020",
+            "marks":"3.26 GPA",
+            "location":"Hetauda"
+        },
+        {
+            "title":"Primary School (SEE)",
+            "name":"Tulsi Meher Memorial School",
+            "date":"2017-2018",
+            "marks":"3.45 GPA",
+            "location":"Hetauda"
+        }
+    ],
+    "summary":"As an IT undergraduate specializing in UI/UX design, web development, and data analytics, I have gained hands-on experience through a variety of academic projects. These include designing user interfaces, creating digital content, and developing functional web applications. I'm well-versed in tools like Figma and Balsamiq, along with key web development technologies. My enthusiasm for artificial intelligence and data analytics drives me to keep learning and growing in these dynamic fields. Beyond my technical background, working as a receptionist and content creator has strengthened my communication, organization, and time management skills, while also reinforcing a strong sense of professionalism and responsibility.",
+    "references":[
+        {
+            "name":"Saman Maharjan",
+            "company":"KUDO.inc",
+            "title":"QA Engineer",
+            "email":"saman.maharjan96@gmail.com",
+            "phone":""
+        },
+        {
+            "name":"Rami Maharjan",
+            "company":"Proshore Nepal Pvt.Ltd",
+            "title":"Senior.Net Developer",
+            "email":"maharjanrami12@gmail.com",
+            "phone":"9843267472"
+        },
+        {
+            "name":"Aman Maharjan",
+            "company":"EbPearls Pvt.Ltd",
+            "title":" Senior Quality Analyst",
+            "email":"amanmahrjan18@gmail.com",
+            "phone":"9845364868"
+        }
+    ]
+}
