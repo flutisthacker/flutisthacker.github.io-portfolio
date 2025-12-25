@@ -1,11 +1,13 @@
 function updateData(nJSON){
+  if(searchTerm=="?x"){
     myData.training.forEach(x=>AddTraining(x))
     myData.experience.forEach(x=>AddExperience(x))
     myData.education.forEach(x=>AddEducation(x))
+  }
   document.querySelector(".personal-title").innerHTML=nJSON.personal.title
-  document.querySelector(".personal-contact")=nJSON.personal.contact
   document.querySelector(".personal-email")=nJSON.personal.email
   document.querySelector(".personal-location")=nJSON.personal.location
+  document.querySelector(".personal-contact")=nJSON.personal.contact
   document.querySelector(".personal-position")=nJSON.personal.position
 }
 function AddEducation(data){
