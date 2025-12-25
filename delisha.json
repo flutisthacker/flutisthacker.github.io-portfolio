@@ -4,7 +4,7 @@
         "contact":"9826262128",
         "email":"delishamaharjan@gmail.com",
         "location":"Kritipur, Kathmandu"
-    },
+    }, 
     "awards":[
         {
             "title":"Dean Award",
@@ -131,5 +131,11 @@
             "email":"amanmahrjan18@gmail.com",
             "phone":"9845364868"
         }
-    ]
+    ],
+    "links":{
+        "facebook":"https://www.facebook.com/saman.maharjan3",
+        "x":"https://www.twitter.com/maharjandsaman",
+        "instagram":"https://www.instagram.com/samanmaharjan",
+        "linkedin":"https://www.linkedin.com/in/saman-maharjan-97s/"
+    }
 }
