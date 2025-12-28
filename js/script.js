@@ -5,10 +5,10 @@ function updateData(nJSON){
     myData.education.forEach(x=>AddEducation(x))
   }
   document.querySelector(".personal-title").innerHTML=nJSON.personal.title
-  document.querySelector(".personal-email")=nJSON.personal.email
-  document.querySelector(".personal-location")=nJSON.personal.location
-  document.querySelector(".personal-contact")=nJSON.personal.contact
-  document.querySelector(".personal-position")=nJSON.personal.position
+  document.querySelector(".personal-email").innerHTML=nJSON.personal.email
+  document.querySelector(".personal-location").innerHTML=nJSON.personal.location
+  document.querySelector(".personal-contact").innerHTML=nJSON.personal.contact
+  document.querySelector(".personal-position").innerHTML=nJSON.personal.position
 }
 function AddEducation(data){
   document.querySelector(".my-education").innerHTML+=`
