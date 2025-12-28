@@ -332,7 +332,7 @@ let myData2={
 },
         "delisha":{
     "personal":{
-        "name":"Delisha Maharjan",
+        "title":"Delisha Maharjan",
         "contact":"9826262128",
         "email":"delishamaharjan@gmail.com",
         "location":"Kritipur, Kathmandu",
