@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600">
+<style>
+text{
+    font-family:Roboto,Arial;
+}
+.title{
+    font-size: 20px;
+    font-weight:700;
+    fill:#111;
+}
+
+.subtitle{
+    font-size:12px;
+    fill:#666;
+}
+.btn{
+    cursor:pointor;
+    user-select:none;
+}
+<![CDATA[
+
+]]>
+</style>
+<rect  width="100%" height="100%" fill="#fafafa" rx="8"/> 
+    <g transform="translate(24,24)">
+    <text class="title">Saman</text>
+    <text x="0" y="26" class="subTitle">Maharjan</text>
+    </g>
+    <g id="inputContainer" transform="translate(24,72)">
+        <rect class="inputContainer" width="100%" height="100%" fill="#fafafa" rx="8"/> 
+        <foreignObject x="8" y="6" width="675" height="40">
+            <body xmlns="http://www.w3.org/1999/xhtml" style="margin=0">
+            <input type="text" id="listInput" placeholder="Add new Item"/>
+            </body>
+        </foreignObject>
+        <g id="addBtn" transform="translate(360,4)" class="btn">
+        <rect x="0" y="0" width="96" height="32" fill="#007bff" rx="8"/> 
+        <text x="48" y="20" text-anchor="midde" fill="#fff">Add</text>
+        </g>
+        <g id="exportBtn" transform="translate(470,4)" class="btn">
+        <rect x="0" y="0" width="96" height="32" fill="#6c757d" rx="8"/> 
+        <text x="48" y="20" text-anchor="midde" fill="#fff">Export</text>
+        </g>
+    </g>
+        <g id="list" transform="translate(24,134)"></g>
+
+        <desc id="datastore" style="display:none"></desc>
+<script>
+<![CDATA[
+
+document.querySelector("#addBtn").addEventListener("click",e=>{
+document.querySelector("#list").innerHTML+=e.value
+})
+document.querySelector("body").innerHTML+="saman maharjan"
+]]>
+</script>
+</svg>
