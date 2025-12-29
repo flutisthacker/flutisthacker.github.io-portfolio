@@ -317,32 +317,31 @@
   </div>
 
   <script>
-    function addComment(){
+    function addComment(commentor,date,message,image){
     document.querySelector(".comment-list").innerHTML+=`<li class="comment">
                   <div class="vcard bio">
-                    <img src="./images/bg_9.JPG" alt="Image placeholder">
+                    <img src="./images/${image || "bg_9.JPG"}" alt="Image placeholder">
                   </div>
                   <div class="comment-body">
-                    <h3>Jacob Smith</h3>
-                    <div class="meta">January 9, 2018 at 2:21pm</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                    <h3>${commentor}</h3>
+                    <div class="meta">${date}</div>
+                    <p>${message}</p>
                     <p><a href="#" class="reply">Reply</a></p>
                   </div>
                 </li>`
     }
 
-    function addBlog(){
+    function addBlog(title,message){
+      let messages="";
+       message.split("||").forEach(m=>messages+=`<p>${m}</p>`)
       document.querySelector(".blog-list").innerHTML+=`
-      <h4 class="mt-5 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit</h4>
-            <p>Accusamus, temporibus, ullam. Voluptate consectetur laborum totam sunt culpa repellat, dolore voluptas. Quaerat cum ducimus aut distinctio sit, facilis corporis ab vel alias, voluptas aliquam, expedita molestias quisquam sequi eligendi nobis ea error omnis consequatur iste deleniti illum, dolorum odit.</p>
-            <p>In adipisci corporis at delectus! Cupiditate, voluptas, in architecto odit id error reprehenderit quam quibusdam excepturi distinctio dicta laborum deserunt qui labore dignissimos necessitatibus reiciendis tenetur corporis quas explicabo exercitationem suscipit. Nisi quo nulla, nihil harum obcaecati vel atque quos.</p>
-            <p>Amet sint explicabo maxime accusantium qui dicta enim quia, nostrum id libero voluptates quae suscipit dolor quam tenetur dolores inventore illo laborum, corporis non ex, debitis quidem obcaecati! Praesentium maiores illo atque error! Earum, et, fugit. Sint, delectus molestiae. Totam.</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa iste, repudiandae facere aperiam sapiente, officia delectus soluta molestiae nihil corporis animi quos ratione qui labore? Sint eaque perspiciatis minus illum.</p>
-            <p>Consectetur porro odio quod iure quaerat cupiditate similique, dolor reprehenderit molestias provident, esse dolorum omnis architecto magni amet corrupti neque ratione sunt beatae perspiciatis? Iste pariatur omnis sed ut itaque.</p>
+      <div>
+      <h4 class="mt-5 mb-4">${title}</h4>
+            ${messages}
             <p>Id similique, rem ipsam accusantium iusto dolores sit velit ex quas ea atque, molestiae. Sint, sed. Quisquam, suscipit! Quisquam quibusdam maiores fugiat eligendi eius consequuntur, molestiae saepe commodi expedita nemo!</p>
-            `
+            </div>`
     }
+    
   </script>
     <!-- SCRIPTS -->
     <script src="./js/jquery.min.js"></script>
