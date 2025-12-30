@@ -1,0 +1,160 @@
+{
+        "skills":{
+            "QE":{"name":"Manual testing" ,"logo":"tools","exp":"3 years"},
+            "frameworks":{"name":"Bootstrap,ruby on rails,NodeJS" ,"logo":"tools","exp":"3 years"},
+            "security":{"name":"Security testing" ,"logo":"lightbulb","exp":"2 months"},
+        "API":{"name":"postman, jmeter" ,"logo":"laptop","exp":"1.5 years"},
+        "git":{"name":"Github, Gitlab" ,"logo":"search","exp":"1.5 years"},
+        "SDLC":{"name":"SCRUM,agile,kanban" ,"logo":"presentation","exp":"1.5 years"},
+        "personal":{"name":"initiative" ,"logo":"ribbon","exp":"1.5 years"},
+        "monitor":{"name":"heap,logrocket, datadog,airbrake" ,"logo":"tools","exp":"1.5 years"},
+        "management":{"name":"jira,trello,confluence,testrails, slack,Google application" ,"logo":"lightbulb","exp":"1.5 years"},
+        "lang":{"name":"HTML,CSS,js,python,JQuery" ,"logo":"search","exp":"1.5 years"},
+        "Visual":{"name":"Tableau" ,"logo":"presentation","exp":"1.5 years"}
+    },
+    "experience":{
+        "KUDO":{"name":"KUDO", "exp":"3 years","from":"2020","position":"Software Quality Engineer","about":
+[       "Analyze and clarify requirements with team members.",
+        "Performed manual functional testing of application features and bugs.",
+        "Writing test cases and scenarios for the new features and bugs using test rails.",
+        "Performed various types of testing such as sanity, smoke, and regression testing in non-production and production environments.",
+        "Used test rails for production sanity testing and ensuring production stability.",
+        "Worked with Trello and Jira for project management.",
+        "Collaborated with DevOps and Developers for testing new application features and infrastructure changes.",
+        "Worked with Kanban and sprint methodologies in a team.",
+        "Worked in API testing on features with the help of Postman",
+        "Worked with Azure SDK and websockets for machine translation for human speech",
+        "Partly handled scrum on project and Release management",
+        "Testcase automation with test agent.",
+        "Datavalidation to test AI with LLM model implementation.",
+        "Extendedtest on integration and POC applications",
+        "Planned and Reviewed test plan and scenario",
+        "Verification of Application vulnerability threats",
+        "Co-Organized onsite event for the team"] 
+    },
+        "BF":{"name":"Bazaar Factory", "exp":"1 years","from":"2019","position":"Backend Developer","about":[
+            "Developed application features for e-commerce platforms.",
+            "Fixed application bugs and developed features according to clients’ needs.",
+            "Developed dashboard and e-commerce websites using API application and liquid templating.",
+            "UsedTrello, Gitlab/Github/Bitbucket for project management.",
+            "Worked with version control systems.",
+            "Learned Ruby onRails and liquid templating.",
+            "Fixed and tested application bugs.",
+            "Learned software development methodologies."
+        ]}
+    },
+    "education":{
+        "masters":{"name":"Masters in computer science", "logo":"./assets/images/iims.png","university":"Lincoln university","location":"putalisadak,KTM","status":"current","desc":"I am currently pursuing a Master’s degree in Computer Science, focusing on advanced topics such as algorithms, machine learning, and software engineering. This program is enhancing my expertise in developing innovative solutions and tackling complex computational problems. My studies are deepening my understanding of cutting-edge technologies and equipping me with the skills needed to drive impactful projects in the tech industry.","study":"2 years"},
+        "bachelors":{"name":"Bachelor’s Hons in computing science", "logo":"./assets/images/iims.png","university":"UCSI Malaysia","location":"hattisar,KTM","status":"finished","desc":"I hold a Bachelor's degree with Honors in Computing Science, where I gained a solid foundation in core computing principles and technologies. My coursework covered key areas such as programming, data structures, algorithms, and software development, equipping me with both theoretical insights and practical skills. This degree provided me with a robust understanding of computing fundamentals and problem-solving techniques, preparing me for diverse roles in the technology sector.","study":"3 years"},
+        "higher":{"name":"Gillette International Boarding Secondary School", "logo":"./assets/images/eic.jpg","university":"TU","location":"Solteemode,KTM","status":"finished","desc":"I have pursued higher education in Computer Science, building on a foundational background in Commerce. This unique combination has allowed me to integrate technical proficiency with a strong understanding of business principles. My studies in Computer Science have provided me with expertise in programming, data analysis, and system design, while my commerce background has equipped me with insights into financial management, market analysis, and strategic planning. This interdisciplinary approach enables me to effectively bridge the gap between technology and business, driving innovative solutions that align with organizational goals.","study":"2 years"},
+        "SLC":{"name":"EIC college", "logo":"./assets/images/eic.jpg","university":"TU","location":"kalimati,KTM","status":"finished","desc":"I completed my secondary education with excellent results, demonstrating strong academic performance across a broad range of subjects. This solid foundation in key areas such as mathematics, science, and language arts has equipped me with essential skills in problem-solving, critical thinking, and effective communication. My commitment to academic excellence during this period laid the groundwork for my continued success in higher education and professional endeavors.","study":"10 years"}
+    },
+    "training":{
+        "scrum":{
+            "type":"workshop",
+            "date":"2022",
+            "instructor":"Prakash Aryal",
+            "desc":"Registered Scrum Master under the Scrumlab platform. Short workshop on learning the scrum methods and its implementation.",
+            "title":"Scrum master register workshop",
+            "logo":"tools"
+        },
+        "harras":{
+            "type":"Training",
+            "date":"2023",
+            "instructor":"KUDO",
+            "desc":"Learned about the harassment and discrimination that may arise in the company  and learnt ways to prevent it.",
+            "title":" Preventing Discrimination & Harassment: Global Employee V3.3",
+            "logo":"lightbulb"
+        },
+        "infoSec":{
+            "type":"Training",
+            "date":"2023",
+            "instructor":"KUDO infoSec",
+            "desc":"Learned about the harassment and discrimination that may arise in the company  and learnt ways to prevent it.",
+            "title":"infosec security",
+            "logo":"laptop"
+        },
+        "game":{
+            "type":"Training",
+            "date":"2019",
+            "instructor":"Red fox studio",
+            "desc":" Learned creating a game using unity 3d game engine using C# as language and Visual code studio as a code editor.",
+            "title":"Game development training",
+            "logo":"search"
+        },
+        "drills":{
+            "type":"Training",
+            "date":"2017",
+            "instructor":"KTM metropolitian",
+            "desc":"",
+            "title":"Fire drills",
+            "logo":"presentation"
+        },
+        "report":{
+            "type":"Training",
+            "date":"2017",
+            "instructor":"KTM metropolitian;Sunita Dangol",
+            "desc":"Attended a week long workshop where we learnt the process of writing report and proposal for government related organization.",
+            "title":"Report Writing workshop",
+            "logo":"ribbon"
+        },
+        "mc":{
+            "type":"Training",
+            "date":"2017",
+            "instructor":"KTM metropolitian;Sunita Dangol",
+            "desc":"Attended a week long workshop where we learnt the process of hosting.",
+            "title":"Mass communication workshop",
+            "logo":"tools"
+        },
+        "self":{
+            "type":"Training",
+            "date":"2017",
+            "instructor":"IIMS College",
+            "desc":" Attended workshop for self management and time management conducted by guruji shri yogacharya arun kumar.",
+            "title":" Workshop Cum training Program on SELF Management",
+            "logo":"lightbulb"
+        },
+        "office":{
+            "type":"Training",
+            "date":"2013",
+            "instructor":"Pentasoft Institute, Jamal",
+            "desc":"Learned about Microsoft Word, Excel, and Powerpoint.",
+            "title":"Microsoft office package 2007",
+            "logo":"laptop"
+        },
+        "graphic":{
+            "type":"Training",
+            "date":"2013",
+            "instructor":"Pentasoft Institute, Jamal",
+            "desc":"Learned graphics designing using Adobe Photoshop and web designing using HTML5 and CSS",
+            "title":"Graphic designing and web designing",
+            "logo":"search"
+        }
+
+    },
+    "languages":["English","Nepali","Hindi","Newari"],
+    "personal":{
+        "email":"saman.maharjan96@gmail.com",
+        "phone":"9803042890",
+        "fullName":"Saman Maharjan",
+        "facebook":"https://www.facebook.com/saman.maharjan3",
+        "instagram":"https://www.instagram.com/samanmaharjan",
+        "twitter":"https://www.twitter.com/maharjandsaman",
+        "linkedin":"https://www.linkedin.com/in/saman-maharjan-97s",
+        "position":"Quality Engineer"
+    },
+    "affiliation":{
+        "club":{
+            "name":"Youth corner club",
+            "est":"2032",
+            "position":"Youth member",
+            "since":"5 years"
+        },
+        "band":{
+            "name":"Palaa:",
+            "est":"2020",
+            "position":"flutist",
+            "since":"5 years"
+        }
+    }
+}    

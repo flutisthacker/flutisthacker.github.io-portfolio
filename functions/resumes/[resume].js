@@ -62,6 +62,20 @@ let myData2={
             "location":"Youth Corner Club",
             "logo":"./images/ycc%2050.png",
             "description":"Assisted in designing wireframes and interactive prototypes using Figma for a mobile-based e-health application.;Created user personas and journey maps to build user-focused designs.;Developed responsive web page layouts and mobile app interfaces based on UI/UX best practices.; Developed low-fidelity and high-fidelity prototypes to simulate user interactions.  "
+        },
+        {
+            "title":"Flautist",
+            "date":"2018-2019",
+            "location":"Palaa:",
+            "logo":"./images/ycc%2050.png",
+            "description":""
+        },
+        {
+            "title":"Flautist",
+            "date":"2018-2015",
+            "location":"Sur Sutra",
+            "logo":"./images/ycc%2050.png",
+            "description":""
         }
     ],
             "training":[
