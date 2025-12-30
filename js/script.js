@@ -34,7 +34,7 @@
   function AddExperience(data){
     document.querySelector(".my-experience").innerHTML+=  `        <div class="col-md-6 col-lg-6 mb-4">
             <div class="block__86547 d-block d-xl-flex align-items-stretch">
-              <figure class="img" style="background-image: url(${data.logo || "/images/eic.jpg"}); background-size:center;   background-repeat: no-repeat;
+              <figure class="img" style="background-image: url(${data.logo || "/images/eic.jpg"});  background-size: contain; background-repeat:no-repeat;;
     background-size: auto;">
               </figure>
               <div class="h-100">

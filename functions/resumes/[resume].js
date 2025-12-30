@@ -34,7 +34,7 @@ let myData2={
             "language":["English","Newari","Nepali","Hindi"],
                 "experience":[
         {
-            "title":"QA Engineer",
+            "title":"Software Quality Engineer",
             "date":"2020-2025",
             "location":"KUDO.inc",
             "logo":"https://website-cdn.kudo.ai/wp-content/uploads/2024/05/kudo-logo-header.svg",
@@ -42,9 +42,9 @@ let myData2={
             "points":"Analyze and clarify requirements with team members.||Performed manual functional testing of application features and bugs.||Writing test cases and scenarios for the new features and bugs using test rails.||Performed various types of testing such as sanity, smoke, and regression testing in non-production and production environments.||Usedtestrails for production sanity testing and ensuring production stability.||WorkedwithTrello and Jira for project management.||Collaborated with DevOps and Developers for testing new application features and infrastructure changes.||WorkedwithKanban and sprint methodologies in a team.||WorkedinAPItesting on features with the help of Postman||WorkedwithAzure SDK and websockets for machine translation for human speech||Partly handled scrum on project and Release management||Testcase automation with test agent.||Datavalidation to test AI with LLM model implementation.||Extendedtest on integration and POC applications||PlannedandReviewed test plan and scenario||Verification of Application vulnerability threats||Co-Organized onsite event for the team.|| Performed manual functional testing of the application features.|| Identify problem areas and bugs of the application.|| Re-test fixed defects.|| Ensureproduction environment sanity testing and stabilization.|| Performed various types of testing such as sanity, smoke, and regression testing.|| Workedinateamanddiscussed bugs with developers with limited access.|| Exploratory testing on AI-based application|| Functional testing for the data-based applications.|| Usedgoogledocs for documenting bug lists.|| UsedTrello for bug tracking.|| LearnedAPI testing for AI based applications."
         },
         {
-            "title":"Bazaar Factory",
+            "title":"Backend developer",
             "date":"2018-2019",
-            "location":"KUDO.inc",
+            "location":"Bazaar Factory",
             "logo":"./images/bf.png",
             "description":"Assisted in designing wireframes and interactive prototypes using Figma for a mobile-based e-health application.;Created user personas and journey maps to build user-focused designs.;Developed responsive web page layouts and mobile app interfaces based on UI/UX best practices.; Developed low-fidelity and high-fidelity prototypes to simulate user interactions.  ",
             "points":"Developed application features for e-commerce platforms.|| Fixed application bugs and developed features according to clients’ needs.|| Developed dashboard and e-commerce websites using API application and liquid templating.|| UsedTrello, Gitlab/Github/Bitbucket for project management.|| Workedwithversion control systems.|| LearnedRuby onRails and liquid templating.|| Fixedandtested application bugs.|| Learnedsoftware development methodologies."
