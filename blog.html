@@ -119,14 +119,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 blog-content">
-            <h3 class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit</h3>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda nihil aspernatur nemo sunt, qui, harum repudiandae quisquam eaque dolore itaque quod tenetur quo quos labore?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae expedita cumque necessitatibus ducimus debitis totam, quasi praesentium eveniet tempore possimus illo esse, facilis? Corrupti possimus quae ipsa pariatur cumque, accusantium tenetur voluptatibus incidunt reprehenderit, quidem repellat sapiente, id, earum obcaecati.</p>
-
-            <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident vero tempora aliquam excepturi labore, ad soluta voluptate necessitatibus. Nulla error beatae, quam, facilis suscipit quaerat aperiam minima eveniet quis placeat.</p></blockquote>
-
-            <p>Eveniet deleniti accusantium nulla natus nobis nam asperiores ipsa minima laudantium vero cumque cupiditate ipsum ratione dicta, expedita quae, officiis provident harum nisi! Esse eligendi ab molestias, quod nostrum hic saepe repudiandae non. Suscipit reiciendis tempora ut, saepe temporibus nemo.</p>
-            <div class="blog-list">
+           <div class="blog-list">
 
             </div>
             
@@ -160,35 +153,6 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
                         <p><a href="#" class="reply">Reply</a></p>
                       </div>
-
-
-                      <ul class="children">
-                        <li class="comment">
-                          <div class="vcard bio">
-                            <img src="./images/bg_7.jpg" alt="Image placeholder">
-                          </div>
-                          <div class="comment-body">
-                            <h3>Jean Doe</h3>
-                            <div class="meta">January 9, 2018 at 2:21pm</div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                            <p><a href="#" class="reply">Reply</a></p>
-                          </div>
-
-                            <ul class="children">
-                              <li class="comment">
-                                <div class="vcard bio">
-                                  <img src="./images/bg_4.jpg" alt="Image placeholder">
-                                </div>
-                                <div class="comment-body">
-                                  <h3>Ben Afflick</h3>
-                                  <div class="meta">January 9, 2018 at 2:21pm</div>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                                  <p><a href="#" class="reply">Reply</a></p>
-                                </div>
-                              </li>
-                            </ul>
-                        </li>
-                      </ul>
                     </li>
                   </ul>
                 </li>
@@ -316,33 +280,7 @@
   
   </div>
 
-  <script>
-    function addComment(commentor,date,message,image){
-    document.querySelector(".comment-list").innerHTML+=`<li class="comment">
-                  <div class="vcard bio">
-                    <img src="./images/${image || "bg_9.JPG"}" alt="Image placeholder">
-                  </div>
-                  <div class="comment-body">
-                    <h3>${commentor}</h3>
-                    <div class="meta">${date}</div>
-                    <p>${message}</p>
-                    <p><a href="#" class="reply">Reply</a></p>
-                  </div>
-                </li>`
-    }
-
-    function addBlog(title,message){
-      let messages="";
-       message.split("||").forEach(m=>messages+=`<p>${m}</p>`)
-      document.querySelector(".blog-list").innerHTML+=`
-      <div>
-      <h4 class="mt-5 mb-4">${title}</h4>
-            ${messages}
-            <p>Id similique, rem ipsam accusantium iusto dolores sit velit ex quas ea atque, molestiae. Sint, sed. Quisquam, suscipit! Quisquam quibusdam maiores fugiat eligendi eius consequuntur, molestiae saepe commodi expedita nemo!</p>
-            </div>`
-    }
-    
-  </script>
+  <script src="./js/script.js"></script>
     <!-- SCRIPTS -->
     <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>

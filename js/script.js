@@ -89,3 +89,32 @@
           </div>
         </div>`
   }
+
+  // =======================blog
+   function addComment(commentor,date,message,image){
+    document.querySelector(".comment-list").innerHTML+=`<li class="comment">
+                  <div class="vcard bio">
+                    <img src="./images/${image || "bg_9.JPG"}" alt="Image placeholder">
+                  </div>
+                  <div class="comment-body">
+                    <h3>${commentor}</h3>
+                    <div class="meta">${date}</div>
+                    <p>${message}</p>
+                    <p><a href="#" class="reply">Reply</a></p>
+                  </div>
+                </li>`
+    }
+
+    function addBlog(title,subtitle,message,date){
+      let messages="";
+       message.split("||").forEach(m=>messages+=`<p>${m}</p>`)
+      document.querySelector(".blog-list").innerHTML+=`
+      <div>
+      <h4 class="mt-5 mb-4">${title}</h4>
+        <p class="lead">${subtitle}</p>
+            ${messages}
+            <blockquotce><p>${date}</p></blockquote>
+            </div>`
+    }
+    addBlog("First Blog","blog sub","message","sep 20")
+    addComment("saman maharjan","30 sept","Okay","")
