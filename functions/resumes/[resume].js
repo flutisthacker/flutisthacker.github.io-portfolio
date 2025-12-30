@@ -138,7 +138,38 @@ let myData2={
                     "description":"Learned graphics designing using Adobe Photoshop and web designing using HTML5 and CSS."
                 }
             ],
-            "projects involved":[],
+            "projects involved":[
+                {
+                    "title":"Transpose Notes",
+                    "date":"2019",
+                    "location":"./notes",
+                    "description":"As a musician rooted in Nepali culture and the instruments from the childhood. I often dreamt of creating something personal to music. I found it as quite a hassle to save multiple notations and its mostly time consuming to transpose the note from one to another."
+                },
+                {
+                    "title":"Dhime Notes",
+                    "date":"2021",
+                    "location":"./dhime",
+                    "description":"As a musician rooted in Nepali culture and the instruments from the childhood. I often dreamt of creating something personal to music. I found it as quite a hassle to search for instrument notations and its mostly time consuming."
+                },
+                {
+                    "title":"File Extension",
+                    "date":"2025",
+                    "location":"./#",
+                    "description":"A file extension currently on my mind which lets users to explore files in the device with a good User experience"
+                },
+                {
+                    "title":"Shayari notes",
+                    "date":"2024",
+                    "location":"./shayar",
+                    "description":"the memory and the emotion of my life."
+                },
+                {
+                    "title":"Educational notes",
+                    "date":"2024",
+                    "location":"./mcsnotes",
+                    "description":"Notes of the MCS information I gathered in a platform."
+                }
+            ],
             "education":[
                 {
                     "title":"Masters in computer science and multimedia",

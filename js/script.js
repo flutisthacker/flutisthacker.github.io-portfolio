@@ -116,5 +116,72 @@
             <blockquotce><p>${date}</p></blockquote>
             </div>`
     }
+    function addAboutAuthor(message,img){
+      document.querySelector(".col-md-4.sidebar.pl-md-5").innerHTML+=`
+       <img style="aspect-ratio:1/1;" src="./images/${img|| 'bg_2.JPG'}" alt="Image placeholder" class="img-fluid mb-4 w-50 rounded-circle">
+            <div class="sidebar-box AboutAuthor">
+              <h3>About The Author</h3>
+              <p>${message}</p>
+              <p><a href="#" class="btn btn-primary btn-sm">Read More</a></p>
+              </div>`
+    }
+
+    function addShortDescription(title,message){
+      document.querySelector(".col-md-4.sidebar.pl-md-5").innerHTML+=`
+      <div class="sidebar-box shortDescription">
+      <h3>${title}</h3>
+      <p>${message}</p>
+      </div>`
+      }
+      
+      function AddBlogLinks(links){
+        let linkstoAdd="";
+        links.split("||").forEach(l=> linkstoAdd+=`<li><a href="./${l}">${l} <span>(0)</span></a></li>`)
+        document.querySelector(".col-md-4.sidebar.pl-md-5").innerHTML+=`
+        <div class="sidebar-box">
+        <div class="categories">
+                <h3>Categories</h3>
+                ${linkstoAdd}
+          </div>
+        </div>`
+    }
+
+    function AddProjects(data){
+      document.querySelector(".myProjects").innerHTML+=`
+      <div class="row mb-5 mt-5">
+          <div class="col-lg-5 ml-auto h-100 jm-sticky-top">
+            <div class="mb-5">
+              <h3 class="mb-4 h4">${data.title}</h3>
+              <a href="${data.location}" class="spepcial_link">Visit Website</a>
+              <p class="mb-0">${data.description}</p>
+            </div>
+
+            <div class="block__87154 mb-2 bg-dark text-light">
+                <span class="quote"><img src="./images/quote.png" alt="Image"></span>
+                <blockquote>
+                  <p>${data.description}</p>
+                </blockquote>
+                <div class="block__91147 d-flex align-items-center">
+                  <figure class="mr-4"><img style="aspect-ratio: 1/1;" src="./images/bg_2.JPG" alt="Image" class="img-fluid"></figure>
+                  <div>
+                    <h3>Saman Maharjan</h3>
+                    <span class="position">${data.date}</span>
+                  </div>
+                </div>
+              </div>
+
+
+          </div>
+          <div class="col-lg-6">
+
+            <figure class="mb-0">
+              <a href="./images/dhime_1.jpeg" data-fancybox="gallery"><img src="./images/dhime_1.jpeg" alt="Image" class="img-fluid"></a>
+            </figure>
+          </div>
+
+        </div>
+      `
+    }
+    addAboutAuthor("hello from author","")
     addBlog("First Blog","blog sub","message","sep 20")
     addComment("saman maharjan","30 sept","Okay","")
