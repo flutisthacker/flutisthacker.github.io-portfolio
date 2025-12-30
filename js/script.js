@@ -64,3 +64,28 @@
 
           </div>`
   }
+
+  function AddSkills(data){
+    document.querySelector(".my-skills").innerHTML+=`
+     <div class="col-lg-6">
+          <div class="block__87154">
+            <span class="quote"><img src="./images/quote.png" alt="Image"></span>
+            <blockquote>
+              <p>
+                ${data.description}  
+              </p>
+            </blockquote>
+            <div class="block__91147 d-flex align-items-center">
+              <figure class="mr-4"><img src="./images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+              <div>
+                <h3>
+                  ${data.title}
+                </h3>
+                <span class="position">
+                  ${data.location}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>`
+  }

@@ -228,8 +228,8 @@ let myData2={
         "Workingin/as a team",
         "Adaptability",
         "Customer Insight",
-"Customer Research",
-"Customer Experience"
+        "Customer Research",
+        "Customer Experience"
     ],
     "language":["English","Newari","Nepali","Hindi"],
     "experience":[
