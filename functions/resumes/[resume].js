@@ -507,7 +507,7 @@ let myData2={
 };
 export function getMetaData(x){
     fetchJSONData("../../saman.json"); 
-    return {mydata:{name:"saman",data:myData},tdata:myData2[x]}
+    return {...myData2[x]}
 }
 
 function fetchJSONData(url) {
