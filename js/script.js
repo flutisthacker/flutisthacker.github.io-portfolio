@@ -146,6 +146,14 @@
         </div>`
     }
 
+    if(location.pathname.includes("personal")){
+      addAboutAuthor("hello from author","")
+      addBlog("First Blog","blog sub","message","sep 20")
+      addComment("saman maharjan","30 sept","Okay","")
+    }
+
+    // ======================= projects
+    
     function AddProjects(data){
       document.querySelector(".myProjects").innerHTML+=`
       <div class="row mb-5 mt-5">
@@ -182,6 +190,22 @@
         </div>
       `
     }
-    addAboutAuthor("hello from author","")
-    addBlog("First Blog","blog sub","message","sep 20")
-    addComment("saman maharjan","30 sept","Okay","")
+
+
+    // =========================experience
+    function AddExperience2(data){
+      document.querySelector("").innerHTML+=`
+      
+        <div class="col-lg-6">
+          <span class="text-info d-block mb-5"><span class="icon-line-tools display-1"></span></span>
+          <h2 class="mb-4" id="#bfExp">
+              ${data.title}
+          </h2>
+        
+          ${data.points.split("||").map(x=>`<p>${x}</p>`)}        
+
+          <p><a href="#" class="btn btn-primary btn-md mt-4">
+            ${data.location}
+          </a></p>
+        </div>`
+    }
