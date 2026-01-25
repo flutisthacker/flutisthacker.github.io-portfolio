@@ -10,7 +10,10 @@ export function onRequest(context) {
     try{
         if (context.params.id=="all"){
             toSend=me
-        }else{
+        }else if (context.params.id=="all"){
+            toSend=btoa(me)
+        }
+        else{
             toSend[context.params.id]=me[context.params.id]
         }
         return new Response(JSON.stringify(toSend));
