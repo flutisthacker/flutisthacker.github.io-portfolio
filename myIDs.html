@@ -111,125 +111,7 @@
       </div>
 
   </section></div>
-      <section class="site-section services-section bg-light block__62849" id="services-section">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-12 text-center" data-aos="fade">
-          <h3 class="section-title-sub text-primary">Training and workshop</h3>
-          <h2 class="section-title mb-3">Training and workshops</h2>
-        </div>
-      </div>
-      <div class="row my-training">
-        
 
-        <div class="col-6 col-md-6 col-lg-4 mb-4 mb-lg-5">
-
-          <a href="/service-single.html" class="block__16443 text-secondary text-center d-block">
-            <span class="custom-icon mx-auto"><span class="icon-line-tools d-block"></span></span>
-            <h3>Scrum master register workshop</h3>
-            <p>Registered Scrum Master under the Scrumlab platform. Short workshop on learning the scrum methods and its implementation.</p>
-          </a>
-
-        </div>
-        
-
-        <div class="col-6 col-md-6 col-lg-4 mb-4 mb-lg-5">
-
-          <a href="/service-single.html" class="block__16443 text-secondary text-center d-block">
-            <span class="custom-icon mx-auto"><span class="icon-line-lightbulb d-block"></span></span>
-            <h3> Preventing Discrimination &amp; Harassment: Global Employee V3.3</h3>
-            <p>Learned about the harassment and discrimination that may arise in the company  and learnt ways to prevent it.</p>
-          </a>
-
-        </div>
-        
-
-        <div class="col-6 col-md-6 col-lg-4 mb-4 mb-lg-5">
-
-          <a href="/service-single.html" class="block__16443 text-secondary text-center d-block">
-            <span class="custom-icon mx-auto"><span class="icon-line-laptop d-block"></span></span>
-            <h3>infosec security</h3>
-            <p>Learned about the harassment and discrimination that may arise in the company  and learnt ways to prevent it.</p>
-          </a>
-
-        </div>
-        
-
-        <div class="col-6 col-md-6 col-lg-4 mb-4 mb-lg-5">
-
-          <a href="/service-single.html" class="block__16443 text-secondary text-center d-block">
-            <span class="custom-icon mx-auto"><span class="icon-line-search d-block"></span></span>
-            <h3>Game development training</h3>
-            <p> Learned creating a game using unity 3d game engine using C# as language and Visual code studio as a code editor.</p>
-          </a>
-
-        </div>
-        
-
-        <div class="col-6 col-md-6 col-lg-4 mb-4 mb-lg-5">
-
-          <a href="/service-single.html" class="block__16443 text-secondary text-center d-block">
-            <span class="custom-icon mx-auto"><span class="icon-line-ribbon d-block"></span></span>
-            <h3>Report Writing workshop</h3>
-            <p>Attended a week long workshop where we learnt the process of writing report and proposal for government related organization.</p>
-          </a>
-
-        </div>
-        
-
-        <div class="col-6 col-md-6 col-lg-4 mb-4 mb-lg-5">
-
-          <a href="/service-single.html" class="block__16443 text-secondary text-center d-block">
-            <span class="custom-icon mx-auto"><span class="icon-line-tools d-block"></span></span>
-            <h3>Mass communication workshop</h3>
-            <p>Attended a week long workshop where we learnt the process of hosting.</p>
-          </a>
-
-        </div>
-        
-
-        <div class="col-6 col-md-6 col-lg-4 mb-4 mb-lg-5">
-
-          <a href="/service-single.html" class="block__16443 text-secondary text-center d-block">
-            <span class="custom-icon mx-auto"><span class="icon-line-lightbulb d-block"></span></span>
-            <h3> Workshop Cum training Program on SELF Management</h3>
-            <p> Attended workshop for self management and time management conducted by guruji shri yogacharya arun kumar.</p>
-          </a>
-
-        </div>
-        
-
-        <div class="col-6 col-md-6 col-lg-4 mb-4 mb-lg-5">
-
-          <a href="/service-single.html" class="block__16443 text-secondary text-center d-block">
-            <span class="custom-icon mx-auto"><span class="icon-line-laptop d-block"></span></span>
-            <h3>Microsoft office package 2007</h3>
-            <p>Learned about Microsoft Word, Excel, and Powerpoint.</p>
-          </a>
-
-        </div>
-        
-
-        <div class="col-6 col-md-6 col-lg-4 mb-4 mb-lg-5">
-
-          <a href="/service-single.html" class="block__16443 text-secondary text-center d-block">
-            <span class="custom-icon mx-auto"><span class="icon-line-search d-block"></span></span>
-            <h3>Graphic designing and web designing</h3>
-            <p>Learned graphics designing using Adobe Photoshop and web designing using HTML5 and CSS</p>
-          </a>
-
-        </div>
-        
-
-
-      <!-- <div class="row">
-        <div class="col-12 text-center">
-          <a href="#" class="btn btn-primary btn-md">View All Services</a>
-        </div>
-      </div> -->
-    </div>
-  </div>
-</section>
 
     <footer class="site-footer slanted-footer">
 
@@ -300,7 +182,7 @@ let myData;
               .then(data => {
                 myData=JSON.parse(atob(data))
                 Object.keys(myData).forEach(d=>{
-                    document.querySelector("#services-section").innerHTML+=`${d}:${myData[d]}`
+                    document.querySelector("#about-us-section").innerHTML+=`${d}:${myData[d]}`
                 })
               })    
               .catch((error) => {
@@ -313,7 +195,6 @@ let myData;
           
     </script>
     
-<script src="./js/script.js"></script>
   <!-- SCRIPTS -->
   <script src="./js/jquery.min.js"></script>
   <script src="./js/bootstrap.bundle.min.js"></script>
