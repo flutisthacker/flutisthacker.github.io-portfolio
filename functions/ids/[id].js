@@ -12,7 +12,7 @@ export function onRequest(context) {
             toSend=me
         }else if (context.params.id=="allx"){
             toSend=btoa(JSON.stringify(me))
-re        }
+        }
         else{
             toSend[context.params.id]=me[context.params.id]
         }
