@@ -9,13 +9,15 @@ export function onRequest(context) {
     let toSend={}
     try{
         if (context.params.id=="all"){
-            toSend=btoa(me)
-            return new Response(JSON.stringify(toSend));
+            toSend=me
+        }else if (context.params.id=="allx"){
+            toSend=btoa(JSON.stringify(me))
+            toSend[context.params.id]=me[contXext.params.id]
         }
         else{
             toSend[context.params.id]=me[context.params.id]
-            return new Response(JSON.stringify(toSend));
         }
+        return new Response(JSON.stringify(toSend));
     }catch(e){
         return new Response(JSON.stringify({"status":404}));        
     }
