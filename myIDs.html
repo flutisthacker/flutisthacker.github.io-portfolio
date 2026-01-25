@@ -107,6 +107,7 @@
             <p class="lead personal-position">Quality engineer</p>
             <p>As a dedicated Quality Engineer with three years of hands-on experience, complemented by an additional year in back-end development, I bring a unique blend of skills to ensure top-notch product quality and performance. My background in quality assurance has equipped me with a keen eye for detail and a deep understanding of testing methodologies, while my experience in back-end development has honed my technical expertise and problem-solving abilities. This combination allows me to bridge the gap between quality and development seamlessly, driving efficiency and excellence in every project I undertake.
             </p>
+            <div id="myIDs"></div>
           </div>
         </div>
       </div>
@@ -183,7 +184,7 @@ let myData;
               .then(data => {
                 myData=JSON.parse(atob(data))
                 Object.keys(myData).forEach(d=>{
-                    document.querySelector("#about-us-section").innerHTML+=`${d}:${myData[d]}`
+                    document.querySelector("#myIDs").innerHTML+=`<p>${d} : ${myData[d]}</p>`
                 })
               })    
               .catch((error) => {
