@@ -5,8 +5,8 @@ panID: "231x",
 prabhu: "0660119224100011x",
 drivingL:"030601048967x"
 }
-let toSend={}
 export function onRequest(context) {
+    let toSend={}
     try{
         if (context.params.id=="all"){
             toSend=me
