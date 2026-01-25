@@ -8,7 +8,6 @@
 <body>
     
     <script>
-            document.getElementById("bgVideo").muted = true;
 let myData;
       const fetchSomeData=async (uMethod,url)=>{
         fetch(url, {
@@ -24,7 +23,10 @@ let myData;
               return response.json(); // Parse the JSON response from the server
               })
               .then(data => {
-              console.log(atob(data))
+                myData=JSON.parse(atob(data))
+                Object.keys(myData).forEach(d=>{
+                    document.body.innerHTML+=`${d}:${myData[d]}`
+                })
               })    
               .catch((error) => {
               console.error('There was a problem with the fetch operation:', error); // Handle errors
@@ -32,7 +34,7 @@ let myData;
           
           }
           let [searchTerm,searchNote]=location.search.split("=")
-          fetchSomeData("GET","/ids/alls")
+          fetchSomeData("GET","/ids/allx")
           
     </script>
 </body>
