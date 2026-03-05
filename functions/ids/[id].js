@@ -1,9 +1,10 @@
 let me={
     nationalID: "2298260378x",
 citizenship:"27017105935x",
-panID: "231x",
+panID: "129447117x",
 prabhu: "0660119224100011x",
-drivingL:"030601048967x"
+drivingL:"030601048967x",
+"voter":"18286971|1823x"
 }
 export function onRequest(context) {
     let toSend={}
