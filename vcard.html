@@ -52,6 +52,7 @@ padding:20px;
 transition:.4s;
 overflow:auto;
 box-shadow:3px 0 10px rgba(0,0,0,.3);
+z-index: 20;
 }
 
 .offcanvas.active{
@@ -240,24 +241,32 @@ text-decoration:none;
 
 <h3>Edit Visiting Card</h3>
 
-<select id="templateSelect">
-<option value="template1">Glass</option>
-<option value="template2">Dark</option>
-<option value="template3">Gradient</option>
-</select>
-<label>Primary Color</label> <input type="color" id="colorPicker">
-
+<div>
 <input id="companyInput" placeholder="Company Name">
 <input id="nameInput" placeholder="Name">
 <input id="titleInput" placeholder="Job Title">
 <input id="phoneInput" placeholder="Phone">
 <input id="emailInput" placeholder="Email">
 <input id="webInput" placeholder="Website">
+    <label>LinkedIn</label> <input id="linkedinInput" placeholder="LinkedIn profile URL">
+     <label>Twitter / X</label> <input id="twitterInput" placeholder="Twitter profile URL">
+     <label>Instagram</label> <input id="instagramInput" placeholder="Instagram profile URL">
+     <label>Facebook</label> <input id="facebookInput" placeholder="Facebook profile URL">
+</div>
 
 <label>Upload Logo</label>
 <input type="file" id="logoUpload">
 
 <button onclick="downloadCard()">Download PNG</button>
+
+<div class="settings">
+    
+<select id="templateSelect">
+<option value="template1">Glass</option>
+<option value="template2">Dark</option>
+<option value="template3">Gradient</option>
+</select>
+<label>Primary Color</label> <input type="color" id="colorPicker">
 
 <label>Background Pattern</label> <select id="patternSelect"> <option value="none">None</option> <option value="dots">Dots</option> <option value="grid">Grid</option> <option value="lines">Diagonal Lines</option> <option value="cross">Cross Pattern</option> <option value="waves">Waves</option> </select>
 
@@ -273,6 +282,7 @@ text-decoration:none;
 <option value="Playfair Display">Playfair Display</option>
 <option value="Oswald">Oswald</option>
 </select>
+</div>
 </div>
 
 <!-- CARD -->
@@ -340,7 +350,7 @@ document.getElementById("web").textContent=params.get("web");
 </script>
 <script>
 
-function updateSocialIcons(){
+function updateSocialIcons(sInputs){
 
 const icons=document.getElementById("socialIcons");
 
@@ -353,9 +363,9 @@ const socials=[
 {input:"facebookInput",icon:"fa-facebook"}
 ];
 
-socials.forEach(s=>{
+socials.forEach((s,i)=>{
 
-let url=document.getElementById(s.input).value;
+let url=sInputs[i] ||document.getElementById(s.input).value;
 
 if(url){
 
@@ -501,7 +511,7 @@ const fields=[
 ["titleInput","title"],
 ["phoneInput","phone"],
 ["emailInput","email"],
-["webInput","web"]
+["webInput","web"],
 ];
 
 let myCardDetails=JSON.parse(localStorage.getItem("VCARD"));
@@ -513,6 +523,10 @@ if(e.key=="Enter")generateQR();
 document.querySelector(`#${input}`).value=myCardDetails[target]
 document.querySelector(`#${target}`).textContent=myCardDetails[target]
 });
+// ["linkedinInput","linkedin"],
+// ["twitterInput","twitter"],
+// ["instagramInput","instagram"],
+// ["facebookInput","facebook"],
 
 /* QR */
 
@@ -524,13 +538,21 @@ const email=document.getElementById("email").textContent;
 const web=document.getElementById("web").textContent;
 const company = document.getElementById("company").textContent;
 const title = document.getElementById("title").textContent;
+const linkedin=document.getElementById("linkedinInput").textContent;
+const twitter=document.getElementById("twitterInput").textContent;
+const instagram=document.getElementById("instagramInput").textContent;
+const facebook=document.getElementById("facebookInput").textContent
 const cardDetails={
 name:name,
 phone:phone,
 email:email,
 web:web,    
 company:company,
-title:title
+title:title,
+linkedin:linkedin,
+twitter:twitter,
+instagram:instagram,
+facebook:facebook,
 }
 localStorage.setItem("VCARD",JSON.stringify(cardDetails))
 
