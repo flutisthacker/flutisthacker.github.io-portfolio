@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ICS Generator (Invite + Reply)</title>
+
+<style>
+body{
+font-family:Arial;
+max-width:760px;
+margin:40px auto;
+}
+label{
+display:block;
+margin-top:12px;
+}
+input,textarea,select{
+width:100%;
+padding:8px;
+margin-top:4px;
+}
+button{
+margin-top:20px;
+padding:10px 16px;
+}
+</style>
+
+</head>
+<body>
+
+<h2>ICS Event Generator</h2>
+
+<label>Calendar Method
+<select id="method">
+<option value="PUBLISH">Publish Event</option>
+<option value="REQUEST">Send Invitation</option>
+<option value="REPLY">Attendee Reply</option>
+<option value="CANCEL">Cancel Event</option>
+</select>
+</label>
+
+<label>Event UID (important for updates/replies)
+<input id="uid" placeholder="leave blank to auto generate">
+</label>
+
+<label>Sequence
+<input type="number" id="sequence" value="0">
+</label>
+
+<label>Status
+<select id="status">
+<option value="CONFIRMED">Confirmed</option>
+<option value="TENTATIVE">Tentative</option>
+<option value="CANCELLED">Cancelled</option>
+</select>
+</label>
+
+<label>Event Title
+<input id="title">
+</label>
+
+<label>Description
+<textarea id="description"></textarea>
+</label>
+
+<label>Location
+<input id="location">
+</label>
+
+<label>Start
+<input type="datetime-local" id="start">
+</label>
+
+<label>End
+<input type="datetime-local" id="end">
+</label>
+
+<hr>
+
+<h3>Organizer</h3>
+
+<label>Name
+<input id="organizerName">
+</label>
+
+<label>Email
+<input id="organizerEmail">
+</label>
+
+<hr>
+
+<h3>Attendee</h3>
+
+<label>Email
+<input id="attendeeEmail">
+</label>
+
+<label>RSVP Required
+<select id="rsvp">
+<option value="TRUE">Yes</option>
+<option value="FALSE">No</option>
+</select>
+</label>
+
+<label>Response (for METHOD:REPLY)
+<select id="partstat">
+<option value="NEEDS-ACTION">Needs Action</option>
+<option value="ACCEPTED">Accepted</option>
+<option value="DECLINED">Declined</option>
+<option value="TENTATIVE">Tentative</option>
+</select>
+</label>
+
+<hr>
+
+<h3>Reminder</h3>
+
+<label>Minutes before event
+<input type="number" id="alarm" value="30">
+</label>
+
+<button onclick="generateICS()">Download ICS</button>
+
+<script>
+
+function pad(n){return String(n).padStart(2,"0")}
+
+function formatUTC(d){
+return d.getUTCFullYear()
++pad(d.getUTCMonth()+1)
++pad(d.getUTCDate())
++"T"
++pad(d.getUTCHours())
++pad(d.getUTCMinutes())
++"00Z"
+}
+
+function formatLocal(d){
+return d.getFullYear()
++pad(d.getMonth()+1)
++pad(d.getDate())
++"T"
++pad(d.getHours())
++pad(d.getMinutes())
++"00"
+}
+
+function generateICS(){
+
+const method=document.getElementById("method").value
+let uid=document.getElementById("uid").value
+
+if(!uid){
+uid=Date.now()+"@ics-generator"
+}
+
+const sequence=document.getElementById("sequence").value
+const status=document.getElementById("status").value
+
+const title=document.getElementById("title").value
+const description=document.getElementById("description").value
+const location=document.getElementById("location").value
+
+const start=new Date(document.getElementById("start").value)
+const end=new Date(document.getElementById("end").value)
+
+const organizerName=document.getElementById("organizerName").value
+const organizerEmail=document.getElementById("organizerEmail").value
+
+const attendeeEmail=document.getElementById("attendeeEmail").value
+const rsvp=document.getElementById("rsvp").value
+const partstat=document.getElementById("partstat").value
+
+const alarm=document.getElementById("alarm").value
+
+const stamp=formatUTC(new Date())
+
+let organizer=""
+if(organizerEmail){
+organizer=`ORGANIZER;CN=${organizerName}:MAILTO:${organizerEmail}`
+}
+
+let attendee=""
+if(attendeeEmail){
+
+if(method==="REPLY"){
+attendee=`ATTENDEE;PARTSTAT=${partstat}:MAILTO:${attendeeEmail}`
+}else{
+attendee=`ATTENDEE;RSVP=${rsvp};PARTSTAT=NEEDS-ACTION:MAILTO:${attendeeEmail}`
+}
+
+}
+
+let alarmBlock=""
+
+if(alarm){
+
+alarmBlock=
+`BEGIN:VALARM
+TRIGGER:-PT${alarm}M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM`
+
+}
+
+const ics=
+`BEGIN:VCALENDAR
+VERSION:2.0
+METHOD:${method}
+PRODID:-//ICS Generator//EN
+BEGIN:VEVENT
+UID:${uid}
+SEQUENCE:${sequence}
+DTSTAMP:${stamp}
+STATUS:${status}
+DTSTART:${formatLocal(start)}
+DTEND:${formatLocal(end)}
+SUMMARY:${title}
+DESCRIPTION:${description}
+LOCATION:${location}
+${organizer}
+${attendee}
+${alarmBlock}
+END:VEVENT
+END:VCALENDAR`
+
+const blob=new Blob([ics],{type:"text/calendar"})
+const url=URL.createObjectURL(blob)
+
+const a=document.createElement("a")
+a.href=url
+a.download="event.ics"
+a.click()
+
+URL.revokeObjectURL(url)
+
+}
+
+</script>
+
+</body>
+</html>

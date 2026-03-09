@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advanced ICS Generator</title>
+
+<style>
+body{
+font-family:Arial;
+max-width:750px;
+margin:40px auto;
+}
+label{
+display:block;
+margin-top:12px;
+}
+input,textarea,select{
+width:100%;
+padding:8px;
+margin-top:4px;
+}
+button{
+margin-top:20px;
+padding:10px 16px;
+}
+</style>
+
+</head>
+<body>
+
+<h2>Advanced ICS Generator</h2>
+
+<label>Event Title
+<input id="title">
+</label>
+
+<label>Description
+<textarea id="description"></textarea>
+</label>
+
+<label>Location
+<input id="location">
+</label>
+
+<label>Timezone
+<select id="timezone">
+<option value="UTC">UTC</option>
+<option value="Asia/Kathmandu">Asia/Kathmandu</option>
+<option value="America/New_York">America/New_York</option>
+<option value="Europe/London">Europe/London</option>
+</select>
+</label>
+
+<label>Status
+<select id="status">
+<option value="CONFIRMED">Confirmed</option>
+<option value="TENTATIVE">Tentative</option>
+<option value="CANCELLED">Cancelled</option>
+</select>
+</label>
+
+<label>Calendar Method
+<select id="method">
+<option value="PUBLISH">Publish</option>
+<option value="REQUEST">Request (invite attendees)</option>
+<option value="CANCEL">Cancel Event</option>
+</select>
+</label>
+
+<label>Sequence (event version)
+<input type="number" id="sequence" value="0">
+</label>
+
+<label>
+<input type="checkbox" id="allday"> All-day event
+</label>
+
+<label>Start
+<input type="datetime-local" id="start">
+</label>
+
+<label>End
+<input type="datetime-local" id="end">
+</label>
+
+<label>Organizer Name
+<input id="organizerName">
+</label>
+
+<label>Organizer Email
+<input id="organizerEmail">
+</label>
+
+<label>Attendees (comma separated)
+<input id="attendees">
+</label>
+
+<label>Require RSVP
+<select id="rsvp">
+<option value="TRUE">Yes</option>
+<option value="FALSE">No</option>
+</select>
+</label>
+
+<hr>
+
+<h3>Recurrence</h3>
+
+<label>Frequency
+<select id="freq">
+<option value="">None</option>
+<option value="DAILY">Daily</option>
+<option value="WEEKLY">Weekly</option>
+<option value="MONTHLY">Monthly</option>
+<option value="YEARLY">Yearly</option>
+</select>
+</label>
+
+<label>Interval
+<input type="number" id="interval" value="1">
+</label>
+
+<label>Repeat Count
+<input type="number" id="count">
+</label>
+
+<label>Repeat Until
+<input type="date" id="until">
+</label>
+
+<hr>
+
+<label>Reminder minutes before
+<input type="number" id="alarm" value="30">
+</label>
+
+<button onclick="generateICS()">Download ICS</button>
+
+<script>
+
+function pad(n){return String(n).padStart(2,"0")}
+
+function formatLocal(d){
+return d.getFullYear()
++pad(d.getMonth()+1)
++pad(d.getDate())
++"T"
++pad(d.getHours())
++pad(d.getMinutes())
++"00"
+}
+
+function formatUTC(d){
+return d.getUTCFullYear()
++pad(d.getUTCMonth()+1)
++pad(d.getUTCDate())
++"T"
++pad(d.getUTCHours())
++pad(d.getUTCMinutes())
++"00Z"
+}
+
+function formatDate(d){
+return d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())
+}
+
+function generateICS(){
+
+const title=document.getElementById("title").value
+const description=document.getElementById("description").value
+const location=document.getElementById("location").value
+const timezone=document.getElementById("timezone").value
+const status=document.getElementById("status").value
+const method=document.getElementById("method").value
+const sequence=document.getElementById("sequence").value
+
+const allDay=document.getElementById("allday").checked
+
+const start=new Date(document.getElementById("start").value)
+const end=new Date(document.getElementById("end").value)
+
+const organizerName=document.getElementById("organizerName").value
+const organizerEmail=document.getElementById("organizerEmail").value
+
+const attendeesRaw=document.getElementById("attendees").value
+const rsvp=document.getElementById("rsvp").value
+
+const freq=document.getElementById("freq").value
+const interval=document.getElementById("interval").value
+const count=document.getElementById("count").value
+const until=document.getElementById("until").value
+
+const alarm=document.getElementById("alarm").value
+
+const uid=Date.now()+"@ics-generator"
+const stamp=formatUTC(new Date())
+
+let dtStart
+let dtEnd
+
+if(allDay){
+dtStart="DTSTART;VALUE=DATE:"+formatDate(start)
+dtEnd="DTEND;VALUE=DATE:"+formatDate(end)
+}else{
+dtStart=`DTSTART;TZID=${timezone}:${formatLocal(start)}`
+dtEnd=`DTEND;TZID=${timezone}:${formatLocal(end)}`
+}
+
+let organizer=""
+if(organizerEmail){
+organizer=`ORGANIZER;CN=${organizerName}:MAILTO:${organizerEmail}`
+}
+
+let attendees=""
+if(attendeesRaw){
+
+attendeesRaw.split(",").forEach(email=>{
+email=email.trim()
+
+if(email){
+attendees+=`ATTENDEE;CN=${email};RSVP=${rsvp};PARTSTAT=NEEDS-ACTION:MAILTO:${email}\n`
+}
+
+})
+
+}
+
+let rrule=""
+
+if(freq){
+
+rrule="RRULE:FREQ="+freq
+
+if(interval){
+rrule+=";INTERVAL="+interval
+}
+
+if(count){
+rrule+=";COUNT="+count
+}
+
+if(until){
+const u=new Date(until)
+rrule+=";UNTIL="+formatUTC(u)
+}
+
+}
+
+let alarmBlock=""
+
+if(alarm){
+
+alarmBlock=
+`BEGIN:VALARM
+TRIGGER:-PT${alarm}M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM`
+
+}
+
+const ics=
+`BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:${method}
+PRODID:-//Advanced ICS Generator//EN
+BEGIN:VEVENT
+UID:${uid}
+SEQUENCE:${sequence}
+DTSTAMP:${stamp}
+STATUS:${status}
+${dtStart}
+${dtEnd}
+SUMMARY:${title}
+DESCRIPTION:${description}
+LOCATION:${location}
+${organizer}
+${attendees}${rrule}
+${alarmBlock}
+END:VEVENT
+END:VCALENDAR`
+
+const blob=new Blob([ics],{type:"text/calendar"})
+const url=URL.createObjectURL(blob)
+
+const a=document.createElement("a")
+a.href=url
+a.download="event.ics"
+a.click()
+
+URL.revokeObjectURL(url)
+
+}
+
+</script>
+
+</body>
+</html>
