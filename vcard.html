@@ -95,11 +95,12 @@ font-size:20px;
      perspective:1000px;
      user-select: none;
     cursor:pointer;
-    transition: transform ease-in-out .5s;
- }
+    transition: transform ease-in-out .5s,box-shadow ease-in .9s;
+}
 
  .card:hover{
     transform: rotateZ(1deg) rotateX(20deg);
+    box-shadow: 5px 7px 8px #764ba2, inset 3px 2px 8px #667eea;
  }
 
 @media (max-width:600px){
@@ -179,15 +180,17 @@ font-weight: 800;
     font-size: 3.3vw;
     opacity:.8;
     font-weight: 400;}
-.contact{margin-top:1vh;font-size:2.2vw;}
+.contact{margin-top:1vh;font-size:2.2vw; margin-left: 8vw; gap:10px}
 
 #qrcode{
 position:absolute;
 bottom:10px;
-right:10px;
-background:white;
+right:12px;
+background:transparent;
 padding:5px;
 border-radius:6px;
+/* width: 18vw;
+aspect-ratio: 1/1; */
 }
 
 button{
@@ -268,7 +271,7 @@ text-decoration:none;
 }
 
 .profile-photo{
-width:10vw;
+width:15vw;
 aspect-ratio: 1/1;
 border-radius:50%;
 object-fit:cover;
@@ -451,7 +454,7 @@ right: 50px;
 
 <div id="card" class="card template1">
 <div id="patternLayer" class="pattern-layer"></div>
-<div class="flex flex-direction"> <img src="./images/bg_9.JPG" id="logoImg" class="logo" style="display:block"> <span id="company">Your Company</span></div>
+<div class="flex flex-direction"> <img src="./images/bg_9.JPG" id="logoImg" class="logo" style="display:none"> <span id="company">Your Company</span></div>
 
 <div class="name" id="name">John Doe</div>
 <div class="title" id="title">Creative Director</div>
@@ -553,10 +556,11 @@ const icons=$$("socialIcons");
 icons.innerHTML="";
 
 const socials=[
-{input:"linkedinInput",icon:"fa-linkedin"},
-{input:"twitterInput",icon:"fa-x-twitter"},
-{input:"instagramInput",icon:"fa-instagram"},
-{input:"facebookInput",icon:"fa-facebook"}
+{input:"linkedinInput",icon:"fa-linkedin",preURL:"https://www.linkedin.com/in/saman-maharjan-5bb284174/"},
+{input:"twitterInput",icon:"fa-x-twitter",preURL:"https://x.com/samanmaharjan"},
+{input:"instagramInput",icon:"fa-instagram",preURL:"https://www.instagram.com/samanmaharjan"},
+{input:"instagramInput",icon:"fa-youtube",preURL:"https://www.youtube.com/samanmaharjan"},
+{input:"facebookInput",icon:"fa-facebook",preURL:"https://www.facebook.com/saman.maharjan.3"}
 ];
 
 socials.forEach((s,i)=>{
@@ -566,7 +570,7 @@ let url=sInputs[i] ||$$(s.input).value;
 if(url){
 
 let a=document.createElement("a");
-a.href=url;
+a.href=s.preURL||url;
 a.target="_blank";
 a.innerHTML=`<i class="fa-brands ${s.icon}"></i>`;
 
