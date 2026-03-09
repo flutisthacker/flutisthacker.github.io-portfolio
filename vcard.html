@@ -129,6 +129,8 @@ font-size:11px;
 .logo{
 width:32px;
 height:32px;
+position: absolute;
+right: 30px;
 }
 
 #qrcode{
@@ -170,14 +172,14 @@ font-style: bolder;
 font-weight: 800;
 }
 .name{
-    font-size:4.5vw;margin-top:5px;
+    font-size:4.2vw;margin-top:1vh;
     font-weight: 600;
 }
 .title{
-    font-size: 3.8vw;
+    font-size: 3.3vw;
     opacity:.8;
     font-weight: 400;}
-.contact{margin-top:10px;font-size:2.2vw;}
+.contact{margin-top:1vh;font-size:2.2vw;}
 
 #qrcode{
 position:absolute;
@@ -266,12 +268,14 @@ text-decoration:none;
 }
 
 .profile-photo{
-width:70px;
-height:70px;
+width:10vw;
+aspect-ratio: 1/1;
 border-radius:50%;
 object-fit:cover;
 margin-bottom:8px;
 margin-left: 20px;
+position: absolute;
+right: 50px;
 }
 
 </style>
@@ -447,20 +451,22 @@ margin-left: 20px;
 
 <div id="card" class="card template1">
 <div id="patternLayer" class="pattern-layer"></div>
-<div class="flex flex-direction"> <img id="logoImg" class="logo" style="display:none"> <span id="company">Your Company</span></div>
+<div class="flex flex-direction"> <img src="./images/bg_9.JPG" id="logoImg" class="logo" style="display:block"> <span id="company">Your Company</span></div>
 
 <div class="name" id="name">John Doe</div>
 <div class="title" id="title">Creative Director</div>
-<img id="cardPhoto" style="display:none" class="profile-photo">
+<img src="./images/bg_9.JPG" id="cardPhoto" style="display:block" class="profile-photo">
 
 <div class="contact">
     <!-- 📞 ✉ 🌐-->
-<i class="fa fa-phone"></i> <span id="phone">123456</span><br>
-<i class="fa fa-envelope"></i> <span id="email">email@mail.com</span><br>
-<i class="fa-brands fa-edge"></i> <span id="web">website.com</span>
+    <i class="fa fa-phone"></i> <span id="phone">123456</span><br>
+    <i class="fa fa-envelope"></i> <span id="email">email@mail.com</span><br>
+    <i class="fa-brands fa-edge"></i> <span id="web">website.com</span>
 </div>
 <div class="social-icons" id="socialIcons"></div>
-<div id="qrcode"  data-bs-toggle="modal" data-bs-target="#qrModal"></div>
+<div class="card2">
+    <div id="qrcode"  data-bs-toggle="modal" data-bs-target="#qrModal"></div>
+    </div>
 </div>
 <div class="modal fade" id="qrModal" tabindex="-1">
      <div class="modal-dialog modal-dialog-centered modal-xl modal-lg">
