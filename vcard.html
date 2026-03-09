@@ -4,7 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Visiting Card Generator</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Montserrat&family=Noto+Sans&family=Roboto&family=Lato&family=Playfair+Display&family=Oswald&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Montserrat&family=Noto+Sans&family=Roboto&family=Lato&family=Playfair+Display&family=Oswald
+&family=Merriweather&family=Mada&family=Sansation&family=Fira+Sans&family=Macando&family=Neuton&family=quintessential&family=kings&family=Roboto+Flex&family=open+sans&family=Zalando+Sans+SemiExpanded&family=Space+Grotesk&family=Crimson+text&family=lexend+Deca&family=cal+Sans
+&family=Oh+Whale&family=kavoon&family=luckiest guy&family=schoolball&family=jua&family=mali&family=fustat&family=rasa&family=varta&family=amethysta&family=ramaraja&family=gluten
+&display=swap" rel="stylesheet">
+
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,7 +16,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-
 <style>
 
 body{
@@ -80,15 +83,17 @@ font-size:20px;
 /* CARD */
 
 .card{ 
-    width:95vw;
-     max-width:350px;
+    width:80vw;
+    min-width: 336px;
+    min-height: 192px;
      aspect-ratio:3.9/2;
-     padding:16px;
+     padding:2vw;
      border-radius:14px;
      color:white;
      position:relative;
-     margin:auto;
+     margin:5rem;
      perspective:1000px;
+     user-select: none;
     cursor:pointer;
     transition: transform ease-in-out .5s;
  }
@@ -159,15 +164,20 @@ object-fit:contain;
 }
 
 #company{
-font-size:22px;
+/* font-size:22px; */
+font-size:5vw;
 font-style: bolder;
 font-weight: 800;
 }
-.name{font-size:18px;margin-top:5px;
-font-weight: 600;}
-.title{opacity:.8;
-font-weight: 400;}
-.contact{margin-top:10px;font-size:13px;}
+.name{
+    font-size:4.5vw;margin-top:5px;
+    font-weight: 600;
+}
+.title{
+    font-size: 3.8vw;
+    opacity:.8;
+    font-weight: 400;}
+.contact{margin-top:10px;font-size:2.2vw;}
 
 #qrcode{
 position:absolute;
@@ -244,10 +254,10 @@ background-size:20px 20px;
 }
 
 .social-icons{
-margin-top:8px;
+margin-top:1.2vh;
 display:flex;
-gap:10px;
-font-size:16px;
+gap:1vw;
+font-size:2.5vw;
 }
 
 .social-icons a{
@@ -281,80 +291,149 @@ margin-left: 20px;
     <h3 class="offcanvas-title" id="openPanelLabel">Edit visiting card</h3>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body">
+  <div class="offcanvas-body row">
 
-<div>
-<input class="form-control mb-2" type="text" for="company" name="company" id="companyInput" placeholder="Company Name">
-<input class="form-control mb-2" type="text" for="name" name="name" id="nameInput" placeholder="Name">
-<input class="form-control mb-2" type="text" for="title" name="title" id="titleInput" placeholder="Job Title">
-<input class="form-control mb-2" type="tel" for="phone" name="phone" id="phoneInput" placeholder="Phone">
-<input class="form-control mb-2" type="email" for="email" name="email" id="emailInput" placeholder="Email">
-<input class="form-control mb-2" type="text" for="web" name="web" id="webInput" placeholder="Website">
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#CardData" aria-expanded="true" aria-controls="CardData">
+        Card Data
+      </button>
+    </h2>
+    <div id="CardData" class="accordion-collapse collapse show bg-dark" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+            <div class="col-12">
+            <div class="input-group col-6"><input class="form-control mb-2" type="text" for="company" name="company" id="companyInput" placeholder="Company Name"></div>
+            <div class="input-group col-6"><input class="form-control mb-2" type="text" for="name" name="name" id="nameInput" placeholder="Name"></div>
+            <div class="input-group col-6"><input class="form-control mb-2" type="text" for="title" name="title" id="titleInput" placeholder="Job Title"></div>
+            <div class="input-group col-6"><input class="form-control mb-2" type="tel" for="phone" name="phone" id="phoneInput" placeholder="Phone"></div>
+            <div class="input-group col-6"><input class="form-control mb-2" type="email" for="email" name="email" id="emailInput" placeholder="Email"></div>
+            <div class="input-group col-6"><input class="form-control mb-2" type="text" for="web" name="web" id="webInput" placeholder="Website"></div>
 
-<div class="input-group mb-3">
-  <span class="input-group-text" id="basic-addon1">LinkedIn</span>
-  <input class="form-control" type="text" id="linkedinInput" placeholder="LinkedIn profile URL">
+            <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">LinkedIn</span>
+            <input class="form-control" type="text" id="linkedinInput" placeholder="LinkedIn profile URL">
+            </div>
+            <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Twitter / X</span>
+            <input class="form-control" type="text" id="twitterInput" placeholder="Twitter profile URL">
+            </div>
+            <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Instagram</span>
+                <input class="form-control" type="text" id="instagramInput" placeholder="Instagram profile URL">
+            </div>
+            <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Facebook</span>
+            <input class="form-control" type="text" id="facebookInput" placeholder="Facebook profile URL">
+            </div>
+
+            <div class="button-group">
+                                <button class="btn btn-success" onclick="generateQR()">Add QR</button>
+                <button class="btn btn-success" onclick="downloadCard()">Download PNG</button>
+                <button class="btn btn-success" onclick="downloadVCard()">Download Contact (.VCF)</button>
+
+            </div>
+            <div class="mb-3">
+            <label for="logoUpload" class="form-label">Upload Logo</label>
+            <input class="form-control" type="file" id="logoUpload" accept="image/*">
+            </div>
+            <div class="mb-3">
+            <label for="photoInput" class="form-label">Profile Photo / Logo</label>
+            <input class="form-control" type="file" id="photoInput" placeholder="Choose"  accept="image/*">
+            </div>
+
+            </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Settings" aria-expanded="false" aria-controls="Settings">
+        Settings
+      </button>
+    </h2>
+    <div id="Settings" class="accordion-collapse collapse bg-dark text-light" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="container row settings">
+            <div class="input-group mb-3">
+            <span class="input-group-text bg-secondary" id="basic-addon1">Select Template</span>
+            <select class="form-select" id="templateSelect">
+            <option value="template1">Glass</option>
+            <option value="template2">Dark</option>
+            <option value="template3">Gradient</option>
+            </select>
+            </div>
+            
+            <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Font Style</span>
+            <select class="form-select" id="fontSelect">
+            <option value="Poppins">Poppins</option>
+            <option value="Montserrat">Montserrat</option>
+            <option value="Roboto">Roboto</option>
+            <option value="Noto Sans">Noto Sans</option>
+            <option value="Lato">Lato</option>
+            <option value="Playfair Display">Playfair Display</option>
+            <option value="Oswald">Oswald</option>
+            <option value="Fira Sans">Fira Sans</option>
+            <option value="Merriweather">Merriweather</option>
+            <option value="Roboto Flex">Roboto Flex</option>
+            <option value="open sans">open sans</option>
+            <option value="Mada">Mada</option>
+            <option value="Zalando Sans SemiExpanded">Zalando Sans SemiExpanded</option>
+            <option value="Sansation">Sansation</option>
+            <option value="Neuton">Neuton</option>
+            <option value="Space Grotesk">Space Grotesk</option>
+            <option value="Crimson text">Crimson text</option>
+            <option value="lexend Deca">lexend Deca</option>
+            <option value="cal Sans">cal Sans</option>
+            <option value="Macando">Macando</option>
+            <option value="quintessential">quintessential</option>
+            <option value="kings">kings</option>
+            <option value="Oh Whale">Oh whale</option>
+    <option value="kavoon">kavoon</option>
+    <option value="luckiest guy">luckiest guy</option>
+    <option value="schoolball">schoolball</option>
+    <option value="jua">jua</option>
+    <option value="mali">mali</option>
+    <option value="fustat">fustat</option>
+    <option value="rasa">rasa</option>
+    <option value="varta">varta</option>
+    <option value="amethysta">amethysta</option>
+    <option value="ramaraja">ramaraja</option>
+    <option value="gluten">gluten</option>
+            </select>
+            </div>
+
+                        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Background Pattern
+            </span>
+            <select class="form-select" id="patternSelect"> <option value="none">None</option> <option value="dots">Dots</option> <option value="grid">Grid</option> <option value="lines">Diagonal Lines</option> <option value="cross">Cross Pattern</option> <option value="waves">Waves</option> </select>
+            
+            </div>
+
+            <div class="input-group mb-3">
+            <span for="patternDensity" class="input-group-text" id="basic-addon1">Pattern Density            </span>
+            <input type="range" class="form-range" id="patternDensity" min="5" max="40" value="15">
+            </div>
+
+                    <div class="input-group mb-3">
+            <span for="colorPicker" class="input-group-text" id="basic-addon1">
+                Primary Color
+            </span>
+            <input type="color" class="form-control form-control-color" id="colorPicker" value="#563d7c" title="Choose your color">
+            </div>
+
+        <div class="input-group mb-3">
+            <input type="text" id="shareLink" class="form-control" placeholder="Share Link" aria-label="Username" aria-describedby="basic-addon1">
+            <button class="btn btn-primary btn-large" onclick="generateShareLink()">Generate Share Link</button> 
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="input-group mb-3">
-  <span class="input-group-text" id="basic-addon1">Twitter / X</span>
- <input class="form-control" type="text" id="twitterInput" placeholder="Twitter profile URL">
-</div>
-<div class="input-group mb-3">
-  <span class="input-group-text" id="basic-addon1">Instagram</span>
-     <input class="form-control" type="text" id="instagramInput" placeholder="Instagram profile URL">
-</div>
-<div class="input-group mb-3">
-  <span class="input-group-text" id="basic-addon1">Facebook</span>
- <input class="form-control" type="text" id="facebookInput" placeholder="Facebook profile URL">
-</div>
-
-     <button class="btn btn-success" onclick="generateQR()">Add QR</button>
-     <button class="btn btn-success" onclick="downloadCard()">Download PNG</button>
-    <button class="btn btn-success" onclick="downloadVCard()">Download Contact (.VCF)</button>
-<div class="mb-3">
-  <label for="logoUpload" class="form-label">Upload Logo</label>
-  <input class="form-control" type="file" id="logoUpload" accept="image/*">
-</div>
-<div class="mb-3">
-  <label for="photoInput" class="form-label">Profile Photo / Logo</label>
-  <input class="form-control" type="file" id="photoInput" accept="image/*">
-</div>
-
-</div>
 
 
-
-<div class="settings">
-    
-<select class="form-select" id="templateSelect">
-<option value="template1">Glass</option>
-<option value="template2">Dark</option>
-<option value="template3">Gradient</option>
-</select>
-<label>Font Style</label>
-<select class="form-select" id="fontSelect">
-<option value="Poppins">Poppins</option>
-<option value="Montserrat">Montserrat</option>
-<option value="Roboto">Roboto</option>
-<option value="Lato">Lato</option>
-<option value="Playfair Display">Playfair Display</option>
-<option value="Oswald">Oswald</option>
-</select>
-</div>
-
-<label>Background Pattern</label> <select class="form-select" id="patternSelect"> <option value="none">None</option> <option value="dots">Dots</option> <option value="grid">Grid</option> <option value="lines">Diagonal Lines</option> <option value="cross">Cross Pattern</option> <option value="waves">Waves</option> </select>
-
-<label for="patternDensity" class="form-label">Pattern Density</label>
-<input type="range" class="form-range" id="patternDensity" min="5" max="40" value="15">
-
-<label for="colorPicker" class="form-label">Primary Color</label>
-<input type="color" class="form-control form-control-color" id="colorPicker" value="#563d7c" title="Choose your color">
-<div class="input-group mb-3">
-    <input type="text" id="shareLink" class="form-control" placeholder="Share Link" aria-label="Username" aria-describedby="basic-addon1">
-    <button class="btn btn-outline-info pb-1" onclick="generateShareLink()">Generate Share Link</button> 
-    <!-- <input id="shareLink" readonly> -->
-  <!-- <span class="input-group-text" id="basic-addon1">@</span> -->
-</div>
 
   </div>
 </div>
@@ -368,9 +447,7 @@ margin-left: 20px;
 
 <div id="card" class="card template1">
 <div id="patternLayer" class="pattern-layer"></div>
-<img id="logoImg" class="logo" style="display:none">
-
-<div id="company">Your Company</div>
+<div class="flex flex-direction"> <img id="logoImg" class="logo" style="display:none"> <span id="company">Your Company</span></div>
 
 <div class="name" id="name">John Doe</div>
 <div class="title" id="title">Creative Director</div>
@@ -423,15 +500,16 @@ margin-left: 20px;
 function generateShareLink(){
 
 const data={
-name:$$("name").textContent,
-title:$$("title").textContent,
-phone:$$("phone").textContent,
-email:$$("email").textContent,
-web:$$("web").textContent
+    name:$$("name").textContent,
+    title:$$("title").textContent,
+    phone:$$("phone").textContent,
+    email:$$("email").textContent,
+    // company:$$("company").textContent,
+    web:$$("web").textContent
 };
 
 const params=new URLSearchParams(btoa(JSON.stringify(data))).toString();
-console.log(params)
+console.log(params,data)
 
 const link=window.location.origin+window.location.pathname+"?"+params;
 
@@ -443,18 +521,18 @@ $$("shareLink").value=link;
 <script>
 window.addEventListener("load",()=>{
 
-const params=new URLSearchParams(window.location.search);
+const params=new URLSearchParams(JSON.parse(atob(location.search.substr(1))));
 
+console.log("done",params)
 if(params.get("name")){
-
+    
 $$("name").textContent=params.get("name");
 $$("title").textContent=params.get("title");
 $$("phone").textContent=params.get("phone");
 $$("email").textContent=params.get("email");
 $$("web").textContent=params.get("web");
-
-// generateQR();
-
+$$("company").textContent=params.get("company");
+generateQR();
 }
 
 });
@@ -634,13 +712,10 @@ if(e.key=="Enter"){
     generateQR()
 }
 });
+console.log(input,target)
 $(`#${input}`).value=myCardDetails[target]
 $(`#${target}`).textContent=myCardDetails[target]
 });
-// ["linkedinInput","linkedin"],
-// ["twitterInput","twitter"],
-// ["instagramInput","instagram"],
-// ["facebookInput","facebook"],
 
 /* QR */
 
@@ -663,10 +738,12 @@ email:email,
 web:web,    
 company:company,
 title:title,
-linkedin:linkedin,
+social:{
+    linkedin:linkedin,
 twitter:twitter,
 instagram:instagram,
 facebook:facebook,
+}
 }
 localStorage.setItem("VCARD",JSON.stringify(cardDetails))
 console.log(cardDetails)
@@ -693,16 +770,16 @@ $$("qrcode").innerHTML="";
 
 new QRCode($$("qrcode"),{
 text:vcard,
-width:100,
-height:100,
+width:window.innerWidth/6,
+height:window.innerWidth/6,
 colorDark:"#111111",
 correctLevel:QRCode.CorrectLevel.L
 });
 
 new QRCode($$("qrModalCode"),{
 text:vcard,
-width:400,
-height:400,
+width:window.innerWidth/2,
+height:window.innerWidth/2,
 colorDark:"#111111",
 correctLevel:QRCode.CorrectLevel.L
 });
