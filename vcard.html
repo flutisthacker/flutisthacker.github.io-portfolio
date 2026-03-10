@@ -99,9 +99,21 @@ font-size:20px;
     transition: transform ease-in-out .5s,box-shadow ease-in .9s;
 }
 
- .card:hover{
-    transform: rotateZ(1deg) rotateX(20deg);
+.card:hover{
+    animation: shake linear .9s ease-in-out;
     box-shadow: 5px 7px 8px #764ba2, inset 3px 2px 8px #667eea;
+}
+
+@keyframes shake {
+    0%{
+        transform: rotateZ(0deg) rotateX(0deg);
+    }
+    50%{
+        transform: rotateZ(1deg) rotateX(20deg);
+    }
+    100%{
+        transform: rotateZ(0deg) rotateX(0deg);
+    }
  }
 
 @media (max-width:600px){
@@ -174,14 +186,20 @@ font-style: bolder;
 font-weight: 800;
 }
 .name{
-    font-size:4.2vw;margin-top:1vh;
+    font-size:4vw;
+    margin-top:0.5vh;
     font-weight: 600;
 }
 .title{
-    font-size: 3.3vw;
+    font-size: 3vw;
     opacity:.8;
-    font-weight: 400;}
-.contact{margin-top:1vh;font-size:2.2vw; margin-left: 8vw; gap:10px}
+    font-weight: 400;
+}
+.contact{
+    margin-top:.2vh;
+    font-size:2.2vw; 
+    margin-left: 8vw; 
+    gap:.2vh}
 
 #qrcode{
 position:absolute;
@@ -260,14 +278,21 @@ background-size:20px 20px;
 }
 
 .social-icons{
-margin-top:1.2vh;
+    position: absolute;
+    top:43%;
+    right:4%;
+margin-top:0.5vh;
 display:flex;
 gap:1vw;
 font-size:2.5vw;
 }
 
-.social-icons a{
-color:white;
+.social-icons a:hover{
+    transform: scale(1.1);
+}
+
+.contact a,.social-icons a{
+color:#425051;
 text-decoration:none;
 }
 
@@ -286,12 +311,6 @@ right: 50px;
 </head>
 
 <body>
-
-
-<button class="open-btn" oncontextmenu="openPanel()" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#openPanel" aria-controls="openPanel">
-  Edit Card
-</button>
-
 
 <!-- OFFCANVAS FORM -->
 <div class="offcanvas offcanvas-start bg-dark text-light" style="width: 50%;"  tabindex="-1" id="openPanel" aria-labelledby="openPanelLabel">
@@ -345,7 +364,7 @@ right: 50px;
             <label for="logoUpload" class="form-label">Upload Logo</label>
             <input class="form-control" type="file" id="logoUpload" accept="image/*">
             </div>
-            <div class="mb-3">
+            <div class="mb-3 d-none">
             <label for="photoInput" class="form-label">Profile Photo / Logo</label>
             <input class="form-control" type="file" id="photoInput" placeholder="Choose"  accept="image/*">
             </div>
@@ -455,23 +474,27 @@ right: 50px;
 
 <div id="card" class="card template1">
 <div id="patternLayer" class="pattern-layer"></div>
-<img src="./images/bg_9.JPG" id="logoImg" class="logo" style="display:none"> 
+<img src="./images/ycc logo.png" id="logoImg" class="logo" style="display:none"> 
 <h1 id="company">Your Company</h1>
 
 <p class="name" id="name">John Doe</p>
 <p class="title" id="title">Creative Director</p>
-<img src="./images/bg_9.JPG" id="cardPhoto" style="display:block" class="profile-photo">
+<img src="./images/bg_8.jpg" id="cardPhoto" style="display:block" class="profile-photo" onclick="document.querySelector('#photoInput').click()">
 
 <div class="contact">
     <!-- 📞 ✉ 🌐-->
-    <i class="fa fa-phone"></i> <span id="phone">123456</span><br>
-    <i class="fa fa-envelope"></i> <span id="email">email@mail.com</span><br>
-    <i class="fa-brands fa-edge"></i> <span id="web">website.com</span>
+    <i class="fa fa-phone"></i> <a href="tel:" data-link="tel:"  onmouseover="this.setAttribute('href',this.dataset.link+this.textContent)"  class="text-decoration-none" id="phone">123456</a><br>
+    <i class="fa fa-envelope"></i> <a href="mailto:"data-link="mailto:" onmouseover="this.setAttribute('href',this.dataset.link+this.textContent)" class="text-decoration-none" id="email">email@mail.com</a><br>
+    <i class="fa-brands fa-edge"></i> <a href="./" data-link="https://"  onmouseover="this.setAttribute('href',this.dataset.link+this.textContent)"  class="text-decoration-none" id="web">website.com</a>
 </div>
 <div class="social-icons" id="socialIcons"></div>
 <div class="card2">
     <div id="qrcode"  data-bs-toggle="modal" data-bs-target="#qrModal"></div>
     </div>
+      <span  oncontextmenu="openPanel()"  type="button" data-bs-toggle="offcanvas" data-bs-target="#openPanel" aria-controls="openPanel" class="position-absolute fs-5 top-0 start-100 translate-middle badge rounded-pill bg-info">
+    <i class="fa fa-edit"></i>
+    <span class="visually-hidden">unread messages</span>
+  </span>
 </div>
 
 <div class="modal fade" id="qrModal" tabindex="-1">
@@ -714,8 +737,7 @@ fields.forEach(([input,target])=>{
     $(`#${input}`).value=hasParams? params.get(target):myCardDetails[target];
     $(`#${target}`).textContent= hasParams? params.get(target):myCardDetails[target];
     });
-    
-    // generateQR();
+    generateQR();
 }
 /* QR */
 function generateQR(){
@@ -769,16 +791,16 @@ $$("qrcode").innerHTML="";
 
 new QRCode($$("qrcode"),{
 text:vcard,
-width:window.innerWidth/6,
-height:window.innerWidth/6,
+width:window.innerWidth/7,
+height:window.innerWidth/7,
 colorDark:"#111111",
 correctLevel:QRCode.CorrectLevel.L
 });
 
 new QRCode($$("qrModalCode"),{
 text:vcard,
-width:window.innerWidth/2,
-height:window.innerWidth/2,
+width:window.innerWidth/3,
+height:window.innerWidth/3,
 colorDark:"#111111",
 correctLevel:QRCode.CorrectLevel.L
 });
