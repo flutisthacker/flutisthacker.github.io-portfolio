@@ -16,6 +16,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://transposenotes.pages.dev/lib/browserStorage.js"></script>
 <style>
 
 body{
@@ -83,13 +84,13 @@ font-size:20px;
 /* CARD */
 
 .card{ 
-    width:80vw;
+    width:75vw;
     min-width: 336px;
     min-height: 192px;
      aspect-ratio:3.9/2;
      padding:2vw;
      border-radius:14px;
-     color:white;
+     color:#425051;
      position:relative;
      margin:5rem;
      perspective:1000px;
@@ -335,7 +336,7 @@ right: 50px;
             </div>
 
             <div class="button-group">
-                                <button class="btn btn-success" onclick="generateQR()">Add QR</button>
+                    <button class="btn btn-success" onclick="generateQR()">Add QR</button>
                 <button class="btn btn-success" onclick="downloadCard()">Download PNG</button>
                 <button class="btn btn-success" onclick="downloadVCard()">Download Contact (.VCF)</button>
 
@@ -454,10 +455,11 @@ right: 50px;
 
 <div id="card" class="card template1">
 <div id="patternLayer" class="pattern-layer"></div>
-<div class="flex flex-direction"> <img src="./images/bg_9.JPG" id="logoImg" class="logo" style="display:none"> <span id="company">Your Company</span></div>
+<img src="./images/bg_9.JPG" id="logoImg" class="logo" style="display:none"> 
+<h1 id="company">Your Company</h1>
 
-<div class="name" id="name">John Doe</div>
-<div class="title" id="title">Creative Director</div>
+<p class="name" id="name">John Doe</p>
+<p class="title" id="title">Creative Director</p>
 <img src="./images/bg_9.JPG" id="cardPhoto" style="display:block" class="profile-photo">
 
 <div class="contact">
@@ -471,6 +473,7 @@ right: 50px;
     <div id="qrcode"  data-bs-toggle="modal" data-bs-target="#qrModal"></div>
     </div>
 </div>
+
 <div class="modal fade" id="qrModal" tabindex="-1">
      <div class="modal-dialog modal-dialog-centered modal-xl modal-lg">
      <div class="modal-content text-center">
@@ -483,9 +486,20 @@ right: 50px;
  </div>
  </div>
  </div>
-<script>
-    const $$=z=>document.getElementById(z);
+
+ <script>
+        const $$=z=>document.getElementById(z);
     const $=z=>document.querySelector(z);
+    const isEmpty=z=>(z=="")
+
+window.addEventListener("load",()=>{
+        const params=new URLSearchParams(atob(location.search.substr(1)))
+        updateinputFields(!isEmpty(location.search),params)
+        updateSocialIcons("")
+});
+
+</script>
+<script>
     let photoBase64 = "";
      $$("photoInput").addEventListener("change", function(e){ const file = e.target.files[0];
          if(!file) return;
@@ -513,73 +527,47 @@ const data={
     title:$$("title").textContent,
     phone:$$("phone").textContent,
     email:$$("email").textContent,
-    // company:$$("company").textContent,
+    company:$$("company").textContent,
     web:$$("web").textContent
 };
+const params=new URLSearchParams(data).toString();
+console.log(params,btoa(params),data)
 
-const params=new URLSearchParams(btoa(JSON.stringify(data))).toString();
-console.log(params,data)
-
-const link=window.location.origin+window.location.pathname+"?"+params;
+const link=window.location.origin+window.location.pathname+"?"+btoa(params);
 
 $$("shareLink").value=link;
 
 }
 
 </script>
-<script>
-window.addEventListener("load",()=>{
 
-const params=new URLSearchParams(JSON.parse(atob(location.search.substr(1))));
-
-console.log("done",params)
-if(params.get("name")){
-    
-$$("name").textContent=params.get("name");
-$$("title").textContent=params.get("title");
-$$("phone").textContent=params.get("phone");
-$$("email").textContent=params.get("email");
-$$("web").textContent=params.get("web");
-$$("company").textContent=params.get("company");
-generateQR();
-}
-
-});
-
-</script>
 <script>
 
 function updateSocialIcons(sInputs){
+console.log(sInputs)
+    const icons=$$("socialIcons");
 
-const icons=$$("socialIcons");
+    icons.innerHTML="";
 
-icons.innerHTML="";
+    const socials=[
+    {input:"linkedinInput",icon:"fa-linkedin",preURL:"https://www.linkedin.com/in/saman-maharjan-5bb284174/"},
+    {input:"twitterInput",icon:"fa-x-twitter",preURL:"https://x.com/samanmaharjan"},
+    {input:"instagramInput",icon:"fa-instagram",preURL:"https://www.instagram.com/samanmaharjan"},
+    {input:"instagramInput",icon:"fa-youtube",preURL:"https://www.youtube.com/samanmaharjan"},
+    {input:"facebookInput",icon:"fa-facebook",preURL:"https://www.facebook.com/saman.maharjan.3"}
+    ];
 
-const socials=[
-{input:"linkedinInput",icon:"fa-linkedin",preURL:"https://www.linkedin.com/in/saman-maharjan-5bb284174/"},
-{input:"twitterInput",icon:"fa-x-twitter",preURL:"https://x.com/samanmaharjan"},
-{input:"instagramInput",icon:"fa-instagram",preURL:"https://www.instagram.com/samanmaharjan"},
-{input:"instagramInput",icon:"fa-youtube",preURL:"https://www.youtube.com/samanmaharjan"},
-{input:"facebookInput",icon:"fa-facebook",preURL:"https://www.facebook.com/saman.maharjan.3"}
-];
+    socials.forEach((s,i)=>{
+        let url=s.preURL ||$$(s.input).value;
+        if(url){
+            let a=document.createElement("a");
+            a.href=url;
+            a.target="_blank";
+            a.innerHTML=`<i class="fa-brands ${s.icon}"></i>`;
 
-socials.forEach((s,i)=>{
-
-let url=sInputs[i] ||$$(s.input).value;
-
-if(url){
-
-let a=document.createElement("a");
-a.href=s.preURL||url;
-a.target="_blank";
-a.innerHTML=`<i class="fa-brands ${s.icon}"></i>`;
-
-icons.appendChild(a);
-
-}
-
-});
-
+            icons.appendChild(a);
+        }
+    });
 }
 
 document.querySelectorAll("#linkedinInput,#twitterInput,#instagramInput,#facebookInput")
@@ -589,11 +577,10 @@ document.querySelectorAll("#linkedinInput,#twitterInput,#instagramInput,#faceboo
 <script>
 const templateSelect=$$("templateSelect"); for(let i=1;i<=20;i++){ const option=document.createElement("option"); option.value="template"+i; option.textContent="Template "+i; templateSelect.appendChild(option); }
 const fontSelect = $$("fontSelect");
-// const patternSelect = $$("patternSelect"); 
-// const patternLayer = $$("patternLayer"); patternSelect.addEventListener("change", function(){ patternLayer.className = "pattern-layer"; if(this.value !== "none"){ patternLayer.classList.add("pattern-" + this.value); } });
 
 
 const patternSelect = $$("patternSelect");
+// const patternLayer = $$("patternLayer"); patternSelect.addEventListener("change", function(){ patternLayer.className = "pattern-layer"; if(this.value !== "none"){ patternLayer.classList.add("pattern-" + this.value); } });
 // const card = $$("card");
 
 /* Create 100 pattern options */
@@ -705,30 +692,32 @@ reader.readAsDataURL(this.files[0]);
 
 /* LIVE UPDATE */
 
-const fields=[
-["companyInput","company"],
-["nameInput","name"],
-["titleInput","title"],
-["phoneInput","phone"],
-["emailInput","email"],
-["webInput","web"],
-];
-
+function updateinputFields(hasParams,params){
+    console.log(params,hasParams)
+    const fields=[
+        ["nameInput","name"],
+        ["titleInput","title"],
+        ["phoneInput","phone"],
+        ["emailInput","email"],
+        ["webInput","web"],
+        ["companyInput","company"],
+    ];
 let myCardDetails=JSON.parse(localStorage.getItem("VCARD"));
 fields.forEach(([input,target])=>{
-$$(input).addEventListener("input",e=>{
-$$(target).textContent=e.target.value;
-if(e.key=="Enter"){
-    generateQR()
+    console.log(input,target,params.get(target))
+    $$(input).addEventListener("input",e=>{
+        $$(target).textContent=e.target.value;
+        if(e.key=="Enter"){
+            generateQR()
+        }
+    });
+    $(`#${input}`).value=hasParams? params.get(target):myCardDetails[target];
+    $(`#${target}`).textContent= hasParams? params.get(target):myCardDetails[target];
+    });
+    
+    // generateQR();
 }
-});
-console.log(input,target)
-$(`#${input}`).value=myCardDetails[target]
-$(`#${target}`).textContent=myCardDetails[target]
-});
-
 /* QR */
-
 function generateQR(){
 
 const name=$$("nameInput").value;
@@ -750,9 +739,9 @@ company:company,
 title:title,
 social:{
     linkedin:linkedin,
-twitter:twitter,
-instagram:instagram,
-facebook:facebook,
+    twitter:twitter,
+    instagram:instagram,
+    facebook:facebook,
 }
 }
 localStorage.setItem("VCARD",JSON.stringify(cardDetails))
@@ -800,11 +789,12 @@ correctLevel:QRCode.CorrectLevel.L
 /* DOWNLOAD */
 
 function downloadCard(){
-
-html2canvas(card).then(canvas=>{
+    let card=document.getElementById("card")
+    html2canvas(card,{  useCORS: true}).then(canvas=>{
 const link=document.createElement("a");
-link.download=company.textContent+"visiting-card.png";
-link.href=canvas.toDataURL();
+console.log(canvas)
+link.download="visiting-card.png";
+link.setAttribute("href", canvas.toDataURL("image/png"));
 link.click();
 });
 
