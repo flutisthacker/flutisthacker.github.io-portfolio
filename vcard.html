@@ -150,6 +150,7 @@ right: 30px;
 #qrcode{
 width:55px;
 height:55px;
+
 }
 .offcanvasX{ width:85vw; z-index: 20;}
 }
@@ -208,8 +209,9 @@ right:12px;
 background:transparent;
 padding:5px;
 border-radius:6px;
-/* width: 18vw;
-aspect-ratio: 1/1; */
+background-size: contain;
+width: 15vw;
+aspect-ratio: 1/1;
 }
 
 button{
@@ -479,7 +481,7 @@ right: 50px;
 
 <p class="name" id="name">John Doe</p>
 <p class="title" id="title">Creative Director</p>
-<img src="./images/bg_8.jpg" id="cardPhoto" style="display:block" class="profile-photo" onclick="document.querySelector('#photoInput').click()">
+<img src="./images/bg_9.JPG" id="cardPhoto" style="display:block" class="profile-photo" onclick="document.querySelector('#photoInput').click()">
 
 <div class="contact">
     <!-- 📞 ✉ 🌐-->
@@ -504,7 +506,7 @@ right: 50px;
         <h5 class="modal-title">Scan Contact QR</h5> 
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button> </div>
          <div class="modal-body">
-     <div id="qrModalCode"></div> 
+     <img src="./" alt="QR code" id="qrModalCode"/> 
     </div>
  </div>
  </div>
@@ -740,6 +742,7 @@ fields.forEach(([input,target])=>{
     generateQR();
 }
 /* QR */
+let QRComponent;
 function generateQR(){
 
 const name=$$("nameInput").value;
@@ -789,24 +792,21 @@ localStorage.setItem("VCARData",JSON.stringify(cardDetails))
 
 $$("qrcode").innerHTML="";
 
-new QRCode($$("qrcode"),{
-text:vcard,
-width:window.innerWidth/7,
-height:window.innerWidth/7,
-colorDark:"#111111",
-correctLevel:QRCode.CorrectLevel.L
-});
-
-new QRCode($$("qrModalCode"),{
+QRComponent=new QRCode($$("qrcode"),{
 text:vcard,
 width:window.innerWidth/3,
 height:window.innerWidth/3,
 colorDark:"#111111",
 correctLevel:QRCode.CorrectLevel.L
-});
+})
 
 }
-
+$$("qrcode").addEventListener("load",setTimeout(()=>{
+    console.log(QRComponent)
+    $$("qrcode").querySelector("img").style.display="none";
+    $$("qrModalCode").src=$$("qrcode").querySelector("img").src;
+    $$("qrcode").style.backgroundImage="url("+$$("qrcode").querySelector("img").src+")";
+},1000))
 
 /* DOWNLOAD */
 
