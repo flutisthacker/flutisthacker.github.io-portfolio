@@ -84,44 +84,44 @@ font-size:20px;
 /* CARD */
 
 .card{ 
-    width:75vw;
-    min-width: 336px;
-    min-height: 192px;
-     aspect-ratio:3.9/2;
-     padding:2vw;
-     border-radius:14px;
-     color:#425051;
-     position:relative;
-     margin:5rem;
-     perspective:1000px;
-     user-select: none;
-    cursor:pointer;
-    transition: transform ease-in-out .5s,box-shadow ease-in .9s;
+width:75vw;
+min-width: 336px;
+min-height: 192px;
+    aspect-ratio:3.9/2;
+    padding:2vw;
+    border-radius:14px;
+    color:#425051;
+    position:relative;
+    margin:5rem;
+    perspective:1000px;
+    user-select: none;
+cursor:pointer;
+transition: transform ease-in-out .5s,box-shadow ease-in .9s;
 }
 
 .card:hover{
-    animation: shake linear .9s ease-in-out;
-    box-shadow: 5px 7px 8px #764ba2, inset 3px 2px 8px #667eea;
+animation: shake linear .9s ease-in-out;
+box-shadow: 5px 7px 8px #764ba2, inset 3px 2px 8px #667eea;
 }
 
 @keyframes shake {
-    0%{
-        transform: rotateZ(0deg) rotateX(0deg);
-    }
-    50%{
-        transform: rotateZ(1deg) rotateX(20deg);
-    }
-    100%{
-        transform: rotateZ(0deg) rotateX(0deg);
-    }
- }
+0%{
+    transform: rotateZ(0deg) rotateX(0deg);
+}
+50%{
+    transform: rotateZ(1deg) rotateX(20deg);
+}
+100%{
+    transform: rotateZ(0deg) rotateX(0deg);
+}
+}
 
 @media (max-width:600px){
 
 .card{
 width:92vw;
 padding:12px;
-     max-width:350px;
+    max-width:350px;
 }
 
 #company{
@@ -187,20 +187,20 @@ font-style: bolder;
 font-weight: 800;
 }
 .name{
-    font-size:4vw;
-    margin-top:0.5vh;
-    font-weight: 600;
+font-size:4vw;
+margin-top:0.5vh;
+font-weight: 600;
 }
 .title{
-    font-size: 3vw;
-    opacity:.8;
-    font-weight: 400;
+font-size: 3vw;
+opacity:.8;
+font-weight: 400;
 }
 .contact{
-    margin-top:.2vh;
-    font-size:2.2vw; 
-    margin-left: 8vw; 
-    gap:.2vh}
+margin-top:.2vh;
+font-size:2.2vw; 
+margin-left: 8vw; 
+gap:.2vh}
 
 #qrcode{
 position:absolute;
@@ -280,9 +280,9 @@ background-size:20px 20px;
 }
 
 .social-icons{
-    position: absolute;
-    top:43%;
-    right:4%;
+position: absolute;
+top:43%;
+right:4%;
 margin-top:0.5vh;
 display:flex;
 gap:1vw;
@@ -290,7 +290,7 @@ font-size:2.5vw;
 }
 
 .social-icons a:hover{
-    transform: scale(1.1);
+transform: scale(1.1);
 }
 
 .contact a,.social-icons a{
@@ -316,155 +316,155 @@ right: 50px;
 
 <!-- OFFCANVAS FORM -->
 <div class="offcanvas offcanvas-start bg-dark text-light" style="width: 50%;"  tabindex="-1" id="openPanel" aria-labelledby="openPanelLabel">
-  <div class="offcanvas-header">
-    <h3 class="offcanvas-title" id="openPanelLabel">Edit visiting card</h3>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body row">
+<div class="offcanvas-header">
+<h3 class="offcanvas-title" id="openPanelLabel">Edit visiting card</h3>
+<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+</div>
+<div class="offcanvas-body row">
 
 <div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#CardData" aria-expanded="true" aria-controls="CardData">
-        Card Data
-      </button>
-    </h2>
-    <div id="CardData" class="accordion-collapse collapse show bg-dark" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-            <div class="col-12">
-            <div class="input-group col-6"><input class="form-control mb-2" type="text" for="company" name="company" id="companyInput" placeholder="Company Name"></div>
-            <div class="input-group col-6"><input class="form-control mb-2" type="text" for="name" name="name" id="nameInput" placeholder="Name"></div>
-            <div class="input-group col-6"><input class="form-control mb-2" type="text" for="title" name="title" id="titleInput" placeholder="Job Title"></div>
-            <div class="input-group col-6"><input class="form-control mb-2" type="tel" for="phone" name="phone" id="phoneInput" placeholder="Phone"></div>
-            <div class="input-group col-6"><input class="form-control mb-2" type="email" for="email" name="email" id="emailInput" placeholder="Email"></div>
-            <div class="input-group col-6"><input class="form-control mb-2" type="text" for="web" name="web" id="webInput" placeholder="Website"></div>
-
-            <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">LinkedIn</span>
-            <input class="form-control" type="text" id="linkedinInput" placeholder="LinkedIn profile URL">
-            </div>
-            <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Twitter / X</span>
-            <input class="form-control" type="text" id="twitterInput" placeholder="Twitter profile URL">
-            </div>
-            <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Instagram</span>
-                <input class="form-control" type="text" id="instagramInput" placeholder="Instagram profile URL">
-            </div>
-            <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Facebook</span>
-            <input class="form-control" type="text" id="facebookInput" placeholder="Facebook profile URL">
-            </div>
-
-            <div class="button-group">
-                    <button class="btn btn-success" onclick="generateQR()">Add QR</button>
-                <button class="btn btn-success" onclick="downloadCard()">Download PNG</button>
-                <button class="btn btn-success" onclick="downloadVCard()">Download Contact (.VCF)</button>
-
-            </div>
-            <div class="mb-3">
-            <label for="logoUpload" class="form-label">Upload Logo</label>
-            <input class="form-control" type="file" id="logoUpload" accept="image/*">
-            </div>
-            <div class="mb-3 d-none">
-            <label for="photoInput" class="form-label">Profile Photo / Logo</label>
-            <input class="form-control" type="file" id="photoInput" placeholder="Choose"  accept="image/*">
-            </div>
-
-            </div>
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Settings" aria-expanded="false" aria-controls="Settings">
-        Settings
-      </button>
-    </h2>
-    <div id="Settings" class="accordion-collapse collapse bg-dark text-light" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <div class="container row settings">
-            <div class="input-group mb-3">
-            <span class="input-group-text bg-secondary" id="basic-addon1">Select Template</span>
-            <select class="form-select" id="templateSelect">
-            <option value="template1">Glass</option>
-            <option value="template2">Dark</option>
-            <option value="template3">Gradient</option>
-            </select>
-            </div>
-            
-            <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Font Style</span>
-            <select class="form-select" id="fontSelect">
-            <option value="Poppins">Poppins</option>
-            <option value="Montserrat">Montserrat</option>
-            <option value="Roboto">Roboto</option>
-            <option value="Noto Sans">Noto Sans</option>
-            <option value="Lato">Lato</option>
-            <option value="Playfair Display">Playfair Display</option>
-            <option value="Oswald">Oswald</option>
-            <option value="Fira Sans">Fira Sans</option>
-            <option value="Merriweather">Merriweather</option>
-            <option value="Roboto Flex">Roboto Flex</option>
-            <option value="open sans">open sans</option>
-            <option value="Mada">Mada</option>
-            <option value="Zalando Sans SemiExpanded">Zalando Sans SemiExpanded</option>
-            <option value="Sansation">Sansation</option>
-            <option value="Neuton">Neuton</option>
-            <option value="Space Grotesk">Space Grotesk</option>
-            <option value="Crimson text">Crimson text</option>
-            <option value="lexend Deca">lexend Deca</option>
-            <option value="cal Sans">cal Sans</option>
-            <option value="Macando">Macando</option>
-            <option value="quintessential">quintessential</option>
-            <option value="kings">kings</option>
-            <option value="Oh Whale">Oh whale</option>
-    <option value="kavoon">kavoon</option>
-    <option value="luckiest guy">luckiest guy</option>
-    <option value="schoolball">schoolball</option>
-    <option value="jua">jua</option>
-    <option value="mali">mali</option>
-    <option value="fustat">fustat</option>
-    <option value="rasa">rasa</option>
-    <option value="varta">varta</option>
-    <option value="amethysta">amethysta</option>
-    <option value="ramaraja">ramaraja</option>
-    <option value="gluten">gluten</option>
-            </select>
-            </div>
-
-                        <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Background Pattern
-            </span>
-            <select class="form-select" id="patternSelect"> <option value="none">None</option> <option value="dots">Dots</option> <option value="grid">Grid</option> <option value="lines">Diagonal Lines</option> <option value="cross">Cross Pattern</option> <option value="waves">Waves</option> </select>
-            
-            </div>
-
-            <div class="input-group mb-3">
-            <span for="patternDensity" class="input-group-text" id="basic-addon1">Pattern Density            </span>
-            <input type="range" class="form-range" id="patternDensity" min="5" max="40" value="15">
-            </div>
-
-                    <div class="input-group mb-3">
-            <span for="colorPicker" class="input-group-text" id="basic-addon1">
-                Primary Color
-            </span>
-            <input type="color" class="form-control form-control-color" id="colorPicker" value="#563d7c" title="Choose your color">
-            </div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingOne">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#CardData" aria-expanded="true" aria-controls="CardData">
+    Card Data
+    </button>
+</h2>
+<div id="CardData" class="accordion-collapse collapse show bg-dark" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+        <div class="col-12">
+        <div class="input-group col-6"><input class="form-control mb-2" type="text" for="company" name="company" id="companyInput" placeholder="Company Name"></div>
+        <div class="input-group col-6"><input class="form-control mb-2" type="text" for="name" name="name" id="nameInput" placeholder="Name"></div>
+        <div class="input-group col-6"><input class="form-control mb-2" type="text" for="title" name="title" id="titleInput" placeholder="Job Title"></div>
+        <div class="input-group col-6"><input class="form-control mb-2" type="tel" for="phone" name="phone" id="phoneInput" placeholder="Phone"></div>
+        <div class="input-group col-6"><input class="form-control mb-2" type="email" for="email" name="email" id="emailInput" placeholder="Email"></div>
+        <div class="input-group col-6"><input class="form-control mb-2" type="text" for="web" name="web" id="webInput" placeholder="Website"></div>
 
         <div class="input-group mb-3">
-            <input type="text" id="shareLink" class="form-control" placeholder="Share Link" aria-label="Username" aria-describedby="basic-addon1">
-            <button class="btn btn-primary btn-large" onclick="generateShareLink()">Generate Share Link</button> 
+        <span class="input-group-text" id="basic-addon1">LinkedIn</span>
+        <input class="form-control" type="text" id="linkedinInput" placeholder="LinkedIn profile URL">
         </div>
+        <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Twitter / X</span>
+        <input class="form-control" type="text" id="twitterInput" placeholder="Twitter profile URL">
         </div>
-      </div>
+        <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Instagram</span>
+            <input class="form-control" type="text" id="instagramInput" placeholder="Instagram profile URL">
+        </div>
+        <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Facebook</span>
+        <input class="form-control" type="text" id="facebookInput" placeholder="Facebook profile URL">
+        </div>
+
+        <div class="button-group">
+                <button class="btn btn-success" onclick="generateQR()">Add QR</button>
+            <button class="btn btn-success" onclick="downloadCard()">Download PNG</button>
+            <button class="btn btn-success" onclick="downloadVCard()">Download Contact (.VCF)</button>
+
+        </div>
+        <div class="mb-3">
+        <label for="logoUpload" class="form-label">Upload Logo</label>
+        <input class="form-control" type="file" id="logoUpload" accept="image/*">
+        </div>
+        <div class="mb-3 d-none">
+        <label for="photoInput" class="form-label">Profile Photo / Logo</label>
+        <input class="form-control" type="file" id="photoInput" placeholder="Choose"  accept="image/*">
+        </div>
+
+        </div>
     </div>
-  </div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingThree">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Settings" aria-expanded="false" aria-controls="Settings">
+    Settings
+    </button>
+</h2>
+<div id="Settings" class="accordion-collapse collapse bg-dark text-light" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+    <div class="container row settings">
+        <div class="input-group mb-3">
+        <span class="input-group-text bg-secondary" id="basic-addon1">Select Template</span>
+        <select class="form-select" id="templateSelect">
+        <option value="template1">Glass</option>
+        <option value="template2">Dark</option>
+        <option value="template3">Gradient</option>
+        </select>
+        </div>
+        
+        <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Font Style</span>
+        <select class="form-select" id="fontSelect">
+        <option value="Poppins">Poppins</option>
+        <option value="Montserrat">Montserrat</option>
+        <option value="Roboto">Roboto</option>
+        <option value="Noto Sans">Noto Sans</option>
+        <option value="Lato">Lato</option>
+        <option value="Playfair Display">Playfair Display</option>
+        <option value="Oswald">Oswald</option>
+        <option value="Fira Sans">Fira Sans</option>
+        <option value="Merriweather">Merriweather</option>
+        <option value="Roboto Flex">Roboto Flex</option>
+        <option value="open sans">open sans</option>
+        <option value="Mada">Mada</option>
+        <option value="Zalando Sans SemiExpanded">Zalando Sans SemiExpanded</option>
+        <option value="Sansation">Sansation</option>
+        <option value="Neuton">Neuton</option>
+        <option value="Space Grotesk">Space Grotesk</option>
+        <option value="Crimson text">Crimson text</option>
+        <option value="lexend Deca">lexend Deca</option>
+        <option value="cal Sans">cal Sans</option>
+        <option value="Macando">Macando</option>
+        <option value="quintessential">quintessential</option>
+        <option value="kings">kings</option>
+        <option value="Oh Whale">Oh whale</option>
+<option value="kavoon">kavoon</option>
+<option value="luckiest guy">luckiest guy</option>
+<option value="schoolball">schoolball</option>
+<option value="jua">jua</option>
+<option value="mali">mali</option>
+<option value="fustat">fustat</option>
+<option value="rasa">rasa</option>
+<option value="varta">varta</option>
+<option value="amethysta">amethysta</option>
+<option value="ramaraja">ramaraja</option>
+<option value="gluten">gluten</option>
+        </select>
+        </div>
+
+                    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Background Pattern
+        </span>
+        <select class="form-select" id="patternSelect"> <option value="none">None</option> <option value="dots">Dots</option> <option value="grid">Grid</option> <option value="lines">Diagonal Lines</option> <option value="cross">Cross Pattern</option> <option value="waves">Waves</option> </select>
+        
+        </div>
+
+        <div class="input-group mb-3">
+        <span for="patternDensity" class="input-group-text" id="basic-addon1">Pattern Density            </span>
+        <input type="range" class="form-range" id="patternDensity" min="5" max="40" value="15">
+        </div>
+
+                <div class="input-group mb-3">
+        <span for="colorPicker" class="input-group-text" id="basic-addon1">
+            Primary Color
+        </span>
+        <input type="color" class="form-control form-control-color" id="colorPicker" value="#563d7c" title="Choose your color">
+        </div>
+
+    <div class="input-group mb-3">
+        <input type="text" id="shareLink" class="form-control" placeholder="Share Link" aria-label="Username" aria-describedby="basic-addon1">
+        <button class="btn btn-primary btn-large" onclick="generateShareLink()">Generate Share Link</button> 
+    </div>
+    </div>
+    </div>
+</div>
+</div>
 </div>
 
 
 
-  </div>
+</div>
 </div>
 <div class="offcanvasX" id="panel" >
 <span class="close-btn" onclick="closePanel()">✖</span>
@@ -476,7 +476,7 @@ right: 50px;
 
 <div id="card" class="card template1">
 <div id="patternLayer" class="pattern-layer"></div>
-<img src="./images/ycc logo.png" id="logoImg" class="logo" style="display:none"> 
+<img src="./images/bg_9.JPG" id="logoImg" class="logo" style="display:none"> 
 <h1 id="company">Your Company</h1>
 
 <p class="name" id="name">John Doe</p>
@@ -484,62 +484,62 @@ right: 50px;
 <img src="./images/bg_9.JPG" id="cardPhoto" style="display:block" class="profile-photo" onclick="document.querySelector('#photoInput').click()">
 
 <div class="contact">
-    <!-- 📞 ✉ 🌐-->
-    <i class="fa fa-phone"></i> <a href="tel:" data-link="tel:"  onmouseover="this.setAttribute('href',this.dataset.link+this.textContent)"  class="text-decoration-none" id="phone">123456</a><br>
-    <i class="fa fa-envelope"></i> <a href="mailto:"data-link="mailto:" onmouseover="this.setAttribute('href',this.dataset.link+this.textContent)" class="text-decoration-none" id="email">email@mail.com</a><br>
-    <i class="fa-brands fa-edge"></i> <a href="./" data-link="https://"  onmouseover="this.setAttribute('href',this.dataset.link+this.textContent)"  class="text-decoration-none" id="web">website.com</a>
+<!-- 📞 ✉ 🌐-->
+<i class="fa fa-phone"></i> <a href="tel:" data-link="tel:"  onmouseover="this.setAttribute('href',this.dataset.link+this.textContent)"  class="text-decoration-none" id="phone">123456</a><br>
+<i class="fa fa-envelope"></i> <a href="mailto:"data-link="mailto:" onmouseover="this.setAttribute('href',this.dataset.link+this.textContent)" class="text-decoration-none" id="email">email@mail.com</a><br>
+<i class="fa-brands fa-edge"></i> <a href="./" data-link="https://"  onmouseover="this.setAttribute('href',this.dataset.link+this.textContent)"  class="text-decoration-none" id="web">website.com</a>
 </div>
 <div class="social-icons" id="socialIcons"></div>
 <div class="card2">
-    <div id="qrcode"  data-bs-toggle="modal" data-bs-target="#qrModal"></div>
-    </div>
-      <span  oncontextmenu="openPanel()"  type="button" data-bs-toggle="offcanvas" data-bs-target="#openPanel" aria-controls="openPanel" class="position-absolute fs-5 top-0 start-100 translate-middle badge rounded-pill bg-info">
-    <i class="fa fa-edit"></i>
-    <span class="visually-hidden">unread messages</span>
-  </span>
+<div id="qrcode"  data-bs-toggle="modal" data-bs-target="#qrModal"></div>
+</div>
+    <span  oncontextmenu="openPanel()"  type="button" data-bs-toggle="offcanvas" data-bs-target="#openPanel" aria-controls="openPanel" class="position-absolute fs-5 top-0 start-100 translate-middle badge rounded-pill bg-info">
+<i class="fa fa-edit"></i>
+<span class="visually-hidden">unread messages</span>
+</span>
 </div>
 
 <div class="modal fade" id="qrModal" tabindex="-1">
-     <div class="modal-dialog modal-dialog-centered modal-xl modal-lg">
-     <div class="modal-content text-center">
-     <div class="modal-header"> 
-        <h5 class="modal-title">Scan Contact QR</h5> 
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button> </div>
-         <div class="modal-body">
-     <img src="./" alt="QR code" id="qrModalCode"/> 
-    </div>
- </div>
- </div>
- </div>
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-lg">
+    <div class="modal-content text-center">
+    <div class="modal-header"> 
+    <h5 class="modal-title">Scan Contact QR</h5> 
+    <button type="button" class="btn-close" data-bs-dismiss="modal"></button> </div>
+        <div class="modal-body">
+    <img src="./" alt="QR code" id="qrModalCode"/> 
+</div>
+</div>
+</div>
+</div>
 
- <script>
-        const $$=z=>document.getElementById(z);
-    const $=z=>document.querySelector(z);
-    const isEmpty=z=>(z=="")
+<script>
+    const $$=z=>document.getElementById(z);
+const $=z=>document.querySelector(z);
+const isEmpty=z=>(z=="")
 
 window.addEventListener("load",()=>{
-        const params=new URLSearchParams(atob(location.search.substr(1)))
-        updateinputFields(!isEmpty(location.search),params)
-        updateSocialIcons("")
+    const params=new URLSearchParams(atob(location.search.substr(1)))
+    updateSocialIcons("")
+    updateinputFields(!isEmpty(location.search),params)
 });
 
 </script>
 <script>
-    let photoBase64 = "";
-     $$("photoInput").addEventListener("change", function(e){ const file = e.target.files[0];
-         if(!file) return;
-         const reader = new FileReader();
-         reader.onload = function(evt){
-             // remove prefix "data:image/jpeg;
-    // base64," 
-        photoBase64 = evt.target.result.split(",")[1];
-        // preview image 
-        document.getElementById("cardPhoto").style.display="block";
-        document.getElementById("cardPhoto").src = evt.target.result;
-        };
-        reader.readAsDataURL(file);
-    });
-    
+let photoBase64 = "";
+    $$("photoInput").addEventListener("change", function(e){ const file = e.target.files[0];
+        if(!file) return;
+        const reader = new FileReader();
+        reader.onload = function(evt){
+            // remove prefix "data:image/jpeg;
+// base64," 
+    photoBase64 = evt.target.result.split(",")[1];
+    // preview image 
+    document.getElementById("cardPhoto").style.display="block";
+    document.getElementById("cardPhoto").src = evt.target.result;
+    };
+    reader.readAsDataURL(file);
+});
+
 
 </script>
 
@@ -548,12 +548,12 @@ window.addEventListener("load",()=>{
 function generateShareLink(){
 
 const data={
-    name:$$("name").textContent,
-    title:$$("title").textContent,
-    phone:$$("phone").textContent,
-    email:$$("email").textContent,
-    company:$$("company").textContent,
-    web:$$("web").textContent
+name:$$("name").textContent,
+title:$$("title").textContent,
+phone:$$("phone").textContent,
+email:$$("email").textContent,
+company:$$("company").textContent,
+web:$$("web").textContent
 };
 const params=new URLSearchParams(data).toString();
 console.log(params,btoa(params),data)
@@ -569,30 +569,30 @@ $$("shareLink").value=link;
 <script>
 
 function updateSocialIcons(sInputs){
-console.log(sInputs)
-    const icons=$$("socialIcons");
+const icons=$$("socialIcons");
 
-    icons.innerHTML="";
+icons.innerHTML="";
 
-    const socials=[
-    {input:"linkedinInput",icon:"fa-linkedin",preURL:"https://www.linkedin.com/in/saman-maharjan-5bb284174/"},
-    {input:"twitterInput",icon:"fa-x-twitter",preURL:"https://x.com/samanmaharjan"},
-    {input:"instagramInput",icon:"fa-instagram",preURL:"https://www.instagram.com/samanmaharjan"},
-    {input:"instagramInput",icon:"fa-youtube",preURL:"https://www.youtube.com/samanmaharjan"},
-    {input:"facebookInput",icon:"fa-facebook",preURL:"https://www.facebook.com/saman.maharjan.3"}
-    ];
+const socials=[
+{input:"linkedinInput",icon:"fa-linkedin",preURL:"https://www.linkedin.com/in/saman-maharjan-5bb284174/"},
+{input:"twitterInput",icon:"fa-x-twitter",preURL:"https://x.com/samanmaharjan"},
+{input:"instagramInput",icon:"fa-instagram",preURL:"https://www.instagram.com/samanmaharjan"},
+{input:"instagramInput",icon:"fa-youtube",preURL:"https://www.youtube.com/samanmaharjan"},
+{input:"facebookInput",icon:"fa-facebook",preURL:"https://www.facebook.com/saman.maharjan.3"}
+];
 
-    socials.forEach((s,i)=>{
-        let url=s.preURL ||$$(s.input).value;
-        if(url){
-            let a=document.createElement("a");
-            a.href=url;
-            a.target="_blank";
-            a.innerHTML=`<i class="fa-brands ${s.icon}"></i>`;
+socials.forEach((s,i)=>{
+    $$(s.input).value=s.preURL
+    let url=s.preURL ||$$(s.input).value;
+    if(url){
+        let a=document.createElement("a");
+        a.href=url;
+        a.target="_blank";
+        a.innerHTML=`<i class="fa-brands ${s.icon}"></i>`;
 
-            icons.appendChild(a);
-        }
-    });
+        icons.appendChild(a);
+    }
+});
 }
 
 document.querySelectorAll("#linkedinInput,#twitterInput,#instagramInput,#facebookInput")
@@ -718,28 +718,28 @@ reader.readAsDataURL(this.files[0]);
 /* LIVE UPDATE */
 
 function updateinputFields(hasParams,params){
-    console.log(params,hasParams)
-    const fields=[
-        ["nameInput","name"],
-        ["titleInput","title"],
-        ["phoneInput","phone"],
-        ["emailInput","email"],
-        ["webInput","web"],
-        ["companyInput","company"],
-    ];
+console.log(params,hasParams)
+const fields=[
+    ["nameInput","name"],
+    ["titleInput","title"],
+    ["phoneInput","phone"],
+    ["emailInput","email"],
+    ["webInput","web"],
+    ["companyInput","company"],
+];
 let myCardDetails=JSON.parse(localStorage.getItem("VCARD"));
 fields.forEach(([input,target])=>{
-    console.log(input,target,params.get(target))
-    $$(input).addEventListener("input",e=>{
-        $$(target).textContent=e.target.value;
-        if(e.key=="Enter"){
-            generateQR()
-        }
-    });
-    $(`#${input}`).value=hasParams? params.get(target):myCardDetails[target];
-    $(`#${target}`).textContent= hasParams? params.get(target):myCardDetails[target];
-    });
-    generateQR();
+console.log(input,target,params.get(target))
+$$(input).addEventListener("input",e=>{
+    $$(target).textContent=e.target.value;
+    if(e.key=="Enter"){
+        generateQR()
+    }
+});
+$(`#${input}`).value=hasParams? params.get(target):myCardDetails[target];
+$(`#${target}`).textContent= hasParams? params.get(target):myCardDetails[target];
+});
+generateQR();
 }
 /* QR */
 let QRComponent;
@@ -762,30 +762,46 @@ email:email,
 web:web,    
 company:company,
 title:title,
-social:{
-    linkedin:linkedin,
-    twitter:twitter,
-    instagram:instagram,
-    facebook:facebook,
+linkedin:linkedin,
+twitter:twitter,
+instagram:instagram,
+facebook:facebook,
 }
+
+
+if(JSON.parse(localStorage.getItem("VCARD"))==cardDetails){
+    console.log(cardDetails,JSON.parse(localStorage.getItem("VCARD")))
+    localStorage.setItem("VCARD",JSON.stringify(cardDetails))
 }
-localStorage.setItem("VCARD",JSON.stringify(cardDetails))
-console.log(cardDetails)
 
 const vcard=`BEGIN:VCARD
 VERSION:3.0
 FN:${name}
-TEL:${phone}
+N:${name.split(" ").join(";")}
+TEL;TYPE=CELL:+977-${phone}
 EMAIL:${email}
 URL:${web}
+ORG:${company}
+TITLE:${title}
+PHOTO;MEDIATYPE=image/jpeg:https://samanmaharjan.info.np/images/bg_9.JPG
+END:VCARD`;
+
+extra=`
+TEL:${phone}
+TEL;TYPE=WORK,VOICE:+977-${phone}
+IMPP:xmpp:alex@chat.example.com
+GEO:geo:27.7172,85.3240
+TZ:Asia/Kathmandu
+ADR:;;City;State;Country
+BDAY:1990-05-12
+LANG:en
+NOTE:Lead developer for international projects
+URL:${instagram}
 X-SOCIALPROFILE;TYPE=linkedin:${linkedin}
 X-SOCIALPROFILE;TYPE=twitter:${twitter}
 X-SOCIALPROFILE;TYPE=instagram:${instagram}
 X-SOCIALPROFILE;TYPE=facebook:${facebook}
-ORG:${company}
-TITLE:${title}
-ADR:;;City;State;Country
-END:VCARD`;
+`
 
 if(photoBase64){ vcard+=`PHOTO;ENCODING=b;TYPE=JPEG:${photoBase64}\n`; }
 localStorage.setItem("VCARData",JSON.stringify(cardDetails))
@@ -802,21 +818,19 @@ correctLevel:QRCode.CorrectLevel.L
 
 }
 $$("qrcode").addEventListener("load",setTimeout(()=>{
-    console.log(QRComponent)
-    $$("qrcode").querySelector("img").style.display="none";
-    $$("qrModalCode").src=$$("qrcode").querySelector("img").src;
-    $$("qrcode").style.backgroundImage="url("+$$("qrcode").querySelector("img").src+")";
+$$("qrcode").querySelector("img").style.display="none";
+$$("qrModalCode").src=$$("qrcode").querySelector("img").src;
+$$("qrcode").style.backgroundImage="url("+$$("qrcode").querySelector("img").src+")";
 },1000))
 
 /* DOWNLOAD */
 
 function downloadCard(){
-    let card=document.getElementById("card")
-    html2canvas(card,{  useCORS: true}).then(canvas=>{
+let card=$$("card")
+html2canvas(card).then(canvas=>{
 const link=document.createElement("a");
-console.log(canvas)
 link.download="visiting-card.png";
-link.setAttribute("href", canvas.toDataURL("image/png"));
+link.href= canvas.toDataURL();
 link.click();
 });
 
@@ -827,21 +841,21 @@ const vcard = localStorage.getItem("VCARData");
 
 const blob = new Blob([vcard], { type: "text/vcard;charset=utf-8" });
 if(navigator.userAgentData.mobile){
-    const url=URL.createObjectURL(blob); 
-    window.location.href=url;
+const url=URL.createObjectURL(blob); 
+window.location.href=url;
 }else{
-    const link = document.createElement("a");
-    
-    const fileName = document.getElementById("name").textContent || "contact";
-    
-    link.href = URL.createObjectURL(blob);
-    link.download = fileName + ".vcf";
-    
-    document.body.appendChild(link);
-    link.click();
-    
-    document.body.removeChild(link);    
-    }
+const link = document.createElement("a");
+
+const fileName = document.getElementById("name").textContent || "contact";
+
+link.href = URL.createObjectURL(blob);
+link.download = fileName + ".vcf";
+
+document.body.appendChild(link);
+link.click();
+
+document.body.removeChild(link);    
+}
 }
 
 </script>
