@@ -476,12 +476,12 @@ right: 50px;
 
 <div id="card" class="card template1">
 <div id="patternLayer" class="pattern-layer"></div>
-<img src="./images/bg_9.JPG" id="logoImg" class="logo" style="display:none"> 
+<img src="./images/bg_9.JPG id="logoImg" class="logo" style="display:none"> 
 <h1 id="company">Your Company</h1>
 
 <p class="name" id="name">John Doe</p>
 <p class="title" id="title">Creative Director</p>
-<img src="./images/bg_9.JPG" id="cardPhoto" style="display:block" class="profile-photo" onclick="document.querySelector('#photoInput').click()">
+<img src="./images/bg_9.JPG id="cardPhoto" style="display:block" class="profile-photo" onclick="document.querySelector('#photoInput').click()">
 
 <div class="contact">
 <!-- 📞 ✉ 🌐-->
@@ -490,8 +490,7 @@ right: 50px;
 <i class="fa-brands fa-edge"></i> <a href="./" data-link="https://"  onmouseover="this.setAttribute('href',this.dataset.link+this.textContent)"  class="text-decoration-none" id="web">website.com</a>
 </div>
 <div class="social-icons" id="socialIcons"></div>
-<div class="card2">
-<div id="qrcode"  data-bs-toggle="modal" data-bs-target="#qrModal"></div>
+<div id="qrcode" data-bs-toggle="modal" data-bs-target="#qrModal"></div>
 </div>
     <span  oncontextmenu="openPanel()"  type="button" data-bs-toggle="offcanvas" data-bs-target="#openPanel" aria-controls="openPanel" class="position-absolute fs-5 top-0 start-100 translate-middle badge rounded-pill bg-info">
 <i class="fa fa-edit"></i>
@@ -503,10 +502,12 @@ right: 50px;
     <div class="modal-dialog modal-dialog-centered modal-xl modal-lg">
     <div class="modal-content text-center">
     <div class="modal-header"> 
-    <h5 class="modal-title">Scan Contact QR</h5> 
+    <h5 class="modal-title text-dark">Scan Contact QR</h5> 
     <button type="button" class="btn-close" data-bs-dismiss="modal"></button> </div>
         <div class="modal-body">
     <img src="./" alt="QR code" id="qrModalCode"/> 
+    <div id="qrCodeMain" style="display: none;">
+
 </div>
 </div>
 </div>
@@ -806,9 +807,9 @@ X-SOCIALPROFILE;TYPE=facebook:${facebook}
 if(photoBase64){ vcard+=`PHOTO;ENCODING=b;TYPE=JPEG:${photoBase64}\n`; }
 localStorage.setItem("VCARData",JSON.stringify(cardDetails))
 
-$$("qrcode").innerHTML="";
+$$("qrCodeMain").innerHTML="";
 
-QRComponent=new QRCode($$("qrcode"),{
+QRComponent=new QRCode($$("qrCodeMain"),{
 text:vcard,
 width:window.innerWidth/3,
 height:window.innerWidth/3,
@@ -818,9 +819,8 @@ correctLevel:QRCode.CorrectLevel.L
 
 }
 $$("qrcode").addEventListener("load",setTimeout(()=>{
-$$("qrcode").querySelector("img").style.display="none";
-$$("qrModalCode").src=$$("qrcode").querySelector("img").src;
-$$("qrcode").style.backgroundImage="url("+$$("qrcode").querySelector("img").src+")";
+    $$("qrModalCode").src=$$("qrCodeMain").querySelector("img").src;
+    $$("qrcode").style.backgroundImage="url("+$$("qrCodeMain").querySelector("img").src+")";
 },1000))
 
 /* DOWNLOAD */
