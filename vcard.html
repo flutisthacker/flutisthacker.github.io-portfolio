@@ -476,8 +476,8 @@ right: 50px;
 
 <div id="card" class="card template1">
 <div id="patternLayer" class="pattern-layer"></div>
-<img src="./images/bg_9.JPG" id="logoImg" class="logo" style="display:none"> 
-<h1 id="company">Your Company</h1>
+<img src="./images/bg_9.JPG" id="logoImg" class="logo" onerror="this.classList.add('d-none');document.querySelector('#company').classList.remove('d-none');"> 
+<h1 id="company" class="d-none">Your Company</h1>
 
 <p class="name" id="name">John Doe</p>
 <p class="title" id="title">Creative Director</p>
@@ -769,10 +769,11 @@ facebook:facebook,
 }
 
 
-if(JSON.parse(localStorage.getItem("VCARD"))==cardDetails){
-    console.log(cardDetails,JSON.parse(localStorage.getItem("VCARD")))
-    localStorage.setItem("VCARD",JSON.stringify(cardDetails))
-}
+    if(JSON.parse(localStorage.getItem("VCARD"))==cardDetails){
+        console.log(cardDetails,JSON.parse(localStorage.getItem("VCARD")))
+        localStorage.setItem("VCARD",JSON.stringify(cardDetails))
+        updateinputFields()
+    }
 
 const vcard=`BEGIN:VCARD
 VERSION:3.0
