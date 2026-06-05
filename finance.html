@@ -71,12 +71,12 @@ let mySalaryA=parseInt(salaryA.value)
 let mySalaryB=parseInt(salaryB.value)    
 total=mySalaryA+mySalaryB;
 console.log(total)
-incomeRatioA=(mySalaryA/total*100)
-incomeRatioB=(mySalaryB/total*100)
-incomeSaveA=incomeRatioA/100*mySalaryA
-incomeSaveB=incomeRatioB/100*mySalaryB
-document.querySelector(".myValues>tfoot").innerHTML+=`<tr><th>Income</th></tr><tr><td>income Ratio A</td><td>NPR ${incomeRatioA}</td></tr>
-<tr><td>income Ratio B</td><td>NPR ${incomeRatioB}</td></tr>
+incomeRatioA=Math.round(mySalaryA/total*100)
+incomeRatioB=Math.round(mySalaryB/total*100)
+incomeSaveA=Math.round(incomeRatioA/100*mySalaryA)
+incomeSaveB=Math.round(incomeRatioB/100*mySalaryB)
+document.querySelector(".myValues>tfoot").innerHTML+=`<tr><th>Income</th></tr><tr><td>income Ratio A</td><td>${incomeRatioA}%</td></tr>
+<tr><td>income Ratio B</td><td>${incomeRatioB}%</td></tr>
 <tr><td>income save A</td><td>NPR ${incomeSaveA}</td></tr>
 <tr><td>income save B</td><td>NPR ${incomeSaveB}</td></tr>`
 mySalary.value=parseInt(incomeSaveA+incomeSaveB) || total
