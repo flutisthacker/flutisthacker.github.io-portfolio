@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Finance</title>
         <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,9 +15,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     <input type="number" id="salaryB" min="0" class="form-control" placeholder="salary amount">
     <button class="btn btn-info" onclick="cal()">calculate</button>
     <input type="number" id="salary" min="0" class="form-control" placeholder="salary amount">
-    <table class="myValues">
-        <thead><tr></tr></thead>
+    <table class="myValues table table-hover">
         <tbody></tbody>
+        <tfoot></tfoot>
     </table>
 </body>
 <script>
@@ -55,9 +55,17 @@ mapSal={
 function cal(){
 let mySalaryA=parseInt(document.querySelector("#salaryA").value)
 let mySalaryB=parseInt(document.querySelector("#salaryB").value)    
-total=mySalaryA+mySalary;
+total=mySalaryA+mySalaryB;
 console.log(total)
-mySalary.value=(mySalaryA/total*100)+(mySalaryB/total*100) || total
+incomeRatioA=(mySalaryA/total*100)
+incomeRatioB=(mySalaryB/total*100)
+incomeSaveA=incomeRatioA/100*mySalaryA
+incomeSaveB=incomeRatioB/100*mySalaryB
+document.querySelector(".myValues>tfoot").innerHTML+=`<tr><th>Income</th></tr><tr><td>income Ratio A</td><td>NPR ${incomeRatioA}</td></tr>
+<tr><td>income Ratio B</td><td>NPR ${incomeRatioB}</td></tr>
+<tr><td>income save A</td><td>NPR ${incomeSaveA}</td></tr>
+<tr><td>income save B</td><td>NPR ${incomeSaveB}</td></tr>`
+mySalary.value=parseInt(incomeSaveA+incomeSaveB) || total
 }
 mySalary.addEventListener("keypress",e=>{
     if(e.key=="Enter"){
@@ -66,10 +74,10 @@ mySalary.addEventListener("keypress",e=>{
             myHeadvalue=Math.floor(mapSal[x].head*mySalary.value/100)
             Object.keys(mapSal[x]).map((y,i)=>{
                 if(i>0){
-                    document.querySelector(".myValues>tbody").innerHTML+=`<tr><td>${y}</td><td>${Math.floor(mapSal[x][y]/100*myHeadvalue)}</td></tr>`
+                    document.querySelector(".myValues>tbody").innerHTML+=`<tr><td>${y}</td><td>NPR ${Math.floor(mapSal[x][y]/100*myHeadvalue)}</td></tr>`
                 }
                 else{
-                    document.querySelector(".myValues>tbody").innerHTML+=`<tr><th>${x}</th><th>${myHeadvalue}</th></tr>`
+                    document.querySelector(".myValues>tbody").innerHTML+=`<tr class="table-dark"><th>${x}</th><th>NPR ${myHeadvalue}</th></tr>`
                 }
             })
         })
