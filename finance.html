@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finance</title>
+    <title>Document</title>
         <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -11,10 +11,22 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 </head>
 <body>
-    <input type="number" id="salaryA" min="0" class="form-control" placeholder="salary amount">
-    <input type="number" id="salaryB" min="0" class="form-control" placeholder="salary amount">
-    <button class="btn btn-info" onclick="cal()">calculate</button>
-    <input type="number" id="salary" min="0" class="form-control" placeholder="salary amount">
+    <nav class="navbar fixed-bottom navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Finance</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="d-flex">
+        <input type="number" id="salaryA" min="0" class="form-control me-2" placeholder="Salary amount Person A">
+        <input type="number" id="salaryB" min="0" class="form-control me-2" placeholder="Salary amount Person B">
+        <input type="number" id="salary" min="0" class="form-control me-2" placeholder="Total Salary amount">
+        <button class="btn btn-info" onclick="cal()" oncontextmenu="cal2(this)">calculate</button>
+      </div>
+    </div>
+  </div>
+</nav>
     <table class="myValues table table-hover">
         <tbody></tbody>
         <tfoot></tfoot>
@@ -23,6 +35,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <script>
     
 let mySalary=document.querySelector("#salary")
+let SalaryA=document.querySelector("#salary")
+let SalaryB=document.querySelector("#salary")
 mapSal={
 "essentials":{
     "head":50,
@@ -53,8 +67,8 @@ mapSal={
 
 }
 function cal(){
-let mySalaryA=parseInt(document.querySelector("#salaryA").value)
-let mySalaryB=parseInt(document.querySelector("#salaryB").value)    
+let mySalaryA=parseInt(salaryA.value)
+let mySalaryB=parseInt(salaryB.value)    
 total=mySalaryA+mySalaryB;
 console.log(total)
 incomeRatioA=(mySalaryA/total*100)
@@ -69,7 +83,12 @@ mySalary.value=parseInt(incomeSaveA+incomeSaveB) || total
 }
 mySalary.addEventListener("keypress",e=>{
     if(e.key=="Enter"){
-        myvalue=mySalary.value
+        cal2();
+    }
+})
+
+function cal2(){
+            myvalue=mySalary.value
         Object.keys(mapSal).map(x=>{
             myHeadvalue=Math.floor(mapSal[x].head*mySalary.value/100)
             Object.keys(mapSal[x]).map((y,i)=>{
@@ -81,7 +100,6 @@ mySalary.addEventListener("keypress",e=>{
                 }
             })
         })
-    }
-})
+}
 </script>
 </html>
