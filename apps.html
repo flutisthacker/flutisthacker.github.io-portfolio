@@ -9,8 +9,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://transposenotes.pages.dev/lib/midiplayer.css">
   <script src="https://transposenotes.pages.dev/lib/browseStorage.js"></script>
-
+<style>
+  iframe{
+    height:90vh;
+    width:90vw;
+  }
+</style>
 </head>
+
 <body class="bg-secondary">
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
@@ -55,6 +61,14 @@
         </li>
           <li class="nav-item">
           <a class="nav-link" href="#" data-srcset="./test.svg" onclick="document.querySelector('#frameBody').src=this.dataset.srcset">svg</a>
+        </li>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#" data-srcset="./finance" onclick="document.querySelector('#frameBody').src=this.dataset.srcset">finance</a>
+        </li>
+                </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#" data-srcset="./vcard.svg" onclick="document.querySelector('#frameBody').src=this.dataset.srcset">vcard</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
