@@ -178,16 +178,22 @@
                     "date":"2024",
                     "location":"./mcsnotes",
                     "description":"Notes of the MCS information I gathered in a platform."
+                },
+                {
+                    "title":"Virtual Card",
+                    "date":"2025",
+                    "location":"./vcard",
+                    "description":"people can scan and add you contact details."
                 }
     ],
     "education":[
         {
             "title":"Masters in computer science and multimedia",
             "name":"Lincoln university, Hattisar",
-            "date":"2025",
+            "date":"2026",
             "description":"I am currently pursuing a Master’s degree in Computer Science, focusing on advanced topics such as algorithms, machine learning, and software engineering. This program is enhancing my expertise in developing innovative solutions and tackling complex computational problems. My studies are deepening my understanding of cutting-edge technologies and equipping me with the skills needed to drive impactful projects in the tech industry.",
             "logo":"lincoln.png",
-            "marks":"",
+            "marks":"3.74 GPA",
             "location":"Putalisadak, Kathmandu"
         },
         {
