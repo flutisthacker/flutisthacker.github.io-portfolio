@@ -1,0 +1,26 @@
+
+body{
+background:#0f172a;
+color:#06b6d4;
+font-family:
+'JetBrains Mono',
+monospace;
+}
+
+.cv-header{
+border:
+1px solid #06b6d4;
+padding:30px;
+}
+
+section{
+background:#111827;
+padding:20px;
+margin-top:20px;
+}
+
+.skill{
+border:
+1px solid #22c55e;
+padding:6px 12px;
+}

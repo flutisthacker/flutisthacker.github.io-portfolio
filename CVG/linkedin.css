@@ -1,0 +1,22 @@
+/* LinkedIn Theme */
+
+body{
+background:#f3f2ef;
+}
+
+.cv-header{
+background:white;
+padding:30px;
+border-radius:12px;
+}
+
+section{
+background:white;
+padding:25px;
+margin-top:20px;
+border-radius:12px;
+}
+
+h2{
+color:#0a66c2;
+}

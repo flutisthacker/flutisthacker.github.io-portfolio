@@ -1,0 +1,19 @@
+## ATS Theme
+
+```css
+body{
+background:white;
+font-family:Arial,sans-serif;
+}
+
+section{
+margin-top:20px;
+}
+
+.skill{
+display:inline;
+padding:0;
+background:none;
+margin-right:10px;
+}
+```

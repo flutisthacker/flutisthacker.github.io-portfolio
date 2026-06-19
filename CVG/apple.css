@@ -1,0 +1,35 @@
+## Apple Theme
+
+```css
+body{
+background:#fff;
+color:#111;
+font-family:
+-apple-system,
+BlinkMacSystemFont,
+sans-serif;
+}
+
+.cv-header{
+padding:60px 0;
+border-bottom:1px solid #e5e7eb;
+}
+
+h1{
+font-size:4rem;
+font-weight:700;
+}
+
+section{
+padding:40px 0;
+border-bottom:1px solid #f0f0f0;
+}
+
+.skill{
+display:inline-block;
+margin:4px;
+padding:8px 14px;
+background:#f3f4f6;
+border-radius:30px;
+}
+```
