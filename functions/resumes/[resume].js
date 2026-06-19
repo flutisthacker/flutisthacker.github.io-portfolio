@@ -345,7 +345,7 @@ let myData2={
             "name":"Oxbridge International HSS, Hattisar",
             "date":"2025",
             "description":"I am currently pursuing a Master’s degree in Computer Science, focusing on advanced topics such as algorithms, machine learning, and software engineering. This program is enhancing my expertise in developing innovative solutions and tackling complex computational problems. My studies are deepening my understanding of cutting-edge technologies and equipping me with the skills needed to drive impactful projects in the tech industry.",
-            "logo":"lincoln.png",
+            "logo":"https://oxbridge.edu.np/wp-content/uploads/2021/03/oxbrigde-logo.png",
             "marks":"",
             "location":"Putalisadak, Kathmandu"
         },
@@ -354,7 +354,7 @@ let myData2={
             "name":"Campion College",
             "date":"2025",
             "description":"I hold a Bachelor's degree with Honors in Computing Science, where I gained a solid foundation in core computing principles and technologies. My coursework covered key areas such as programming, data structures, algorithms, and software development, equipping me with both theoretical insights and practical skills. This degree provided me with a robust understanding of computing fundamentals and problem-solving techniques, preparing me for diverse roles in the technology sector.",
-            "logo":"https://campioncollege.edu.np/wp-content/uploads/2023/02/header-logo.png",
+            "logo":"https://campioncollege.edu.np/wp-content/uploads/2023/02/campioncollege.png",
             "marks":"",
             "location":"Putalisadak, Kathmandu"
         },
@@ -363,7 +363,7 @@ let myData2={
             "name":"Oxbridge International HSS",
             "date":"2020",
             "description":"I have pursued higher education in Computer Science, building on a foundational background in Commerce. This unique combination has allowed me to integrate technical proficiency with a strong understanding of business principles. My studies in Computer Science have provided me with expertise in programming, data analysis, and system design, while my commerce background has equipped me with insights into financial management, market analysis, and strategic planning. This interdisciplinary approach enables me to effectively bridge the gap between technology and business, driving innovative solutions that align with organizational goals.",
-            "logo":"https://campioncollege.edu.np/wp-content/uploads/2023/02/header-logo.png",
+            "logo":"https://campioncollege.edu.np/wp-content/uploads/2023/02/campioncollege.png",
             "marks":"3.26 GPA",
             "location":"Sanepa, Kathmandu"
         },
@@ -372,7 +372,7 @@ let myData2={
             "name":"Radiant Reader's Academy",
             "date":"2017-2018",
             "description":"I completed my secondary education with excellent results, demonstrating strong academic performance across a broad range of subjects. This solid foundation in key areas such as mathematics, science, and language arts has equipped me with essential skills in problem-solving, critical thinking, and effective communication. My commitment to academic excellence during this period laid the groundwork for my continued success in higher education and professional endeavors.",
-            "logo":"https://radiant.edu.np/wp-content/uploads/2022/07/new-logo-website.png",
+            "logo":"https://radiant.edu.np/wp-content/themes/radiant-readers-academy/images/logo.png",
             "marks":"3.45 GPA",
             "location":"Kalimati, Kathmandu"
         }
