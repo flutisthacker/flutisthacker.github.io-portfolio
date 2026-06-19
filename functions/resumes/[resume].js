@@ -556,14 +556,12 @@ let myData2={
 };
 export function getMetaData(x,toSplit){
     fetchJSONData("../../saman.json");
-    returnData={}
+    let returnData;
     if(toSplit){
         splitedData=x.split("_")
         returnData={...myData2[splitedData[0]][splitedData[1]]}
-    } else{
-        returnData={...myData2[x]}
     }
-    return returnData
+    return returnData||{...myData2[x]}
 }
 
 function fetchJSONData(url) {
