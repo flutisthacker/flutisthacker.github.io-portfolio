@@ -68,14 +68,14 @@ let myData2={
             "date":"2018-2019",
             "location":"Palaa:",
             "logo":"./images/ycc%2050.png",
-            "description":""
+            "description":"Had a chance to join competition with Astra khala and win 3rd position.; Organized own tya si tya at yamari punhi with Palaa: team;"
         },
         {
             "title":"Flautist",
             "date":"2018-2015",
             "location":"Sur Sutra",
             "logo":"./images/ycc%2050.png",
-            "description":""
+            "description":"Had a wonderful time once playing with Late. Singer Bhriguram Shrestha sir.;  Organized own tya si tya at yamari punhi with Sur sutra team; Had chance to play for Radio nepal."
         }
     ],
             "training":[
