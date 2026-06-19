@@ -558,8 +558,8 @@ export function getMetaData(x,toSplit){
     fetchJSONData("../../saman.json");
     let returnData;
     if(toSplit){
-        splitedData=x.split("_")
-        returnData={...myData2[splitedData[0]][splitedData[1]]}
+        splitedData=x.split("_");
+        returnData=myData2[splitedData[0]][splitedData[1]]||{}
     }
     return returnData||{...myData2[x]}
 }
