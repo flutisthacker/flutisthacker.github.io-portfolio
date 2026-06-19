@@ -1,5 +1,8 @@
 export function onRequest(context) {
-  return new Response(JSON.stringify(getMetaData(context.params.resume)));
+    let myParam,toSplit;
+    myParam=context.params.resume
+    toSplit=myParam.includes("_")
+  return new Response(JSON.stringify(getMetaData(myParam,toSplit)));
 }
 let myData;
 let myData2={
@@ -551,9 +554,16 @@ let myData2={
     "travel":[]
 }
 };
-export function getMetaData(x){
-    fetchJSONData("../../saman.json"); 
-    return {...myData2[x]}
+export function getMetaData(x,toSplit){
+    fetchJSONData("../../saman.json");
+    returnData={}
+    if(toSplit){
+        splitedData=x.split("_")
+        returnData={...myData2[splitedData[0]][splitedData[1]]}
+    } else{
+        returnData={...myData2[x]}
+    }
+    return returnData
 }
 
 function fetchJSONData(url) {
