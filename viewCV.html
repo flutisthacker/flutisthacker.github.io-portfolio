@@ -44,9 +44,12 @@
                 Object.keys(myData).forEach(x=>{
                         console.log(x,myData[x])
                         if(typeof(myData[x])=="object" && !Array.isArray(myData[x])){
-                                $("."+x).innerHTML+=JSON.stringify(myData[x])
+                                newArr=Object.entries(myData.personal).map(x=> x[0]+":"+x[1])
+                                // $("."+x).innerHTML+=JSON.stringify(myData[x])
+                                AddToComponent("."+x,createListGroup(newArr,true,false,"info"))
                         } else if(Array.isArray(myData[x])){
-                                $("."+x).innerHTML+=myData[x].join("---")
+                                // $("."+x).innerHTML+=myData[x].join("---")
+                                AddToComponent("."+x,createListGroup(myData[x],true,false,"info"))
                         }else{
                                 $("."+x).innerHTML+=myData[x]
                         }
