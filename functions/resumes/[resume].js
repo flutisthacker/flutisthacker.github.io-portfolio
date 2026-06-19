@@ -23,7 +23,7 @@ let myData2={
                 "Workingin/as a team",
                 "Adaptability",
                 "Knowledgeontest automation tools cypress and selenium.",
-                "SDLC: SCRUM,AGILE,kanban methodology",
+                "SDLC: SCRUM, AGILE, kanban methodology",
                 "Software & Operating Systems: Google Docs, Excels, Presentation, Visual Code, Windows",
                 "Version Control Tools: Github, Gitlab, Bitbucket",
                 "Usedlanguages like Java, Ruby on rails, C#, and .NET.",
@@ -190,7 +190,7 @@ let myData2={
                     "name":"Lincoln university, Hattisar",
                     "date":"2025",
                     "description":"I am currently pursuing a Master’s degree in Computer Science, focusing on advanced topics such as algorithms, machine learning, and software engineering. This program is enhancing my expertise in developing innovative solutions and tackling complex computational problems. My studies are deepening my understanding of cutting-edge technologies and equipping me with the skills needed to drive impactful projects in the tech industry.",
-                    "logo":"lincoln.png",
+                    "logo":"./images/lincoln.png",
                     "marks":"",
                     "location":"Putalisadak, Kathmandu"
                 },
@@ -199,7 +199,7 @@ let myData2={
                     "name":"UCSI University, Malaysia",
                     "date":"2025",
                     "description":"I hold a Bachelor's degree with Honors in Computing Science, where I gained a solid foundation in core computing principles and technologies. My coursework covered key areas such as programming, data structures, algorithms, and software development, equipping me with both theoretical insights and practical skills. This degree provided me with a robust understanding of computing fundamentals and problem-solving techniques, preparing me for diverse roles in the technology sector.",
-                    "logo":"IIMS.png",
+                    "logo":"./images/IIMS.png",
                     "marks":"",
                     "location":"Putalisadak, Kathmandu"
                 },
@@ -208,7 +208,7 @@ let myData2={
                     "name":"Everest International College",
                     "date":"2020",
                     "description":"I have pursued higher education in Computer Science, building on a foundational background in Commerce. This unique combination has allowed me to integrate technical proficiency with a strong understanding of business principles. My studies in Computer Science have provided me with expertise in programming, data analysis, and system design, while my commerce background has equipped me with insights into financial management, market analysis, and strategic planning. This interdisciplinary approach enables me to effectively bridge the gap between technology and business, driving innovative solutions that align with organizational goals.",
-                    "logo":"eic.png",
+                    "logo":"./images/eic.jpg",
                     "marks":"3.26 GPA",
                     "location":"Solteemode, Kathmandu"
                 },
@@ -217,12 +217,13 @@ let myData2={
                     "name":"Tulsi Meher Memorial School",
                     "date":"2017-2018",
                     "description":"I completed my secondary education with excellent results, demonstrating strong academic performance across a broad range of subjects. This solid foundation in key areas such as mathematics, science, and language arts has equipped me with essential skills in problem-solving, critical thinking, and effective communication. My commitment to academic excellence during this period laid the groundwork for my continued success in higher education and professional endeavors.",
-                    "logo":"IIMS.png",
+                    "logo":"./images/eic.jpg",
                     "marks":"3.45 GPA",
                     "location":"Kalimati, Kathmandu"
                 }
             ],
             "summary":"As a dedicated Quality Engineer with three years of hands-on experience, complemented by an additional year in back-end development, I bring a unique blend of skills to ensure top-notch product quality and performance. My background in quality assurance has equipped me with a keen eye for detail and a deep understanding of testing methodologies, while my experience in back-end development has honed my technical expertise and problem-solving abilities. This combination allows me to bridge the gap between quality and development seamlessly, driving efficiency and excellence in every project I undertake.",
+            "referencesAvailable":false,
             "references":[
                 {
                     "name":"Anil Shrestha",
@@ -253,7 +254,9 @@ let myData2={
                 "linkedin":"https://www.linkedin.com/in/saman-maharjan-97s/",
                 "youtube":"https://www.youtube.com/@samanmaharjan1440",
                 "youtubeWatch":["https://www.youtube.com/watch?v=","4uoe0r2dSKE","dhEsvhtMyC0","6_bmZ5hC3Aw","VPrfDpZbrIc","Jhg66OMRzg4","WmRBGbsI0II","SgI7pnft_QY"]
-            }
+            },
+            "travel":[]
+            
         },
         "aarju":{
     "personal":{
@@ -334,7 +337,7 @@ let myData2={
         },
         {
             "title":"Bachelor of Business Studies, Business, Management, Marketing, and Related Support Service",
-            "name":"Campion College ",
+            "name":"Campion Collegex",
             "date":"2025",
             "description":"I hold a Bachelor's degree with Honors in Computing Science, where I gained a solid foundation in core computing principles and technologies. My coursework covered key areas such as programming, data structures, algorithms, and software development, equipping me with both theoretical insights and practical skills. This degree provided me with a robust understanding of computing fundamentals and problem-solving techniques, preparing me for diverse roles in the technology sector.",
             "logo":"IIMS.png",
@@ -361,6 +364,7 @@ let myData2={
         }
     ],
     "summary":"",
+    "referencesAvailable":false,
     "references":[
         {
             "name":"Anil Shrestha",
@@ -375,7 +379,8 @@ let myData2={
         "x":"https://www.twitter.com/maharjandsaman",
         "instagram":"https://www.instagram.com/aarjudangol321",
         "linkedin":"https://www.linkedin.com/in/aarju-dangol-7115a1246"
-    }
+    },
+    "travel":[]
 },
         "delisha":{
     "personal":{
@@ -490,6 +495,7 @@ let myData2={
         }
     ],
     "summary":"As an IT undergraduate specializing in UI/UX design, web development, and data analytics, I have gained hands-on experience through a variety of academic projects. These include designing user interfaces, creating digital content, and developing functional web applications. I'm well-versed in tools like Figma and Balsamiq, along with key web development technologies. My enthusiasm for artificial intelligence and data analytics drives me to keep learning and growing in these dynamic fields. Beyond my technical background, working as a receptionist and content creator has strengthened my communication, organization, and time management skills, while also reinforcing a strong sense of professionalism and responsibility.",
+    "referencesAvailable":false,
     "references":[
         {
             "name":"Saman Maharjan",
@@ -518,7 +524,8 @@ let myData2={
         "x":"https://www.twitter.com/maharjandsaman",
         "instagram":"https://www.instagram.com/samanmaharjan",
         "linkedin":"https://www.linkedin.com/in/saman-maharjan-97s/"
-    }
+    },
+    "travel":[]
 }
 };
 export function getMetaData(x){
