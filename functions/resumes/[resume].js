@@ -1,8 +1,5 @@
 export function onRequest(context) {
-    let myParam,toSplit;
-    myParam=context.params.resume
-    toSplit=myParam.includes("_")
-  return new Response(JSON.stringify(getMetaData(myParam,toSplit)));
+  return new Response(JSON.stringify(getMetaData(context.params.resume)));
 }
 let myData;
 let myData2={
@@ -398,7 +395,7 @@ let myData2={
         "linkedin":"https://www.linkedin.com/in/aarju-dangol-7115a1246"
     },
     "travel":[]
-},
+    },
         "delisha":{
     "personal":{
         "title":"Delisha Maharjan",
@@ -416,16 +413,16 @@ let myData2={
         }
     ],
     "skills":[
-["figma","75"],
-["Canva","75"],
-["Adobe Photoshop (Basic)","25"],
-["Web Development(HTML,CSS,","75"],
-["Time management and problem-solving","75"],
-["Communication","75"],
-["Wireframing and Prototyping with Figma","58"],
-["Database Systems: Oracle Database, MySQL","58"],
-["Python","58"],
-["MS Excel","58"]
+    ["figma","75"],
+    ["Canva","75"],
+    ["Adobe Photoshop (Basic)","25"],
+    ["Web Development(HTML,CSS,","75"],
+    ["Time management and problem-solving","75"],
+    ["Communication","75"],
+    ["Wireframing and Prototyping with Figma","58"],
+    ["Database Systems: Oracle Database, MySQL","58"],
+    ["Python","58"],
+    ["MS Excel","58"]
     ],
     "language":["English","Newari","Dutch"],
     "experience":[
@@ -552,14 +549,12 @@ let myData2={
         "linkedin":"https://www.linkedin.com/in/saman-maharjan-97s/"
     },
     "travel":[]
-}
+    }
 };
-export function getMetaData(x,toSplit){
-    fetchJSONData("../../saman.json");
-    let returnData;
-    returnData=toSplit?{...myData2[x.substr(1,)].personal}:{...myData2[x]};
 
-    return returnData||{...myData2[x]}
+export function getMetaData(x){
+    fetchJSONData("../../saman.json"); 
+    return {...myData2[x]} ||{{...myData2["saman"].personal}}
 }
 
 function fetchJSONData(url) {
