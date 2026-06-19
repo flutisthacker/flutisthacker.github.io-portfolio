@@ -14,28 +14,30 @@ let myData2={
             "awards":[
                 {
                     "title":"Dean Award",
-                    "location":"Taylors University",
-                    "date":"2022"
+                    "location":"UCSI University",
+                    "date":"2017"
                 }
             ],
             "skills":["Initiative",
-                "EagertoLearn",
+                "Eager to Learn",
                 "Workingin/as a team",
                 "Adaptability",
                 "Knowledgeontest automation tools cypress and selenium.",
                 "SDLC: SCRUM, AGILE, kanban methodology",
-                "Software & Operating Systems: Google Docs, Excels, Presentation, Visual Code, Windows",
+                "Software: Google Docs, Excels, Presentation, Visual Code",
+                "OS: windows",
                 "Version Control Tools: Github, Gitlab, Bitbucket",
-                "Usedlanguages like Java, Ruby on rails, C#, and .NET.",
+                "Used languages like Java, Ruby on rails, C#, and .NET.",
                 "Project management tools: Trello, Jira.",
                 "APItools: Jmeter, Postman.",
+                "Data visualization: Tableau",
                 "Documentation tools: Confluence, Testrails, Slack.",
-                "Monitoring tools: datadog, logrocket, Heap analytics."],
+                "Monitoring tools: Datadog, logrocket, Heap analytics."],
             "language":["English","Newari","Nepali","Hindi"],
                 "experience":[
         {
             "title":"Software Quality Engineer",
-            "date":"2020-2025",
+            "date":"2020-2026",
             "location":"KUDO.inc",
             "logo":"https://website-cdn.kudo.ai/wp-content/uploads/2024/05/kudo-logo-header.svg",
             "description":"Assisted in designing wireframes and interactive prototypes using Figma for a mobile-based e-health application.;Created user personas and journey maps to build user-focused designs.;Developed responsive web page layouts and mobile app interfaces based on UI/UX best practices.; Developed low-fidelity and high-fidelity prototypes to simulate user interactions.  ",
@@ -269,8 +271,8 @@ let myData2={
     "awards":[
         {
             "title":"Dean Award",
-            "location":"Taylors University",
-            "date":"2022"
+            "location":"Oxford University",
+            "date":"2023"
         }
     ],
     "skills":["Initiative",
