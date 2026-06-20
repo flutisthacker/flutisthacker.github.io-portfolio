@@ -114,13 +114,13 @@ return `
     <div class="d-flex gap-3">
 
         ${item.logo
-        ? `<img src="${item.logo}" class="logo">`
+        ? `<img src="../${item.logo}" class="logo">`
         : ''}
 
         <div>
 
             <h4>${item.title}</h4>
-
+            
             <div class="meta">
 
                 ${item.date}

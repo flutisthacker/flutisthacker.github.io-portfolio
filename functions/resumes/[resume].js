@@ -554,7 +554,7 @@ let myData2={
 
 export function getMetaData(x){
     fetchJSONData("../../saman.json"); 
-    return {...myData2[x]} ||{{...myData2[x.substr(1,)].personal,...myData2[x.substr(1,)].links}}
+    return {...myData2[x]} ||{...myData2[x.substr(1,)].personal,...myData2[x.substr(1,)].links}
 }
 
 function fetchJSONData(url) {
