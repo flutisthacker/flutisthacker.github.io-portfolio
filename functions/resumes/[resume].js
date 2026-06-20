@@ -215,8 +215,8 @@ let myData2={
                     "location":"Solteemode, Kathmandu"
                 },
                 {
-                    "title":"Gillette International Boarding Secondary School (SLC)",
-                    "name":"Tulsi Meher Memorial School",
+                    "title":"School Leaving Certificate",
+                    "name":"Gillette International Boarding Secondary School (SLC)",
                     "date":"2017-2018",
                     "description":"I completed my secondary education with excellent results, demonstrating strong academic performance across a broad range of subjects. This solid foundation in key areas such as mathematics, science, and language arts has equipped me with essential skills in problem-solving, critical thinking, and effective communication. My commitment to academic excellence during this period laid the groundwork for my continued success in higher education and professional endeavors.",
                     "logo":"./images/eic.jpg",
