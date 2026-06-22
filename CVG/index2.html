@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="newtheme.css">
+
+</head>
+<body>
+<select name="" id="" onchange="location.search='?style='+this.selectedOptions[0].value">
+    <option value="linear">linear</option>
+    <option value="terminal">terminal</option>
+    <option value="timeline">timeline</option>
+    <option value="dashboard">dashboard</option>
+    <option value="swiss">swiss</option>
+    <option value="yc">yc</option>
+    <option value="glass">glass</option>
+    <option value="brutalist">brutalist</option>
+</select>
+<div class="myContainer"></div>
+<div class="cv-stats">
+    ...
+</div>
+
+</body>
+<script src="data.js"></script>
+<script>
+
+    function changeTheme(theme) {
+    const cv = document.querySelector("#cv");
+
+    cv.className = `cv-theme ${theme}`;
+}
+
+function renderCV(data,ts) {
+    const stats = {
+    exp:data.experience.length,
+    projects:data["projects involved"].length,
+    awards:data.awards.length,
+    skills:data.skills.length
+ };
+statDom=`         <div class="dashboard">
+
+      <div class="stats">
+
+        <div class="card">
+          <span>${stats.exp}</span>
+          Experience
+        </div>
+
+        <div class="card">
+          <span>${stats.projects}</span>
+          Projects
+        </div>
+
+        <div class="card">
+          <span>${stats.skills}</span>
+          Skills
+        </div>
+
+        <div class="card">
+          <span>${stats.awards}</span>
+          Awards
+        </div>
+
+      </div>
+
+
+   </div>`
+    return `
+    <div id="cv" class="cv-theme ${ts}">
+
+        <header class="cv-header">
+           <div class="cv-header-main">
+          <h1 class="cv-name">${data.personal.title}</h1>
+          <h2 class="cv-position">${data.personal.position}</h2>
+        </div>
+
+        <div class="cv-contact">
+          <span>${data.personal.contact || ""}</span>
+          <span>${data.personal.email || ""}</span>
+          <span>${data.personal.location || ""}</span>
+        </div>
+
+        </header>
+
+        ${data.summary ? `
+      <section class="cv-section cv-summary">
+        <h3 class="section-title">Summary</h3>
+        <div class="section-content">
+          ${data.summary}
+        </div>
+      </section>` : ""}
+
+        <section class="cv-experience">
+            <h3>Experience</h3>
+        ${getSpan(data.experience)}
+
+        </section>
+        
+        <section class="cv-education">
+            <h3>Education</h3>
+            ${getSpan(data.education)}
+        </section>
+     ${renderExperience(data.experience)}
+
+      ${renderProjects(data["projects involved"])}
+
+      ${renderEducation(data.education)}
+
+      ${renderExperience(data.training)}
+
+      ${renderAwards(data.awards)}
+
+      ${renderSkills(data.skills)}
+
+      ${renderLanguages(data.language)}
+
+      ${renderLanguages(data.travel)}
+
+      ${renderReferences(data.references)}
+    </div>
+    `;
+}
+let myStyle=location.search.split("=")[1] ||"linear"
+document.querySelector(".myContainer").innerHTML=renderCV(cvData,myStyle)
+
+
+function getSpan(data){
+    let returnData="";
+    data.forEach(x=>{        
+        returnData+=`<section>${Object.values(x).map(y=>`<p>${y}</p>`).join("")}</section>`
+    })
+    return returnData
+}
+function renderExperience(experience = []) {
+  if (!experience.length) return "";
+
+  return `
+    <section class="cv-section cv-experience">
+
+      <h3 class="section-title">
+        Experience
+      </h3>
+
+      <div class="section-content">
+
+      ${experience.map(item => `
+        <article class="experience-item">
+
+          <div class="experience-header">
+
+            ${item.logo ? `
+            <img
+              class="experience-logo"
+              src="${item.logo}"
+            >` : ""}
+
+            <div class="experience-meta">
+
+              <div class="experience-title">
+                ${item.title}
+              </div>
+
+              <div class="experience-date">
+                ${item.date}
+              </div>
+
+              <div class="experience-location">
+                ${item.location}
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="experience-description">
+            ${item.description || ""}
+          </div>
+
+          <ul class="experience-points">
+
+          ${(item.points || "")
+            .split("||")
+            .filter(Boolean)
+            .map(point => `
+              <li>${point}</li>
+            `).join("")}
+
+          </ul>
+
+        </article>
+      `).join("")}
+
+      </div>
+
+    </section>
+  `;
+}
+
+function renderEducation(education = []) {
+  if (!education.length) return "";
+
+  return `
+    <section class="cv-section cv-education">
+
+      <h3 class="section-title">
+        Education
+      </h3>
+
+      <div class="section-content">
+
+      ${education.map(item => `
+        <article class="education-item">
+
+          ${item.logo ? `
+          <img
+            class="education-logo"
+            src="${item.logo}"
+          >` : ""}
+
+          <div class="education-info">
+
+            <div class="education-title">
+              ${item.title}
+            </div>
+
+            <div class="education-name">
+              ${item.name}
+            </div>
+
+            <div class="education-date">
+              ${item.date}
+            </div>
+
+            <div class="education-marks">
+              ${item.marks || ""}
+            </div>
+
+            <div class="education-location">
+              ${item.location || ""}
+            </div>
+
+            <div class="education-description">
+              ${item.description || ""}
+            </div>
+
+          </div>
+
+        </article>
+      `).join("")}
+
+      </div>
+
+    </section>
+  `;
+}
+function renderSkills(skills = []) {
+  if (!skills.length) return "";
+
+  return `
+    <section class="cv-section cv-skills">
+
+      <h3 class="section-title">
+        Skills
+      </h3>
+
+      <div class="skills-grid">
+
+        ${skills.map(skill => `
+          <span class="skill">
+            ${skill}
+          </span>
+        `).join("")}
+
+      </div>
+
+    </section>
+  `;
+}
+function renderLanguages(languages = []) {
+  if (!languages.length) return "";
+
+  return `
+    <section class="cv-section cv-languages">
+
+      <h3 class="section-title">
+        Languages
+      </h3>
+
+      <div class="language-list">
+
+        ${languages.map(lang => `
+          <span class="language">
+            ${lang}
+          </span>
+        `).join("")}
+
+      </div>
+
+    </section>
+  `;
+}
+
+function renderProjects(projects = []) {
+  if (!projects.length) return "";
+
+  return `
+    <section class="cv-section cv-projects">
+
+      <h3 class="section-title">
+        Projects
+      </h3>
+
+      ${projects.map(project => `
+        <article class="project-item">
+
+          <div class="project-title">
+            ${project.title}
+          </div>
+
+          <div class="project-date">
+            ${project.date}
+          </div>
+
+          <div class="project-link">
+            ${project.location}
+          </div>
+
+          <div class="project-description">
+            ${project.description}
+          </div>
+
+        </article>
+      `).join("")}
+
+    </section>
+  `;
+}
+function renderAwards(awards = []) {
+  if (!awards.length) return "";
+
+  return `
+    <section class="cv-section cv-awards">
+
+      <h3 class="section-title">
+        Awards
+      </h3>
+
+      ${awards.map(item => `
+        <article class="award-item">
+
+          <div class="award-title">
+            ${item.title}
+          </div>
+
+          <div class="award-location">
+            ${item.location}
+          </div>
+
+          <div class="award-date">
+            ${item.date}
+          </div>
+
+        </article>
+      `).join("")}
+
+    </section>
+  `;
+}
+function renderReferences(refs = []) {
+  if (!refs.length) return "";
+
+  return `
+    <section class="cv-section cv-references">
+
+      <h3 class="section-title">
+        References
+      </h3>
+
+      <div class="reference-grid">
+
+      ${refs.map(ref => `
+        <article class="reference-card">
+
+          <div class="ref-name">
+            ${ref.name}
+          </div>
+
+          <div class="ref-company">
+            ${ref.company}
+          </div>
+
+          <div class="ref-title">
+            ${ref.title}
+          </div>
+
+          <div class="ref-email">
+            ${ref.email}
+          </div>
+
+          <div class="ref-phone">
+            ${ref.phone}
+          </div>
+
+        </article>
+      `).join("")}
+
+      </div>
+
+    </section>
+  `;
+}
+</script>
+</html>
+

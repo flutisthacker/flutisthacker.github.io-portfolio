@@ -1,0 +1,305 @@
+.cv-theme.linear {
+    font-family: Inter, sans-serif;
+    background: #fff;
+    color: #111827;
+    max-width: 900px;
+    margin: auto;
+    padding: 60px;
+}
+
+.cv-theme.linear .cv-header {
+    margin-bottom: 48px;
+}
+
+.cv-theme.linear h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.cv-theme.linear h2 {
+    color: #5e6ad2;
+    font-size: 20px;
+    margin-top: 8px;
+}
+
+.cv-theme.linear section {
+    margin-bottom: 40px;
+}
+
+.cv-theme.linear h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    color: #5e6ad2;
+    margin-bottom: 15px;
+}
+
+.cv-theme.github {
+    font-family: system-ui;
+    background: #ffffff;
+    color: #24292f;
+
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px;
+}
+
+.cv-theme.github .cv-header {
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.cv-theme.github section {
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.cv-theme.github h3 {
+    border-bottom: 1px solid #d0d7de;
+    padding-bottom: 8px;
+}
+
+.cv-theme.github .skill {
+    display: inline-block;
+    background: #ddf4ff;
+    color: #0969da;
+    border-radius: 20px;
+    padding: 4px 10px;
+}
+
+.cv-theme.executive {
+    font-family: "Playfair Display", serif;
+    background: white;
+    color: #1a1a1a;
+
+    max-width: 900px;
+    margin: auto;
+    padding: 60px;
+}
+
+.cv-theme.executive .cv-header {
+    border-bottom: 3px solid #d4af37;
+    padding-bottom: 25px;
+}
+
+.cv-theme.executive h1 {
+    font-size: 52px;
+}
+
+.cv-theme.executive h2 {
+    color: #d4af37;
+}
+
+.cv-theme.executive h3 {
+    color: #d4af37;
+    text-transform: uppercase;
+}
+.cv-theme.terminal {
+    background: #0d1117;
+    color: #00ff88;
+
+    font-family: "JetBrains Mono", monospace;
+
+    min-height: 100vh;
+    padding: 40px;
+}
+
+.cv-theme.terminal h1::before {
+    content: "$ whoami ";
+}
+
+.cv-theme.terminal h3::before {
+    content: "$ ";
+}
+
+.cv-theme.terminal section {
+    margin-top: 30px;
+    border-left: 2px solid #00ff88;
+    padding-left: 20px;
+}
+.cv-theme.glass {
+    background:
+        linear-gradient(
+            135deg,
+            #667eea,
+            #764ba2
+        );
+
+    color: white;
+
+    padding: 50px;
+}
+
+.cv-theme.glass section {
+    background: rgba(255,255,255,.12);
+
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255,255,255,.2);
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+}
+
+.cv-theme.swiss {
+    font-family: Helvetica, sans-serif;
+    background: white;
+    color: #111;
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px;
+}
+
+.cv-theme.swiss h1 {
+    font-size: 72px;
+    font-weight: 800;
+}
+
+.cv-theme.swiss h3 {
+    color: red;
+    text-transform: uppercase;
+}
+
+.cv-theme.swiss section {
+    margin-bottom: 48px;
+}
+
+.cv-theme.editorial {
+    column-count: 2;
+    column-gap: 50px;
+
+    font-family: Georgia, serif;
+
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px;
+}
+
+.cv-theme.editorial .cv-header {
+    column-span: all;
+    margin-bottom: 40px;
+}
+
+.cv-theme.editorial h1 {
+    font-size: 64px;
+}
+
+.cv-theme.editorial h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cv-theme.dashboard {
+    font-family: Inter;
+    padding: 40px;
+}
+
+.cv-theme.dashboard .cv-stats {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.cv-theme.dashboard .stat {
+    background: #f8fafc;
+    border-radius: 12px;
+    text-align: center;
+    padding: 20px;
+}
+
+.cv-theme.dashboard .stat-value {
+    font-size: 36px;
+    color: #2563eb;
+}
+.timeline {
+    position:relative;
+    margin-left:30px;
+}
+
+.timeline::before {
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:3px;
+    height:100%;
+    background:#2563eb;
+}
+
+.timeline-item {
+    position:relative;
+    padding-left:40px;
+    margin-bottom:32px;
+}
+
+.timeline-item::before {
+    content:"";
+    position:absolute;
+    left:-8px;
+    top:10px;
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    background:#2563eb;
+}
+
+.timeline-date {
+    font-weight:700;
+    color:#2563eb;
+}
+
+#cv {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cv-section {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  margin-bottom: 1rem;
+}
+
+.experience-item,
+.education-item,
+.project-item,
+.award-item,
+.reference-card {
+  margin-bottom: 1rem;
+}
+
+.skills-grid,
+.language-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.skill,
+.language {
+  padding: .35rem .75rem;
+}
+
+.experience-header {
+  display: flex;
+  gap: 1rem;
+}
+
+.experience-logo,
+.education-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.reference-grid {
+  display: grid;
+  gap: 1rem;
+}
