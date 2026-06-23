@@ -31,7 +31,7 @@
     "experience":[
         {
             "title":"QA Engineer",
-            "date":"2020-2025",
+            "date":"2020-2026",
             "location":"KUDO.inc",
             "logo":"kudo.png",
             "description":"Assisted in designing wireframes and interactive prototypes using Figma for a mobile-based e-health application.;Created user personas and journey maps to build user-focused designs.;Developed responsive web page layouts and mobile app interfaces based on UI/UX best practices.; Developed low-fidelity and high-fidelity prototypes to simulate user interactions.  ",
@@ -183,7 +183,7 @@
                     "title":"Virtual Card",
                     "date":"2025",
                     "location":"./vcard",
-                    "description":"people can scan and add you contact details."
+                    "description":"People can scan and add your contact details."
                 }
     ],
     "education":[
@@ -202,7 +202,7 @@
             "date":"2025",
             "description":"I hold a Bachelor's degree with Honors in Computing Science, where I gained a solid foundation in core computing principles and technologies. My coursework covered key areas such as programming, data structures, algorithms, and software development, equipping me with both theoretical insights and practical skills. This degree provided me with a robust understanding of computing fundamentals and problem-solving techniques, preparing me for diverse roles in the technology sector.",
             "logo":"IIMS.png",
-            "marks":"",
+            "marks":"3.00 GPA",
             "location":"Putalisadak, Kathmandu"
         },
         {

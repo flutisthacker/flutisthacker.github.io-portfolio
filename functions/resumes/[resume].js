@@ -12,22 +12,18 @@ let myData2={
                 "position":"QA Engineer"
             },
             "awards":[
-                {
-                    "title":"Dean Award",
-                    "location":"UCSI University",
-                    "date":"2017"
-                }
+
             ],
             "skills":["Initiative",
                 "Eager to Learn",
                 "Workingin/as a team",
                 "Adaptability",
-                "Knowledgeontest automation tools cypress and selenium.",
+                "Automation tools: cypress and selenium.",
                 "SDLC: SCRUM, AGILE, kanban methodology",
-                "Software: Google Docs, Excels, Presentation, Visual Code",
+                "Software: Google Docs, Sheets, Presentation, VS Code",
                 "OS: windows",
                 "Version Control Tools: Github, Gitlab, Bitbucket",
-                "Used languages like Java, Ruby on rails, C#, and .NET.",
+                "Used languages like Java, RoR, C#, and .NET.",
                 "Project management tools: Trello, Jira.",
                 "APItools: Jmeter, Postman.",
                 "Data visualization: Tableau",
@@ -184,6 +180,12 @@ let myData2={
                     "date":"2024",
                     "location":"./mcsnotes",
                     "description":"Notes of the MCS information I gathered in a platform."
+                },
+                {
+                    "title":"Virtual Card",
+                    "date":"2025",
+                    "location":"./vcard",
+                    "description":"People can scan and add your contact details."
                 }
             ],
             "education":[
@@ -193,7 +195,7 @@ let myData2={
                     "date":"2025",
                     "description":"I am currently pursuing a Master’s degree in Computer Science, focusing on advanced topics such as algorithms, machine learning, and software engineering. This program is enhancing my expertise in developing innovative solutions and tackling complex computational problems. My studies are deepening my understanding of cutting-edge technologies and equipping me with the skills needed to drive impactful projects in the tech industry.",
                     "logo":"./images/lincoln.png",
-                    "marks":"",
+                    "marks":"3.74 GPA",
                     "location":"Putalisadak, Kathmandu"
                 },
                 {
@@ -202,7 +204,7 @@ let myData2={
                     "date":"2025",
                     "description":"I hold a Bachelor's degree with Honors in Computing Science, where I gained a solid foundation in core computing principles and technologies. My coursework covered key areas such as programming, data structures, algorithms, and software development, equipping me with both theoretical insights and practical skills. This degree provided me with a robust understanding of computing fundamentals and problem-solving techniques, preparing me for diverse roles in the technology sector.",
                     "logo":"./images/IIMS.png",
-                    "marks":"",
+                    "marks":"3.00 GPA",
                     "location":"Putalisadak, Kathmandu"
                 },
                 {
