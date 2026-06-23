@@ -551,7 +551,98 @@ let myData2={
         "linkedin":"https://www.linkedin.com/in/saman-maharjan-97s/"
     },
     "travel":[]
-    }
+    },
+    "lumu":{
+            "personal":{
+                "title":"Lumanti Manandhar",
+                "contact":"9813703637",
+                "email":"lumantimanandhar091@gmail.com",
+                "location":"Lagan, Kathmandu",
+                "position":"QA Engineer"
+            },
+            "awards":[
+
+            ],
+            "skills":[],
+            "language":["English","Newari","Nepali","Hindi"],
+                "experience":[
+        {
+            "title":"Software Quality Engineer",
+            "date":"2020-2026",
+            "location":"Leapfrog technology",
+            "logo":"https://website-cdn.kudo.ai/wp-content/uploads/2024/05/kudo-logo-header.svg",
+            "description":"Assisted in designing wireframes and interactive prototypes using Figma for a mobile-based e-health application.;Created user personas and journey maps to build user-focused designs.;Developed responsive web page layouts and mobile app interfaces based on UI/UX best practices.; Developed low-fidelity and high-fidelity prototypes to simulate user interactions.  ",
+            "points":"Analyze and clarify requirements with team members.||Performed manual functional testing of application features and bugs.||Writing test cases and scenarios for the new features and bugs using test rails.||Performed various types of testing such as sanity, smoke, and regression testing in non-production and production environments.||Usedtestrails for production sanity testing and ensuring production stability.||WorkedwithTrello and Jira for project management.||Collaborated with DevOps and Developers for testing new application features and infrastructure changes.||WorkedwithKanban and sprint methodologies in a team.||WorkedinAPItesting on features with the help of Postman||WorkedwithAzure SDK and websockets for machine translation for human speech||Partly handled scrum on project and Release management||Testcase automation with test agent.||Datavalidation to test AI with LLM model implementation.||Extendedtest on integration and POC applications||PlannedandReviewed test plan and scenario||Verification of Application vulnerability threats||Co-Organized onsite event for the team.|| Performed manual functional testing of the application features.|| Identify problem areas and bugs of the application.|| Re-test fixed defects.|| Ensureproduction environment sanity testing and stabilization.|| Performed various types of testing such as sanity, smoke, and regression testing.|| Workedinateamanddiscussed bugs with developers with limited access.|| Exploratory testing on AI-based application|| Functional testing for the data-based applications.|| Usedgoogledocs for documenting bug lists.|| UsedTrello for bug tracking.|| LearnedAPI testing for AI based applications."
+        }
+
+    ],
+            "training":[
+                {
+                    "title":"Scrum Master workshop",
+                    "date":"2022",
+                    "location":"Prakash Aryal",
+                    "description":"Registered Scrum Master under the Scrumlab platform. Short workshop on learning the scrum methods and its implementation."
+                },
+            ],
+            "projects involved":[
+                {
+                    "title":"Transpose Notes",
+                    "date":"2019",
+                    "location":"./notes",
+                    "description":"As a musician rooted in Nepali culture and the instruments from the childhood. I often dreamt of creating something personal to music. I found it as quite a hassle to save multiple notations and its mostly time consuming to transpose the note from one to another."
+                },
+            ],
+            "education":[
+                {
+                    "title":"Bachelor in computer Science (Hons)",
+                    "name":"St. Xaviers Academy",
+                    "date":"2025",
+                    "description":"I hold a Bachelor's degree with Honors in Computing Science, where I gained a solid foundation in core computing principles and technologies. My coursework covered key areas such as programming, data structures, algorithms, and software development, equipping me with both theoretical insights and practical skills. This degree provided me with a robust understanding of computing fundamentals and problem-solving techniques, preparing me for diverse roles in the technology sector.",
+                    "logo":"./images/IIMS.png",
+                    "marks":"3.00 GPA",
+                    "location":"Putalisadak, Kathmandu"
+                },
+                {
+                    "title":"High School",
+                    "name":"Everest International College",
+                    "date":"2020",
+                    "description":"I have pursued higher education in Computer Science, building on a foundational background in Commerce. This unique combination has allowed me to integrate technical proficiency with a strong understanding of business principles. My studies in Computer Science have provided me with expertise in programming, data analysis, and system design, while my commerce background has equipped me with insights into financial management, market analysis, and strategic planning. This interdisciplinary approach enables me to effectively bridge the gap between technology and business, driving innovative solutions that align with organizational goals.",
+                    "logo":"./images/eic.jpg",
+                    "marks":"3.26 GPA",
+                    "location":"Solteemode, Kathmandu"
+                },
+                {
+                    "title":"School Leaving Certificate",
+                    "name":"Gillette International Boarding Secondary School (SLC)",
+                    "date":"2017-2018",
+                    "description":"I completed my secondary education with excellent results, demonstrating strong academic performance across a broad range of subjects. This solid foundation in key areas such as mathematics, science, and language arts has equipped me with essential skills in problem-solving, critical thinking, and effective communication. My commitment to academic excellence during this period laid the groundwork for my continued success in higher education and professional endeavors.",
+                    "logo":"./images/eic.jpg",
+                    "marks":"3.45 GPA",
+                    "location":"Kalimati, Kathmandu"
+                }
+            ],
+            "summary":"As a dedicated Quality Engineer with three years of hands-on experience, complemented by an additional year in back-end development, I bring a unique blend of skills to ensure top-notch product quality and performance. My background in quality assurance has equipped me with a keen eye for detail and a deep understanding of testing methodologies, while my experience in back-end development has honed my technical expertise and problem-solving abilities. This combination allows me to bridge the gap between quality and development seamlessly, driving efficiency and excellence in every project I undertake.",
+            "referencesAvailable":false,
+            "references":[
+                {
+                    "name":"Saman Maharjan",
+                    "company":"KUDO.inc",
+                    "title":"QA  Engineer",
+                    "email":"saman.maharjan96@gmail.com",
+                    "phone":""
+                },
+            ],
+            "links":{
+                "facebook":"https://www.facebook.com/saman.maharjan3",
+                "x":"https://www.twitter.com/maharjandsaman",
+                "instagram":"https://www.instagram.com/samanmaharjan",
+                "linkedin":"https://www.linkedin.com/in/saman-maharjan-97s/",
+                "youtube":"https://www.youtube.com/@samanmaharjan1440",
+                "youtubeWatch":["https://www.youtube.com/watch?v=","4uoe0r2dSKE","dhEsvhtMyC0","6_bmZ5hC3Aw","VPrfDpZbrIc","Jhg66OMRzg4","WmRBGbsI0II","SgI7pnft_QY"]
+            },
+            "travel":[]
+            
+        }
 };
 
 export function getMetaData(x){
