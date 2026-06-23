@@ -122,7 +122,7 @@ statDom=`         <div class="dashboard">
     </div>
     `;
 }
-let myStyle=location.search.split("=")[1] ||"linear"
+let myStyle=location.search.split("=")[0] ||"linear"
 document.querySelector(".myContainer").innerHTML=renderCV(cvData,myStyle)
 
 
