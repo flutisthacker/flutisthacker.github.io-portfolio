@@ -31,9 +31,8 @@
 
     cv.className = `cv-theme ${theme}`;
 }
-
-function renderCV(data,ts) {
-    const stats = {
+function addstats(){
+      const stats = {
     exp:data.experience.length,
     projects:data["projects involved"].length,
     awards:data.awards.length,
@@ -68,6 +67,10 @@ statDom=`         <div class="dashboard">
 
    </div>`
     return `
+}
+
+function renderCV(data,ts) {
+
     <div id="cv" class="cv-theme ${ts}">
 
         <header class="cv-header">
