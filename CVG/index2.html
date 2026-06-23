@@ -125,6 +125,7 @@ statDom=`         <div class="dashboard">
     </div>
     `;
 }
+
 let myStyle=location.search.split("=")[0].substr(1,) ||"linear"
 document.querySelector(".myContainer").innerHTML=renderCV(cvData,myStyle)
 

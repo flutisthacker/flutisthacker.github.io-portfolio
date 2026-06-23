@@ -15,7 +15,7 @@ let cvData;
               })
               .then(data => {
                     cvData=data;
-                    localStorage.setItem("CVData",JSON.stringify(data))
+                    storedData(true,data,searchNote)
               })    
               .catch((error) => {
               console.error('There was a problem with the fetch operation:', error); // Handle errors
@@ -23,4 +23,21 @@ let cvData;
           
           }
           let [searchTerm,searchNote]=location.search.split("=")
-          localStorage.getItem("CVData")==null?fetchSomeData("GET","/resumes/"+searchNote ||"saman"):cvData=JSON.parse(localStorage.getItem("CVData"))
+            verification(searchNote)
+          
+            function verification(name){
+                  if(localStorage.getItem("CVDataName")!=name||localStorage.getItem("CVData")==null){
+                        fetchSomeData("GET","/resumes/"+searchNote ||"saman")
+                  }else{
+                        cvData=storedData(false)
+                  }
+          }
+          function storedData(set,data,name){
+            if(set==false){
+                  return JSON.parse(localStorage.getItem("CVData"))
+            }
+            else{
+                  localStorage.setItem("CVData",JSON.stringify(data))
+                  localStorage.setItem("CVDataName",name)
+            }
+          }
