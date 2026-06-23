@@ -14,7 +14,8 @@ let cvData;
               return response.json(); // Parse the JSON response from the server
               })
               .then(data => {
-              cvData=data
+                    cvData=data;
+                    localStorage.setItem("CVData",JSON.stringify(data))
               })    
               .catch((error) => {
               console.error('There was a problem with the fetch operation:', error); // Handle errors
@@ -22,4 +23,4 @@ let cvData;
           
           }
           let [searchTerm,searchNote]=location.search.split("=")
-          fetchSomeData("GET","/resumes/"+searchNote ||"saman")
+          localStorage.getItem("CVData")==null?fetchSomeData("GET","/resumes/"+searchNote ||"saman"):cvData=JSON.parse(localStorage.getItem("CVData"))
