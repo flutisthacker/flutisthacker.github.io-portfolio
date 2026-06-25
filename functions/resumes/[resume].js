@@ -36,15 +36,15 @@ let myData2={
             "date":"2020-2026",
             "location":"KUDO.inc",
             "logo":"https://website-cdn.kudo.ai/wp-content/uploads/2024/05/kudo-logo-header.svg",
-            "description":"Assisted in designing wireframes and interactive prototypes using Figma for a mobile-based e-health application.;Created user personas and journey maps to build user-focused designs.;Developed responsive web page layouts and mobile app interfaces based on UI/UX best practices.; Developed low-fidelity and high-fidelity prototypes to simulate user interactions.  ",
-            "points":"Analyze and clarify requirements with team members.||Performed manual functional testing of application features and bugs.||Writing test cases and scenarios for the new features and bugs using test rails.||Performed various types of testing such as sanity, smoke, and regression testing in non-production and production environments.||Usedtestrails for production sanity testing and ensuring production stability.||WorkedwithTrello and Jira for project management.||Collaborated with DevOps and Developers for testing new application features and infrastructure changes.||WorkedwithKanban and sprint methodologies in a team.||WorkedinAPItesting on features with the help of Postman||WorkedwithAzure SDK and websockets for machine translation for human speech||Partly handled scrum on project and Release management||Testcase automation with test agent.||Datavalidation to test AI with LLM model implementation.||Extendedtest on integration and POC applications||PlannedandReviewed test plan and scenario||Verification of Application vulnerability threats||Co-Organized onsite event for the team.|| Performed manual functional testing of the application features.|| Identify problem areas and bugs of the application.|| Re-test fixed defects.|| Ensureproduction environment sanity testing and stabilization.|| Performed various types of testing such as sanity, smoke, and regression testing.|| Workedinateamanddiscussed bugs with developers with limited access.|| Exploratory testing on AI-based application|| Functional testing for the data-based applications.|| Usedgoogledocs for documenting bug lists.|| UsedTrello for bug tracking.|| LearnedAPI testing for AI based applications."
+            "description":"",
+            "points":"Analyze and clarify requirements with team members.||Performed manual functional testing of application features and bugs.||Writing test cases and scenarios for the new features and bugs using test rails.||Performed various types of testing such as sanity, smoke, and regression testing in non-production and production environments.||Used testrails for production sanity testing and ensuring production stability.||Worked with Trello and Jira for project management.||Collaborated with DevOps and Developers for testing new application features and infrastructure changes.||Worked with Kanban and sprint methodologies in a team.||Worked in API testing on features with the help of Postman||Worked with Azure SDK and websockets for machine translation for human speech||Partly handled scrum on project and Release management||Test case automation with test agent.||Data validation to test AI with LLM model implementation.||Extended test on integration and POC applications||Planned & Reviewed test plan and scenario||Verification of Application vulnerability threats||Co-Organized onsite event for the team.|| Performed manual functional testing of the application features.|| Identify problem areas and bugs of the application.|| Re-test fixed defects.|| Ensureproduction environment sanity testing and stabilization.|| Performed various types of testing such as sanity, smoke, and regression testing.|| Worked in a team & discussed bugs with developers with limited access.|| Exploratory testing on AI-based application|| Functional testing for the data-based applications.|| Used google docs for documenting bug lists.|| Used Trello for bug tracking.|| Learned API testing for AI based applications."
         },
         {
             "title":"Backend developer",
             "date":"2018-2019",
             "location":"Bazaar Factory",
             "logo":"./images/bf.png",
-            "description":"Assisted in designing wireframes and interactive prototypes using Figma for a mobile-based e-health application.;Created user personas and journey maps to build user-focused designs.;Developed responsive web page layouts and mobile app interfaces based on UI/UX best practices.; Developed low-fidelity and high-fidelity prototypes to simulate user interactions.  ",
+            "description":"",
             "points":"Developed application features for e-commerce platforms.|| Fixed application bugs and developed features according to clients’ needs.|| Developed dashboard and e-commerce websites using API application and liquid templating.|| UsedTrello, Gitlab/Github/Bitbucket for project management.|| Workedwithversion control systems.|| LearnedRuby onRails and liquid templating.|| Fixedandtested application bugs.|| Learnedsoftware development methodologies."
         },
         {
@@ -52,21 +52,22 @@ let myData2={
             "date":"2020-2025",
             "location":"Youth Corner Club",
             "logo":"./images/ycc%20logo.png",
-            "description":"Assisted in designing wireframes and interactive prototypes using Figma for a mobile-based e-health application.;Created user personas and journey maps to build user-focused designs.;Developed responsive web page layouts and mobile app interfaces based on UI/UX best practices.; Developed low-fidelity and high-fidelity prototypes to simulate user interactions.  "
+            "description":"Organizing youth member of the 3-5 Inter-School Grand Art Competition. || Youth Corner Club Marathons. || Yearly Health Camps."
         },
         {
             "title":"Member",
             "date":"2025-2027",
             "location":"Youth Corner Club",
             "logo":"./images/ycc%2050.png",
-            "description":"Assisted in designing wireframes and interactive prototypes using Figma for a mobile-based e-health application.;Created user personas and journey maps to build user-focused designs.;Developed responsive web page layouts and mobile app interfaces based on UI/UX best practices.; Developed low-fidelity and high-fidelity prototypes to simulate user interactions.  "
+            "points":"",
+            "description":"Core member in the part of organizing the 6th and 7th Inter-School Grand Art Competition.||5th Youth corner club marathon. || Had a divine oppurtunity to host/organize the barha barsha pachali bhairab nach for about 2 days. || Part of organizing and celebration on 50th Anniversary of the Youth Corner Club."
         },
         {
             "title":"Flautist",
             "date":"2018-2019",
             "location":"Palaa:",
             "logo":"./images/ycc%2050.png",
-            "description":"Had a chance to join competition with Astra khala and win 3rd position.; Organized own tya si tya at yamari punhi with Palaa: team;"
+            "description":"Had a chance to join competition with Astra khala and win 3rd position.; Organized own tya si tya at yamari punhi with Palaa: team; Had chance to share stage with the kutumba team and other talented musicians."
         },
         {
             "title":"Flautist",
