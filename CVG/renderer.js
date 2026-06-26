@@ -208,7 +208,7 @@ function renderEducation(education = []) {
                     item.logo
                     ? `
                     <img
-                        src="${item.logo}"
+                        src=".${item.logo}"
                         class="logo"
                         alt="${item.name}"
                     >
