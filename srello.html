@@ -5,13 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="row m-1">
+        <!-- <div class="col-3">
 
+<div id="drag-perview">
+    <div class="card" data-id="2" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+        </div>
+        <div class="col-3 bg-info"></div>
+        <div class="col-3 bg-success"></div> -->
     </div>
+    <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+  + new
+</a>
+
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Add ticket</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="email" class="form-control" id="title" placeholder="name@example.com">
+            </div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+</div>
+<div class="mb-3">
+  <label for="image" class="form-label">Image URL</label>
+  <input type="email" class="form-control" id="image" placeholder="name@example.com">
+</div>
+<div class="mb-3">
+  <label for="url" class="form-label">URL</label>
+  <input type="email" class="form-control" id="url" placeholder="name@example.com">
+</div>
+<div class="mb-3">
+  <label for="desc" class="form-label">Example textarea</label>
+  <textarea class="form-control" id="desc" rows="3"></textarea>
+</div>
+<button class="btn btn-success" onclick="AddMycard()">Add</button>
+    </div>
+  </div>
+</div>
 </body>
 <script>
     let cards=[{img:"",title:"project 1",desc:"sasd",btn:"",id:"0",status:""},
@@ -20,21 +70,10 @@
     let columnscolors=["primary","info","danger","warning"];
     let mycolumns=["To do","Develop","Testing","Deployed"]
     mycolumns.forEach((x,i)=>{
-        document.querySelector(".row").innerHTML+=`<div class="col-3 bg-${columnscolors[i]}" id="${x}"><h1>${x}</h1></div>`
+        document.querySelector(".row").innerHTML+=`<div class="col-3  overflow-y-scroll bg-${columnscolors[i]}" id="${x}"><h1>${x}</h1></div>`
     })
     cards.forEach((card,i)=>{
-        document.querySelector(".col-3").innerHTML+=`<div class="card m-1" draggable="true" data-id="${card.id||i}" style="width: 18vw;">
-             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" onclick="this.parentElement.remove()">
-    x
-    <span class="visually-hidden">unread messages</span>
-  </span>
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">${card.title} ${i}</h5>
-    <p class="card-text">${card.desc}</p>
-    <a href="#" class="btn btn-primary">comments</a>
-  </div>
-</div>`
+        AddMycard(card,i)
     })
     const cardRow=document.querySelector(".row");
     let card;
@@ -47,8 +86,13 @@
         if(!card) return;
         dragId=card.dataset.id;
         card.classList.add("lifted");
+        // e.dataTransfer.setDragImage(preview,20,20)
     })
 
+    // columns[1].addEventListener("dragover",e=>e.preventDefault())
+    // columns[1].addEventListener("drop",e=>{
+    //     columns[1].appendChild(card)
+    // })
     cardRow.addEventListener("dragover",e=>{
         e.preventDefault();
     })
@@ -56,6 +100,7 @@
         column=e.target.closest(".col-3");
         column.appendChild(card)
         cards[dragId].status=column.id;
+
     })
 
     cardRow.addEventListener("dragenter",e=>{
@@ -68,5 +113,24 @@
         column.classList.remove("border");
         column.classList.remove("border-primary");
     })
+    function AddMycard(card,i){
+        if(card==undefined){
+            card={img:document.querySelector("#image").value,title:document.querySelector("#title").value,desc:document.querySelector("#desc").value,btn:document.querySelector("#url").value,id:"0",status:""};
+            cards.push(card)
+            i=cards.length
+        }
+                document.querySelector(".col-3").innerHTML+=`<div class="card m-1" draggable="true" data-id="${card.id||i}" style="width: 18vw;">
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" onclick="this.parentElement.remove()">
+                x
+                <span class="visually-hidden">unread messages</span>
+            </span>
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">${card.title} ${i}</h5>
+                <p class="card-text">${card.desc}</p>
+                <a href="#" class="btn btn-primary">comments</a>
+            </div>
+            </div>`
+    }
 </script>
 </html>
