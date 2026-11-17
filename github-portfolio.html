@@ -1,0 +1,373 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub README Studio</title>
+<style>
+:root {
+  --bg:#0d1117; --panel:#161b22; --border:#30363d;
+  --text:#e6edf3; --muted:#8b949e; --accent:#58a6ff;
+}
+* { box-sizing:border-box }
+body {
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:Inter,system-ui,Arial,sans-serif;
+}
+header {
+  padding:18px 25px; border-bottom:1px solid var(--border);
+  display:flex; justify-content:space-between; align-items:center;
+  gap:12px; flex-wrap:wrap;
+}
+header h2 { margin:0; font-size:19px }
+header span { color:var(--muted); font-size:12px }
+button {
+  background:#238636; border:0; border-radius:6px;
+  padding:10px 15px; color:white; cursor:pointer;
+  font-weight:600;
+}
+button.secondary { background:#21262d; border:1px solid var(--border) }
+button:hover { filter:brightness(1.15) }
+main {
+  display:grid; grid-template-columns:350px 1fr;
+  min-height:calc(100vh - 65px);
+}
+.editor {
+  padding:20px; border-right:1px solid var(--border);
+  overflow-y:auto; max-height:calc(100vh - 65px);
+}
+.preview { padding:24px; min-width:0 }
+h3 { font-size:14px; margin:20px 0 12px }
+h3:first-child { margin-top:0 }
+label {
+  display:block; color:var(--muted); font-size:12px;
+  margin:12px 0 5px;
+}
+input,textarea,select {
+  width:100%; background:#0d1117; color:var(--text);
+  border:1px solid var(--border); border-radius:6px;
+  padding:10px; font:inherit; font-size:13px;
+}
+textarea { resize:vertical; min-height:65px }
+input:focus,textarea:focus { outline:1px solid var(--accent) }
+.actions { display:flex; gap:8px; flex-wrap:wrap; margin-top:18px }
+.tabs { display:flex; gap:8px; margin-bottom:15px }
+.tabs button { flex:1 }
+.output {
+  background:var(--panel); border:1px solid var(--border);
+  border-radius:9px; padding:25px; min-height:400px;
+  overflow-wrap:anywhere;
+}
+.output h1,.output h2 { border-bottom:1px solid var(--border); padding-bottom:9px }
+.output a { color:var(--accent) }
+.output img { max-width:100% }
+.output pre { overflow:auto }
+.output code { background:#30363d; padding:3px 5px; border-radius:4px }
+#markdown {
+  width:100%; min-height:70vh; font-family:monospace;
+  line-height:1.6; white-space:pre; overflow:auto;
+}
+.hidden { display:none }
+small { color:var(--muted) }
+@media(max-width:850px) {
+  main { grid-template-columns:1fr }
+  .editor { max-height:none; border-right:0; border-bottom:1px solid var(--border) }
+  .preview { padding:14px }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h2>⚡ GitHub README Studio</h2>
+    <span>Build your GitHub developer portfolio</span>
+  </div>
+  <div class="actions">
+    <button class="secondary" id="copy">Copy Markdown</button>
+    <button id="download">↓ Download README.md</button>
+  </div>
+</header>
+
+<main>
+<section class="editor">
+  <h3>👤 Profile information</h3>
+  <label>GitHub username</label>
+  <input id="username" value="yourusername">
+
+  <label>Full name</label>
+  <input id="name" value="Your Name">
+
+  <label>Professional headline</label>
+  <input id="headline" value="Full Stack Developer | Open Source Enthusiast">
+
+  <label>About me</label>
+  <textarea id="bio">I'm a passionate developer who loves building useful applications and exploring new technologies.</textarea>
+
+  <label>Location</label>
+  <input id="location" value="Kathmandu, Nepal">
+
+  <label>Website / Portfolio URL</label>
+  <input id="website" placeholder="https://example.com">
+
+  <h3>💻 Skills & Technologies</h3>
+  <label>Skills (comma separated)</label>
+  <textarea id="skills">JavaScript, HTML, CSS, React, Node.js, Python, Git, GitHub</textarea>
+
+  <h3>🌐 Social links</h3>
+  <label>LinkedIn URL</label>
+  <input id="linkedin" placeholder="https://linkedin.com/in/username">
+
+  <label>Twitter / X URL</label>
+  <input id="twitter" placeholder="https://x.com/username">
+
+  <label>GitHub URL</label>
+  <input id="github" placeholder="https://github.com/yourusername">
+
+  <h3>📊 GitHub statistics</h3>
+  <label>Show GitHub stats</label>
+  <select id="stats">
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+  </select>
+
+  <h3>🚀 Projects</h3>
+  <label>Project 1 name</label>
+  <input id="project1" placeholder="My Awesome Project">
+  <label>Project 1 URL</label>
+  <input id="projectUrl1" placeholder="https://github.com/user/project">
+
+  <label>Project 2 name</label>
+  <input id="project2" placeholder="Another Project">
+  <label>Project 2 URL</label>
+  <input id="projectUrl2" placeholder="https://github.com/user/project">
+
+  <h3>✍️ Custom section</h3>
+  <label>Additional Markdown</label>
+  <textarea id="custom" placeholder="## My Goals&#10;- Contribute to open source"></textarea>
+
+  <div class="actions">
+    <button class="secondary" id="reset">Reset</button>
+    <button id="generate">Generate README</button>
+  </div>
+  <small>Changes update the preview automatically.</small>
+</section>
+
+<section class="preview">
+  <div class="tabs">
+    <button id="previewTab" class="secondary">Live Preview</button>
+    <button id="sourceTab" class="secondary">Markdown Source</button>
+  </div>
+
+  <div id="rendered" class="output"></div>
+  <textarea id="markdown" class="hidden" spellcheck="false"></textarea>
+</section>
+</main>
+
+<script>
+const fields = [
+  "username","name","headline","bio","location","website",
+  "skills","linkedin","twitter","github","stats",
+  "project1","projectUrl1","project2","projectUrl2","custom"
+];
+
+const $ = id => document.getElementById(id);
+let currentTab = "preview";
+
+function get(id) {
+  return $(id).value.trim();
+}
+
+function escapeHTML(str) {
+  return String(str).replace(/[&<>"']/g, c => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",
+    '"':"&quot;","'":"&#39;"
+  })[c]);
+}
+
+// Only allow safe HTTP(S) links in generated Markdown.
+function safeURL(value) {
+  try {
+    const url = new URL(value);
+    return ["http:", "https:"].includes(url.protocol) ? url.href : "";
+  } catch {
+    return "";
+  }
+}
+
+function makeREADME() {
+  const username = get("username") || "yourusername";
+  const name = get("name") || username;
+  const skills = get("skills").split(",").map(s => s.trim()).filter(Boolean);
+
+  let md = `# Hi, I'm ${name} 👋
+
+### ${get("headline")}
+
+${get("bio")}
+
+📍 ${get("location")}
+`;
+
+  const website = safeURL(get("website"));
+  if (website) md += `\n🌐 [Portfolio](${website})\n`;
+
+  md += `\n---\n\n## 🛠️ Tech Stack\n\n`;
+
+  md += skills.map(skill =>
+    `\`${skill.replace(/[`\\]/g, "")}\``
+  ).join(" ") || "_Add your skills in the editor._";
+
+  const social = [
+    ["LinkedIn", get("linkedin")],
+    ["Twitter", get("twitter")],
+    ["GitHub", get("github") || `https://github.com/${username}`]
+  ];
+
+  const links = social
+    .map(([label,url]) => [label,safeURL(url)])
+    .filter(([,url]) => url);
+
+  md += "\n\n## 🌐 Connect With Me\n\n";
+  md += links.map(([label,url]) => `[${label}](${url})`).join(" | ");
+
+  const projects = [
+    [get("project1"),get("projectUrl1")],
+    [get("project2"),get("projectUrl2")]
+  ].filter(([name,url]) => name && safeURL(url));
+
+  if (projects.length) {
+    md += "\n\n## 🚀 Featured Projects\n\n";
+    md += projects.map(([name,url]) =>
+      `- [${name}](${safeURL(url)})`
+    ).join("\n");
+  }
+
+  if (get("stats") === "yes") {
+    md += `
+
+## 📊 GitHub Stats
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=${encodeURIComponent(username)}&show_icons=true&theme=github_dark)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=${encodeURIComponent(username)}&layout=compact&theme=github_dark)
+`;
+  }
+
+  if (get("custom")) {
+    md += "\n\n" + get("custom") + "\n";
+  }
+
+  md += "\n\n---\n\n⭐ Thanks for visiting my profile!\n";
+  return md;
+}
+
+// Basic Markdown renderer for the live preview.
+// The Markdown source remains the authoritative output.
+function renderMarkdown(md) {
+  let html = escapeHTML(md);
+
+  html = html.replace(/```([\s\S]*?)```/g,
+    (_,code) => `<pre><code>${code}</code></pre>`);
+
+  html = html.replace(/^### (.*)$/gm,"<h3>$1</h3>");
+  html = html.replace(/^## (.*)$/gm,"<h2>$1</h2>");
+  html = html.replace(/^# (.*)$/gm,"<h1>$1</h1>");
+  html = html.replace(/^---$/gm,"<hr>");
+  html = html.replace(/!\[([^\]]*)\]\((https?:\/\/[^ )]+)\)/g,
+    '<img alt="$1" src="$2">');
+  html = html.replace(/\[([^\]]+)\]\((https?:\/\/[^ )]+)\)/g,
+    '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+  html = html.replace(/`([^`]+)`/g,"<code>$1</code>");
+  html = html.replace(/\*\*(.*?)\*\*/g,"<strong>$1</strong>");
+  html = html.replace(/\*(.*?)\*/g,"<em>$1</em>");
+
+  const lines = html.split("\n");
+  const output = [];
+  let inList = false;
+
+  for (const line of lines) {
+    if (/^- /.test(line)) {
+      if (!inList) {
+        output.push("<ul>");
+        inList = true;
+      }
+      output.push("<li>" + line.slice(2) + "</li>");
+    } else {
+      if (inList) {
+        output.push("</ul>");
+        inList = false;
+      }
+      if (/^<(h[1-3]|hr|pre|ul|li|\/)/.test(line)) {
+        output.push(line);
+      } else if (line.trim()) {
+        output.push("<p>" + line + "</p>");
+      }
+    }
+  }
+
+  if (inList) output.push("</ul>");
+  return output.join("\n");
+}
+
+function update() {
+  const md = makeREADME();
+  $("markdown").value = md;
+
+  if (currentTab === "preview") {
+    $("rendered").innerHTML = renderMarkdown(md);
+  }
+}
+
+function showTab(tab) {
+  currentTab = tab;
+  $("rendered").classList.toggle("hidden",tab !== "preview");
+  $("markdown").classList.toggle("hidden",tab !== "source");
+  update();
+}
+
+fields.forEach(id => {
+  $(id).addEventListener("input",update);
+  $(id).addEventListener("change",update);
+});
+
+$("generate").onclick = update;
+$("previewTab").onclick = () => showTab("preview");
+$("sourceTab").onclick = () => showTab("source");
+
+$("copy").onclick = async () => {
+  try {
+    await navigator.clipboard.writeText(makeREADME());
+    $("copy").textContent = "Copied!";
+    setTimeout(() => $("copy").textContent = "Copy Markdown",1500);
+  } catch {
+    $("markdown").classList.remove("hidden");
+    $("markdown").select();
+    alert("Clipboard unavailable. Select and copy the Markdown manually.");
+  }
+};
+
+$("download").onclick = () => {
+  const blob = new Blob([makeREADME()], {
+    type:"text/markdown;charset=utf-8"
+  });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "README.md";
+  a.click();
+  URL.revokeObjectURL(url);
+};
+
+$("reset").onclick = () => {
+  if (!confirm("Reset all profile information?")) return;
+  fields.forEach(id => $(id).value = "");
+  $("stats").value = "yes";
+  update();
+};
+
+update();
+</script>
+</body>
+</html>
