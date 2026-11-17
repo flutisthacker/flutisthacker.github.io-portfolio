@@ -211,7 +211,7 @@ let myData;
           <div class="col-lg-6">
 
             <figure class="mb-0">
-              <a href="./images/dhime_1.jpeg" data-fancybox="gallery"><img src="./images/dhime_1.jpeg" alt="Image" class="img-fluid"></a>
+              <a href="./images/${data.img||'dhime_1.jpeg'}" data-fancybox="gallery"><img src="./images/${data.img||'dhime_1.jpeg'}" alt="Image" class="img-fluid"></a>
             </figure>
           </div>
 

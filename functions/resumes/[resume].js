@@ -156,84 +156,98 @@ let myData2={
                     "title":"Transpose Notes",
                     "date":"2019",
                     "location":"./notes",
+                    "img":"TNnepali.jpg",
                     "description":"As a musician rooted in Nepali culture and the instruments from the childhood. I often dreamt of creating something personal to music. I found it as quite a hassle to save multiple notations and its mostly time consuming to transpose the note from one to another."
                 },
                 {
                     "title":"Dhime Notes",
                     "date":"2021",
                     "location":"./dhime",
+                    "img":"dhime.jpeg",
                     "description":"As a musician rooted in Nepali culture and the instruments from the childhood. I often dreamt of creating something personal to music. I found it as quite a hassle to search for instrument notations and its mostly time consuming."
                 },
                 {
                     "title":"File Extension",
                     "date":"2025",
                     "location":"./#",
+                    "img":"fileExt.jpeg",
                     "description":"A file extension currently on my mind which lets users to explore files in the device with a good User experience"
                 },
                 {
                     "title":"Shayari notes",
                     "date":"2024",
                     "location":"./shayar",
+                    "img":"TNList.jpeg",
                     "description":"the memory and the emotion of my life."
                 },
                 {
                     "title":"Educational notes",
                     "date":"2024",
                     "location":"./mcsnotes",
+                    "img":"",
                     "description":"Notes of the MCS information I gathered in a platform."
                 },
                 {
                     "title":"Virtual Card",
                     "date":"2025",
                     "location":"./vcard",
+                    "img":"vcard.jpeg",
                     "description":"People can scan and add your contact details."
                 },
                 {
                     "title":"Universal Markup Language",
                     "date":"2026",
                     "location":"./uml",
+                    "img":"uml.png",
                     "description":"create 10 different app data emails, document, content easily from the page"
                 },
                 {
                     "title":"lists of projects",
                     "date":"2026",
                     "location":"./all",
+                    "img":"all.png",
                     "description":"lists of all the personal projects"
                 },
                 {
                     "title":"Vedic app",
                     "date":"2026",
                     "location":"./vedic",
+                    "img":"vedic.png",
                     "description":"lists of all the personal projects"
                 },
                 {
                     "title":"rainmeter sidebar customizations",
                     "date":"2026",
                     "location":"./rainmeter",
+                    "img":"rainmeter.png",
                     "description":"customize the rainmeter sidebar as a dock"
                 },
                 {
                     "title":"Autohot keys customizations",
                     "date":"2026",
                     "location":"./ahk",
+                    "img":"ahk.png",
                     "description":"customize the rainmeter sidebar as a dock"
                 },
                 {
                     "title":"cindy exercise planner and tracker",
                     "date":"2026",
                     "location":"./cindy",
+                    "img":"cindy.png",
                     "description":"cindy exercise planner and tracker"
                 },
                 {
                     "title":"short language learner",
                     "date":"2026",
                     "location":"./language",
+                    "img":"lang.png",
                     "description":"quickly lear langauge with its glossary"
                 },
                 {
                     "title":"svg applicaption creator",
                     "date":"2026",
                     "location":"./htmltosvg",
+                    "img":"",
                     "description":"create application in svg itself"
                 }
             ],
