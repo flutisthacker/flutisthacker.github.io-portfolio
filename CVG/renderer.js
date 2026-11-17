@@ -384,7 +384,7 @@ function renderYouTubeVideos(videos = []) {
 // renderCV(data);
 
 // });
-renderCV(cvData);
+renderCV(cvData ||myData);
 
 function exportPDF() {
 
