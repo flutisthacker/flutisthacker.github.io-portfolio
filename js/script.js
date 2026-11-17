@@ -27,7 +27,7 @@ let myData;
           fetchSomeData("GET","/resumes/"+searchNote ||"saman")
           
     function updateData(nJSON){
-    if(searchTerm=="?x"){
+    if(searchTerm=="?resume"){
       myData.training.forEach(x=>AddTraining(x))
       myData.experience.forEach(x=>AddExperience(x))
       myData.education.forEach(x=>AddEducation(x))
