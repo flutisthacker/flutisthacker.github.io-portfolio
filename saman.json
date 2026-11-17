@@ -184,6 +184,54 @@
                     "date":"2025",
                     "location":"./vcard",
                     "description":"People can scan and add your contact details."
+                },
+                {
+                    "title":"Universal Markup Language",
+                    "date":"2026",
+                    "location":"./uml",
+                    "description":"create 10 different app data emails, document, content easily from the page"
+                },
+                {
+                    "title":"lists of projects",
+                    "date":"2026",
+                    "location":"./uml",
+                    "description":"lists of all the personal projects"
+                },
+                {
+                    "title":"Vedic app",
+                    "date":"2026",
+                    "location":"./vedic",
+                    "description":"lists of all the personal projects"
+                },
+                {
+                    "title":"rainmeter sidebar customizations",
+                    "date":"2026",
+                    "location":"./rainmeter",
+                    "description":"customize the rainmeter sidebar as a dock"
+                },
+                {
+                    "title":"Autohot keys customizations",
+                    "date":"2026",
+                    "location":"./ahk",
+                    "description":"customize the rainmeter sidebar as a dock"
+                },
+                {
+                    "title":"cindy exercise planner and tracker",
+                    "date":"2026",
+                    "location":"./cindy",
+                    "description":"cindy exercise planner and tracker"
+                },
+                {
+                    "title":"short language learner",
+                    "date":"2026",
+                    "location":"./language",
+                    "description":"quickly lear langauge with its glossary"
+                },
+                {
+                    "title":"svg applicaption creator",
+                    "date":"2026",
+                    "location":"./htmltosvg",
+                    "description":"create application in svg itself"
                 }
     ],
     "education":[
